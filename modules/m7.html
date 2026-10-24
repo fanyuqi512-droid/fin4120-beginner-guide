@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 7 · 收益率曲线 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 7 · 收益率曲线</h1>
+  
+<div class="card">
+  <h2>收益率曲线是什么？</h2>
+  <p>同一信用质量（常看国债）、不同到期期限的收益率连成的图，即<strong>利率期限结构</strong>。它帮我们读懂市场对增长、通胀与政策的预期。</p>
+  <p>费雪关系（近似）：名义利率 ≈ 实际利率 + 预期通胀。TIPS 与名义国债之差给出<strong>盈亏平衡通胀（breakeven inflation）</strong>≈市场隐含通胀预期。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  曲线像「天气预报的温度随天数变化」：近端由央行政策主导，远端反映更长期的增长与通胀故事。倒挂就像「明天比今天还冷」的反常信号，历史上常与衰退担忧相连。
+</div>
+<div class="card">
+  <h2>四种常见形状</h2>
+  <ul class="clean">
+    <li><strong>近似平坦</strong>：稳定或观望。</li>
+    <li><strong>向上倾斜</strong>：增长/通胀预期，常态。</li>
+    <li><strong>向下倾斜（倒挂）</strong>：担忧衰退、预期未来降息。</li>
+    <li><strong>驼峰</strong>：近端与远端预期不一致的过渡期。</li>
+  </ul>
+  <p>逻辑链：经济展望 → 预期央行动作 → 投资者买卖不同期限 → 曲线成形。</p>
+</div>
+<div class="card">
+  <h2>曲线随时间的经验规律（建模很重要）</h2>
+  <ul class="clean">
+    <li>名义利率通常非负（实际利率可为负）。</li>
+    <li>均值回复（可用 Vasicek 等模型直觉理解）。</li>
+    <li>不同期限利率正相关但不完美相关；期限差越大相关性越弱。</li>
+    <li>短端波动通常更大。</li>
+    <li><strong>95% 法则</strong>：水平（平行移动）、斜率、曲率三个因子常解释绝大部分曲线变动（PCA）。</li>
+  </ul>
+</div>
+<div class="card">
+  <h2>经典理论（知道各自强调什么）</h2>
+  <table class="simple">
+    <tr><th>理论</th><th>核心想法</th></tr>
+    <tr><td>纯预期</td><td>长期利率≈未来短期利率预期的平均</td></tr>
+    <tr><td>流动性溢价</td><td>长期需额外补偿 → 常呈上倾</td></tr>
+    <tr><td>偏好栖息地</td><td>投资者有期限偏好，但溢价够可搬家</td></tr>
+    <tr><td>市场分割</td><td>供需在各期限段独立，套利有限</td></tr>
+  </table>
+</div>
+<div class="card">
+  <h2>央行如何「管理」曲线</h2>
+  <ul class="clean">
+    <li><strong>QE</strong>：买长债压低远端利率。</li>
+    <li><strong>YCC</strong>：盯住某关键期限（如日本盯 10 年）。</li>
+    <li><strong>前瞻指引</strong>：用话术锚定预期。</li>
+    <li><strong>短期政策利率 / 准备金利率</strong>：管近端。</li>
+  </ul>
+  <p>曲线是经济健康、市场预期、风险补偿与市场分割的综合信号；倒挂常被当作衰退预警之一（如讲义提及的历史案例），但不是机械定律。</p>
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  「收益率」在债券语境常与「市场利率」互换使用，但严格说债券 yield 是 IRR，贷款利率是借款成本——二者相关但不总相等。另：倒挂预测衰退有历史经验，但时滞与误报都存在。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Term Structure</strong></li><li><strong>Breakeven Inflation</strong></li><li><strong>Inverted Curve</strong></li><li><strong>PCA Level/Slope/Curvature</strong></li><li><strong>Liquidity Premium</strong></li><li><strong>QE</strong></li><li><strong>YCC</strong></li><li><strong>Forward Guidance</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 向上倾斜的曲线通常暗示什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>增长与通胀预期偏强，投资者要求更高的长期补偿。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. 倒挂曲线常被解读为什么信号？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>市场担忧放缓/衰退，预期未来降息。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. PCA 的三个主要因子通常是？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>水平、斜率、曲率。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. Breakeven inflation 怎么近似得到？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>名义国债收益率 − TIPS 实际收益率。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. YCC 与 QE 的直观差别？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>YCC 明确盯住某期限利率；QE 通过大规模买债压低利率但不一定设硬目标。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m7">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m7"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m6.html"><span class="dir">← 上一模块</span>模块 6：国际债</a><a href="m8.html"><span class="dir">下一模块 →</span>模块 8：零息曲线</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

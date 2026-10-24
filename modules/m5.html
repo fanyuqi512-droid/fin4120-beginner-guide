@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 5 · 公司债 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 5 · 公司债</h1>
+  
+<div class="card">
+  <h2>企业借钱的三大支柱</h2>
+  <ol>
+    <li><strong>银行贷款</strong>（私募、可协商）</li>
+    <li><strong>货币市场工具</strong>（如商业票据 CP，极短）</li>
+    <li><strong>资本市场债务</strong>（公司债、MTN、可转债等，中长期）</li>
+  </ol>
+  <p>行业常粗分为 Utilities / Financials / Industrials。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  公司融资像三种「借钱渠道」：找熟人银行（贷款）、打一张超短欠条周转工资（CP）、公开发行正式债券盖楼（公司债）。MTN 则像「债券自动贩卖机」——一次注册，分批按需卖。
+</div>
+<div class="card">
+  <h2>清算瀑布（谁先拿钱）</h2>
+  <p>大致顺序：有担保债权人 → 普通无担保债权人 → 次级债 → 混合资本工具 → 优先股 → 普通股。越往后风险越高、要求回报通常越高。</p>
+</div>
+<div class="card">
+  <h2>评级与损失直觉</h2>
+  <p>违约风险 ≠ 全部信用风险（价差扩大即使未违约也可能亏钱）。</p>
+  <div class="formula">Default Loss Rate ≈ Default Rate × (1 − Recovery Rate)</div>
+  <p>投资级约 Aaa/AAA 到 Baa3/BBB-；以下常称高收益/垃圾债。Moody's、S&P、Fitch 以及国内中诚信、联合、鹏元等。</p>
+</div>
+<div class="card">
+  <h2>传统公司债结构要点</h2>
+  <ul class="clean">
+    <li>一次到期 Term vs 分期还本 Serial</li>
+    <li>固息 vs 浮息</li>
+    <li>有担保 / 无担保 / 次级</li>
+    <li>赎回：传统赎回 vs Make-whole（按国债+利差折现剩余现金流，对投资者更「公道」）</li>
+    <li>偿债基金 Sinking fund：分期购回/抽签兑付</li>
+    <li>高收益结构：延期付息、step-up、PIK、可延长重置等</li>
+  </ul>
+</div>
+<div class="example">
+  <div class="tag">Make-whole vs 传统赎回（讲义数字）</div>
+  面值 1000、票息 5%、10 年。传统 5 年后按 1020 赎回、按 4% 折现，发行时「含赎回」价值低于纯债。<br>
+  Make-whole 用国债 3%+0.5%=3.5% 折现全部剩余现金流，立即赎回价可约 1146——发行人提前还钱更贵，投资者保护更好。
+</div>
+<div class="card">
+  <h2>MTN · CP · 银行贷款 · CLO</h2>
+  <p><strong>MTN：</strong>货架发行（如 Rule 415），期限从数月到 30+ 年，条款可定制；结构化票据常经 MTN 计划发行。</p>
+  <p><strong>CP：</strong>通常 &lt;1 年、无担保、贴现，属货币市场，不是典型「债券」。</p>
+  <p><strong>银行贷款：</strong>非证券化私募；投资级循环贷 vs 杠杆贷款（浮息、风险高）。银团贷款可被打包成 <strong>CLO</strong>（贷款「奶昔」再切片：AAA→权益档）。</p>
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  CP 很短、常无票息结构 → 一般不当作债券。CLO 是「打包贷款的结构化产品」，不是单一公司债。评级 AAA 也不等于危机中绝对安全。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Liquidation Waterfall</strong></li><li><strong>Investment Grade</strong></li><li><strong>High Yield</strong></li><li><strong>Make-whole Call</strong></li><li><strong>MTN</strong></li><li><strong>Commercial Paper</strong></li><li><strong>CLO</strong></li><li><strong>Recovery Rate</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 清算时有担保贷款与普通股谁优先？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>有担保债权人优先。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. CP 期限通常是否短于 1 年？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>是；因此常归货币市场而非典型债券。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. CLO 哪一档风险最低？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>AAA（优先档）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. YTW 对含权债为什么有用？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>取对投资者最不利假设下的收益率，更保守。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. MTN 相对单次发债的最大优点？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>一次注册、分批灵活发行，条款可定制。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m5">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m5"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m4.html"><span class="dir">← 上一模块</span>模块 4：国债</a><a href="m6.html"><span class="dir">下一模块 →</span>模块 6：国际债</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

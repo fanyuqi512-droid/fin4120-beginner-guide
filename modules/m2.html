@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 2 · 债券怎么定价 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 2 · 债券怎么定价</h1>
+  
+<div class="card">
+  <h2>核心公式：价格 = 未来现金流的现值之和</h2>
+  <p>普通固息债（vanilla bond）每期票息 C，共 n 期，到期还面值 M，每期折现率 r（例如年化收益率/2）：</p>
+  <div class="formula">P = Σ C/(1+r)^t  +  M/(1+r)^n
+   = C × [1 − (1+r)^(−n)] / r  +  M/(1+r)^n</div>
+  <p>直觉：钱今天比明天更值钱；越晚到的现金流，折得越狠。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  定价像「点外卖预付」：你愿意为「一年后到的 100 元红包」付多少？若你心里的机会成本是每年 5%，你大概只肯付约 95 元——这就是折现。
+</div>
+<div class="card">
+  <h2>票息 · 价格 · 收益率三角关系</h2>
+  <p><strong>Yield</strong>：使未来现金流现值刚好等于<strong>当前市价</strong>的那个利率。市场先给你价格，你反推 yield。</p>
+  <table class="simple">
+    <tr><th>关系</th><th>价格</th><th>直觉</th></tr>
+    <tr><td>票息率 &lt; 收益率</td><td>折价（Price &lt; Par）</td><td>债「不够香」，必须打折卖</td></tr>
+    <tr><td>票息率 = 收益率</td><td>平价</td><td>刚好符合市场要求</td></tr>
+    <tr><td>票息率 &gt; 收益率</td><td>溢价</td><td>债「太香」，大家抢着溢价买</td></tr>
+  </table>
+  <p>价格与收益率<strong>反向</strong>，且关系是<strong>凸的（convex）</strong>：收益率同等下降带来的涨价，往往大于同等上升带来的跌价。</p>
+</div>
+<div class="example">
+  <div class="tag">迷你算例（讲义风格数字）</div>
+  面值 1000，年票息 5%（每年约 50）。若市场要求 6% 的 yield，价格会落到面值以下（讲义示意约 925 量级）。<br>
+  反过来：7% 票息 vs 6% yield → 溢价（示意约 1075）。
+</div>
+<div class="card">
+  <h2>价格为何随时间变？</h2>
+  <ol>
+    <li><strong>信用变化</strong>：发行人变差 → 要求更高 yield → 价格跌。</li>
+    <li><strong>向面值收敛（Pull-to-Par）</strong>：即使收益率不变，折价债会慢慢涨向面值，溢价债慢慢跌向面值——因为到期必须兑付面值。</li>
+    <li><strong>市场利率变化</strong>：整体收益率上移/下移。</li>
+  </ol>
+</div>
+<div class="card">
+  <h2>浮息债与反向浮息债（入门）</h2>
+  <p><strong>Floater：</strong>票息 = 参考利率 + 利差（spread）。参考利率如 SOFR（替代 LIBOR）、€STR、中国 LPR、联邦基金目标利率等。若市场要求的利差≈债券利差，价格常接近面值。</p>
+  <p><strong>Inverse floater：</strong>票息 = 常数 − 参考利率。利率升时票息降，风险很大。交易商常把一只固息债拆成「浮息 + 反向浮息」；无套利下：抵押品价格 ≈ 浮息价格 + 反向浮息价格。</p>
+</div>
+<div class="card">
+  <h2>干净价与脏价</h2>
+  <div class="formula">Dirty Price（全价/发票价）= Clean Price（净价）+ Accrued Interest（应计利息）</div>
+  <p>报价常见净价；真正交割付钱按脏价。应计利息 ≈（距上次付息已过天数 / 付息期天数）× 当期票息。</p>
+  <p>计日惯例：国债常用 Actual/Actual；公司债/市政债常用 30/360。</p>
+  <p>国债报价还有「32 分之几」传统：如 99-16 = 99 + 16/32 = 99.50。</p>
+</div>
+<div class="example">
+  <div class="tag">应计利息例（讲义）</div>
+  年票息 6%，半年付息 30；上次付息 3/1，交割 7/17，下次 9/1。<br>
+  30/360：AI = 136/180 × 30 ≈ 22.67<br>
+  Actual/Actual：AI = 138/184 × 30 ≈ 22.5
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  报价看到的是 Clean Price，但你账户扣的是 Dirty Price。另：Yield ≠ Coupon Rate——这是全课最高频坑。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Present Value</strong></li><li><strong>YTM</strong></li><li><strong>Pull-to-Par</strong></li><li><strong>Floater</strong></li><li><strong>SOFR</strong></li><li><strong>Clean Price</strong></li><li><strong>Dirty Price</strong></li><li><strong>Accrued Interest</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 净价 985、应计利息 12，买方实付（脏价）多少？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>997。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. 票息 5%、yield 6%，价格相对面值？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>折价（Price &lt; Par）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. Pull-to-Par 指什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>随到期临近，价格自然向面值靠拢。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. 浮息债票息一般怎么写？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>参考利率 + 利差（spread）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. 国债报价 99-16 的小数价格约是多少？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>99.50（99 + 16/32）。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m2">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m2"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m1.html"><span class="dir">← 上一模块</span>模块 1：债券是什么</a><a href="m3.html"><span class="dir">下一模块 →</span>模块 3：收益率</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

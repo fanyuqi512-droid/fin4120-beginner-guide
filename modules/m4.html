@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 4 · 国债与准国债 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 4 · 国债与准国债</h1>
+  
+<div class="card">
+  <h2>为什么国债是固收世界的「锚」</h2>
+  <p>美国国债由财政部发行，以政府信用支持：信用风险极低、流动性极好、不可赎回、记账式发行。利息缴联邦税，但常免州/地方税。讲义强调其体量巨大，吸引全球资本。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  国债像「国家开的存单」：最安全的参照物。其他债券的收益率常写成「国债收益率 + 信用利差」。
+</div>
+<div class="card">
+  <h2>美债主要品种</h2>
+  <table class="simple">
+    <tr><th>品种</th><th>期限</th><th>特点</th></tr>
+    <tr><td>T-bills</td><td>≤1 年</td><td>贴现发行，无票息</td></tr>
+    <tr><td>T-notes</td><td>2–10 年</td><td>固息，半年付息</td></tr>
+    <tr><td>T-bonds</td><td>&gt;10 年</td><td>长期固息</td></tr>
+    <tr><td>FRNs</td><td>常见 2 年</td><td>浮动，常盯 13 周 T-bill + 利差</td></tr>
+    <tr><td>TIPS</td><td>5/10/30 年等</td><td>本金随 CPI-U 调整，保实际购买力</td></tr>
+  </table>
+  <p>中国对照：国债、贴现国债、储蓄国债、（历史上的）央行票据等；储蓄国债偏零售、流动性弱。</p>
+</div>
+<div class="card">
+  <h2>一级市场：拍卖</h2>
+  <p>密封投标。竞争性投标报「收益率+数量」，非竞争性只报数量。单一价格拍卖：所有中标者按<strong>最高中标收益率（stop-out yield）</strong>对应价格成交。<strong>Reopening</strong>：增发已有券，条款相同，增强流动性。</p>
+</div>
+<div class="card">
+  <h2>二级市场</h2>
+  <ul class="clean">
+    <li>全球 OTC，接近 24 小时。</li>
+    <li><strong>On-the-run</strong>：最新发行、最活跃；<strong>Off-the-run</strong>：旧券。</li>
+    <li><strong>When-issued</strong>：发行前就交易，帮助价格发现。</li>
+  </ul>
+  <p>中美结构差异：中国银行间为主（机构），交易所偏零售；美国更统一，零售也可经 TreasuryDirect 参与。</p>
+</div>
+<div class="example">
+  <div class="tag">STRIPS 例（讲义）</div>
+  10 年期国债，面值 1000，票息 4% → 每半年票息 20。可拆成 20 张票息零息券 + 1 张本金零息券 = 21 只 STRIPS。<br>
+  一张附息国债 = 一篮子零息债；价格/久期/凸性应匹配。STRIPS 是构造即期利率曲线的重要来源。注意：应计利息可能每年征税，产生「没现金却要交税」的问题。
+</div>
+<div class="card">
+  <h2>GSE / 准政府</h2>
+  <p>政府机构如 Ginnie Mae 有明确政府担保；Fannie Mae、Freddie Mac、FHLB 等 GSE 多为隐性支持（2008 后更明显）。收益通常略高于国债。中国较接近的是政策性银行债（国开、农发、口行）。</p>
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  GSE ≠ 国债。多数 GSE 没有「明文」的全额政府担保；利差就是在补偿这一点点不确定性。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>T-bill</strong></li><li><strong>T-note</strong></li><li><strong>TIPS</strong></li><li><strong>On-the-run</strong></li><li><strong>STRIPS</strong></li><li><strong>Stop-out Yield</strong></li><li><strong>GSE</strong></li><li><strong>When-issued</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. On-the-run 指什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>最新发行的、通常最活跃的那只国债。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. STRIPS 如何产生？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>把附息国债的每期票息与本金拆开，分别成为零息证券。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. T-bills 付传统票息吗？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>不付；贴现发行。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. 单一价格拍卖里，大家最终按什么收益率定价？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>Stop-out yield（最高中标收益率）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. TIPS 主要对冲什么风险？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>通胀风险（本金/票息随物价指数调整）。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m4">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m4"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m3.html"><span class="dir">← 上一模块</span>模块 3：收益率</a><a href="m5.html"><span class="dir">下一模块 →</span>模块 5：公司债</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

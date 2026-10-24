@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 1 · 债券是什么 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 1 · 债券是什么</h1>
+  
+<div class="card">
+  <h2>债券 = 一张结构化的「借条」</h2>
+  <p>讲义开篇把债券定义为：借款人给你的 <strong>I.O.U.（欠条）</strong>。承诺两件事：</p>
+  <ul class="clean">
+    <li>定期付<strong>票息（Coupon）</strong>——美国公司债常见半年付一次；</li>
+    <li>到期日归还<strong>本金 / 面值（Principal / Face / Par）</strong>——美国常见每张 $1,000，中国国债常见面值 ¥100。</li>
+  </ul>
+  <p>现金流时间线：时期 1…N−1 收到票息 C；时期 N 收到 C + 面值 F。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  债券像「分期付息的房租合同」：合同写明每月租金（票息）和租约结束时押金退还（本金）。合同可以转卖给别人——那就是二级市场交易。
+</div>
+<div class="card">
+  <h2>四大票面要素</h2>
+  <table class="simple">
+    <tr><th>要素</th><th>含义</th><th>新手提示</th></tr>
+    <tr><td>Par Value</td><td>面值</td><td>到期通常按此金额还本</td></tr>
+    <tr><td>Coupon Rate</td><td>年票息率</td><td>乘面值得年利息；再除以付息次数得每期票息</td></tr>
+    <tr><td>Maturity</td><td>到期日</td><td>短债≤5年，中债5–12年，长债&gt;12年（讲义口径）</td></tr>
+    <tr><td>Payment Frequency</td><td>付息频率</td><td>美债公司债常半年；影响每期折现次数</td></tr>
+  </table>
+</div>
+<div class="card">
+  <h2>市场板块（Sectors）一眼看懂</h2>
+  <p><strong>美国：</strong>Treasury（国债）· Agency（机构）· Municipal（市政，利息常免税）· Corporate · ABS/MBS · 外国债/欧洲债。</p>
+  <p><strong>中国：</strong>国债 · 政策性银行债 · 公司债/企业债 · 商业银行债 · ABS · 熊猫债（外资在华发人民币债）等。</p>
+  <p><strong>监管差异：</strong>美国相对「一队分工清晰」（SEC、Fed、Treasury…）；中国更多「按品种分管」（央行管银行间、证监会管交易所债、发改委、财政部等）。</p>
+</div>
+<div class="card">
+  <h2>特殊票息与嵌入期权（先建立地图）</h2>
+  <p>票息可以是固定、浮动（跟 SOFR/LPR 等）、零息、递增（step-up）、延期付息、PIK（用新债抵利息）等。</p>
+  <p>嵌入期权：<strong>可赎回 Callable</strong>（发行人有利）· <strong>可回售 Puttable</strong>（投资者有利）· <strong>可转股 Convertible</strong> · 可交换 Exchangeable 等。有期权就会改变定价与风险，后面模块会回来。</p>
+</div>
+<div class="card">
+  <h2>债券投资的主要风险</h2>
+  <p><em>市场与宏观：</em>利率风险、通胀风险、汇率风险、收益率曲线形态变化、波动风险。</p>
+  <p><em>发行人与结构：</em>信用/违约风险、赎回风险、流动性风险、事件风险、税收规则变化。</p>
+</div>
+<div class="example">
+  <div class="tag">报价惯例小例子（来自讲义）</div>
+  「Coca-Cola 4.25s 5/15/2029」= 可口可乐、票息 4.25%、2029-05-15 到期。记号通常不写付息频率，但美国公司债多数半年付息。<br>
+  <strong>CUSIP</strong>：美加证券 9 位身份证；国际常用 <strong>CINS</strong>（更长，常含国家码）。
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  「Municipal 利息免税」不等于「市政债零风险」——仍有信用与流动性风险；GO（以税收担保）与 Revenue（以项目收入担保）风险来源不同。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Coupon</strong></li><li><strong>Par Value</strong></li><li><strong>Maturity</strong></li><li><strong>Callable</strong></li><li><strong>Puttable</strong></li><li><strong>CUSIP</strong></li><li><strong>Interest Rate Risk</strong></li><li><strong>Credit Risk</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 债券到期通常还的是什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>面值（principal / face value），外加最后一期票息。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. 美国公司债票息最常见多久付一次？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>半年（semiannual）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. Callable 对谁有利？利率下降时投资者可能面临什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>对发行人有利；投资者可能被提前还款，面临再投资风险（call risk）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. 利率上升对长期债券价格波动通常比对短期债券更大还是更小？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>通常更大（久期更长，利率风险更大）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. 「Coca-Cola 4.25s 5/15/2029」中的 4.25 指什么？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>年票息率 4.25%。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m1">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m1"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m0.html"><span class="dir">← 上一模块</span>模块 0：导论</a><a href="m2.html"><span class="dir">下一模块 →</span>模块 2：怎么定价</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

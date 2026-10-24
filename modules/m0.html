@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 0 · 导论：什么是固定收益？ · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 0 · 导论：什么是固定收益？</h1>
+  
+<div class="card">
+  <h2>一句话定义</h2>
+  <p><strong>固定收益（Fixed Income）</strong>：一类以「约定现金流」为核心的投资——你把钱借出去，对方承诺按规则付息、到期还本。最典型的就是<strong>债券（Bond）</strong>。</p>
+  <p>和股票不同：股票持有人分享公司利润与控制权；债券持有人通常<strong>没有投票权</strong>，但在公司清算时往往<strong>优先于股东</strong>受偿。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  想象你开了一家「私人银行」：同学向你借 1000 元，约定每年给你 50 元利息，三年后还本。这张借条就是迷你债券。若同学信用很好、市场利率又低，别人可能愿意花 1020 元向你买下这张借条——价格就动了。
+</div>
+<div class="card">
+  <h2>本站学习总路线图</h2>
+  <ol>
+    <li><strong>工具是什么</strong>（模块 1）：债券的零件与风险清单。</li>
+    <li><strong>怎么标价</strong>（模块 2–3）：折现 → 价格与收益率 → 各种 yield 指标。</li>
+    <li><strong>市场上有哪些货</strong>（模块 4–6）：国债、公司债、国际债。</li>
+    <li><strong>利率的全景图</strong>（模块 7–8）：收益率曲线形状 → 如何从一篮子债券「反推」零息曲线。</li>
+  </ol>
+</div>
+<div class="card">
+  <h2>你会反复遇到的核心直觉</h2>
+  <ul class="clean">
+    <li><strong>利率 ↑ → 旧债券价格 ↓</strong>（新债票息更高，旧债必须打折才有人买）。</li>
+    <li><strong>票息率 ≠ 收益率</strong>：票息是「合同写死的」，收益率是「按现价算出来的回报」。</li>
+    <li><strong>风险换收益</strong>：信用越差、期限越长、流动性越差，通常要求更高的收益率补偿。</li>
+  </ul>
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  「固定收益」不等于「没有风险」。票息金额可能固定，但市场价格会波动；通胀、违约、提前赎回、汇率都会伤害实际回报。
+</div>
+<div class="example">
+  <div class="tag">迷你算例（自编数字，帮助建立直觉）</div>
+  你持有一张面值 1000 元、年票息 5%（每年 50 元）的债券。若市场同类债券现在要 6% 的回报，你的债券就「不够香」，价格会跌到面值以下（折价债）。模块 2 会正式算这个折现。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Fixed Income 固定收益</strong></li><li><strong>Bond 债券</strong></li><li><strong>Coupon 票息</strong></li><li><strong>Yield 收益率</strong></li><li><strong>Par / Face Value 面值</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 固定收益投资者更像公司的股东还是债权人？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>债权人（Creditor）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. 利率上升时，已经发行的固定票息债券价格通常怎么变？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>通常下跌。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. 票息率（coupon rate）和收益率（yield）是否一定相等？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>不一定。只有价格等于面值时二者才常相等；市价变化后 yield 会偏离票息率。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. 为什么清算时债券往往比股票安全一点？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>清偿优先级更高：先偿债，再分给股东。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. 「固定收益」是否意味着零风险？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>否。价格、信用、通胀、流动性、汇率等风险仍在。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m0">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m0"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><span></span><a href="m1.html"><span class="dir">下一模块 →</span>模块 1：债券是什么</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

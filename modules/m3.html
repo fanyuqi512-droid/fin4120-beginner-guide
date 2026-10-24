@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模块 3 · 收益率怎么算 · Fin4120 零基础学习站</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../index.html">Fin4120 零基础固收</a>
+    <nav>
+      <a href="../index.html">学习路径</a>
+      <a href="../glossary.html">术语表</a>
+      <a href="../index.html#progress">进度</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <p class="muted"><a href="../index.html">← 返回首页</a></p>
+  <h1>模块 3 · 收益率怎么算</h1>
+  
+<div class="card">
+  <h2>Yield = 投资的内部收益率（IRR）</h2>
+  <p>找一个利率 y，使所有现金流折现之和等于买入价 P：</p>
+  <div class="formula">P = Σ CF_t / (1+y)^t</div>
+  <p>零息债有闭式解：y = (CF_n / P)^(1/n) − 1。附息债一般靠试错/数值方法。</p>
+  <p><strong>年化：</strong>名义年化 ≈ 周期利率 × m；有效年利率 EAY = (1+y_per)^m − 1。</p>
+</div>
+<div class="callout analogy">
+  <div class="label">日常类比</div>
+  Current Yield 像「房租收益率」= 年租金/房价，只管当下现金；YTM 像「整段租约的总账」——还要把到期卖房盈亏、租金再投资算进去。
+</div>
+<div class="card">
+  <h2>常见收益率指标速查</h2>
+  <table class="simple">
+    <tr><th>指标</th><th>在算什么</th></tr>
+    <tr><td>Current Yield</td><td>年票息 / 现价；忽略资本利得与再投资</td></tr>
+    <tr><td>YTM</td><td>持有到期的总回报假设（含票息、价差、再投资于 YTM）</td></tr>
+    <tr><td>YTC / YTP</td><td>假设在赎回日/回售日结束</td></tr>
+    <tr><td>YTW</td><td>YTM、YTC、YTP 等中最差（最低）的那个</td></tr>
+    <tr><td>Cash Flow Yield</td><td>用于 MBS/ABS 等提前还款不确定的现金流</td></tr>
+  </table>
+  <p><strong>折价债：</strong>Coupon &lt; Current Yield &lt; YTM。<br>
+  <strong>溢价债：</strong>Coupon &gt; Current Yield &gt; YTM。<br>
+  <strong>平价：</strong>三者大致相等。</p>
+</div>
+<div class="example">
+  <div class="tag">Current Yield 例（讲义）</div>
+  年票息 50，价格 900 → Current Yield = 50/900 ≈ 5.56%。若持有到期还能赚回面值差额，YTM 会更高（讲义示意约 6.2%）。
+</div>
+<div class="card">
+  <h2>组合与浮息债</h2>
+  <p>组合收益率<strong>不是</strong>各券 YTM 简单平均，而应合并全部现金流，再对总市值解一个 IRR。</p>
+  <p>浮息债常用 <strong>Discount Margin（DM）</strong>：假定参考利率不变，找一个利差，用「参考利率+利差」折现，使现值=市价。平价且利差 80bps 时，DM≈80bps。</p>
+</div>
+<div class="card">
+  <h2>总回报与持有期（Horizon）分析</h2>
+  <p>债券回报三来源：票息 · 资本利得/损失 · 票息再投资（利息的利息）。</p>
+  <p>YTM 假设：持有到期 + 票息按 YTM 再投资。现实常提前卖出、再投资利率变化——于是用 <strong>Horizon Analysis</strong>：</p>
+  <ol>
+    <li>算持有期内票息及再投资的终值；</li>
+    <li>估计期末卖出价（用当时预期收益率折现剩余现金流）；</li>
+    <li>总终值与期初价格反推持有期收益率。</li>
+  </ol>
+</div>
+<div class="example">
+  <div class="tag">持有期算例（讲义改编）</div>
+  面值 1000，票息 6%（年付 60），买价 970，持有 3 年，再投资利率 4%，预计卖出时收益率 5%。<br>
+  票息终值 ≈ 187.30；卖出价 ≈ 1018.59；总终值 ≈ 1205.89。<br>
+  解 970(1+y)^3 = 1205.89 → y ≈ <strong>7.53%</strong>/年。<br>
+  注意：短持有期表面收益率可能更高，但波动也更大；「提前卖出锁定高收益再重复」现实中有再投资风险、交易成本，且事前并不确定。
+</div>
+<div class="callout warn">
+  <div class="label">容易混淆</div>
+  YTM 不是「保证到手的收益率」。它内嵌再投资假设；若你中途卖出或再投资利率改变，实现总回报会偏离 YTM。
+</div>
+<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>IRR</strong></li><li><strong>Current Yield</strong></li><li><strong>YTM</strong></li><li><strong>YTC</strong></li><li><strong>YTW</strong></li><li><strong>Discount Margin</strong></li><li><strong>Horizon Analysis</strong></li><li><strong>Reinvestment Risk</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
+<div class="q">
+  <div class="qtext">Q1. 折价交易时，票息率与 Current Yield 谁更高？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>Current Yield 更高（年票息/较低市价）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q2. 哪个指标把持有到期的票息+资本利得一起考虑？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>YTM。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q3. 组合 YTM 能否对各券 YTM 取简单平均？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>一般不能，应合并现金流再解 IRR。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q4. 浮息债常用什么代替传统 YTM 表述？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>Discount Margin（折现利差）。</div>
+</div>
+<div class="q">
+  <div class="qtext">Q5. Horizon analysis 比 YTM 多考虑了什么现实因素？</div>
+  <button type="button" data-reveal>显示答案</button>
+  <div class="ans"><strong>答：</strong>持有期长度、再投资利率、期末卖出价格（市场收益率变化）。</div>
+</div>
+</div>
+  <div class="card checklist">
+    <label>
+      <input type="checkbox" data-module-check="m3">
+      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m3"></span></span>
+    </label>
+  </div>
+  <div class="nav-mod"><a href="m2.html"><span class="dir">← 上一模块</span>模块 2：定价</a><a href="m4.html"><span class="dir">下一模块 →</span>模块 4：国债</a></div>
+</div>
+<footer class="site">
+  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
