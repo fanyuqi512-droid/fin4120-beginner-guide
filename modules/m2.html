@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>模块 2 · 债券怎么定价 · Fin4120 零基础学习站</title>
+<title>模块 2 · 债券怎么定价 · Pricing of Bonds · Fin4120 零基础学习站</title>
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
+
 </head>
 <body>
 <header class="site">
@@ -17,104 +22,847 @@
     </nav>
   </div>
 </header>
-<div class="wrap">
+<div class="wrap wide">
   <p class="muted"><a href="../index.html">← 返回首页</a></p>
-  <h1>模块 2 · 债券怎么定价</h1>
+  <h1 class="mod-title">模块 2 · 债券怎么定价 · Pricing of Bonds</h1>
   
-<div class="card">
-  <h2>核心公式：价格 = 未来现金流的现值之和</h2>
-  <p>普通固息债（vanilla bond）每期票息 C，共 n 期，到期还面值 M，每期折现率 r（例如年化收益率/2）：</p>
-  <div class="formula">P = Σ C/(1+r)^t  +  M/(1+r)^n
-   = C × [1 − (1+r)^(−n)] / r  +  M/(1+r)^n</div>
-  <p>直觉：钱今天比明天更值钱；越晚到的现金流，折得越狠。</p>
+<div class="source-note">
+  <strong>Source:</strong> Fin4120 slides — <em>Pricing of Bonds</em>, Prof. Linlin Ye (CUHKSZ) — for personal study.
+  左侧为讲义文本摘录（按幻灯片分页整理）；右侧为学习解析，非讲义原文照搬。
 </div>
-<div class="callout analogy">
-  <div class="label">日常类比</div>
-  定价像「点外卖预付」：你愿意为「一年后到的 100 元红包」付多少？若你心里的机会成本是每年 5%，你大概只肯付约 95 元——这就是折现。
+<div class="dual-legend">
+  <span><i class="dot L"></i> 讲义原文</span>
+  <span><i class="dot R"></i> 解析（中文）</span>
 </div>
 <div class="card">
-  <h2>票息 · 价格 · 收益率三角关系</h2>
-  <p><strong>Yield</strong>：使未来现金流现值刚好等于<strong>当前市价</strong>的那个利率。市场先给你价格，你反推 yield。</p>
-  <table class="simple">
-    <tr><th>关系</th><th>价格</th><th>直觉</th></tr>
-    <tr><td>票息率 &lt; 收益率</td><td>折价（Price &lt; Par）</td><td>债「不够香」，必须打折卖</td></tr>
-    <tr><td>票息率 = 收益率</td><td>平价</td><td>刚好符合市场要求</td></tr>
-    <tr><td>票息率 &gt; 收益率</td><td>溢价</td><td>债「太香」，大家抢着溢价买</td></tr>
-  </table>
-  <p>价格与收益率<strong>反向</strong>，且关系是<strong>凸的（convex）</strong>：收益率同等下降带来的涨价，往往大于同等上升带来的跌价。</p>
+  <h2>本模块目录（共 24 节）</h2>
+  <div class="toc-dual">
+    <a href="#s1">1. Pricing of Bonds</a><a href="#s2">2. 1. PRICING OF A VANILLA BOND</a><a href="#s3">3. 1. Pricing of a Vanilla Bond</a><a href="#s4">4. 2. COUPON, PRICE, YIELD</a><a href="#s5">5. 2. Coupon, Yield, Price</a><a href="#s6">6. 2. Coupon,</a><a href="#s7">7. 2. Coupon, Yield, Price-Yield Relationship:</a><a href="#s8">8. 3. PRICE EVOLUTION OF BONDS</a><a href="#s9">9. 3. Bond Price Change Over Time</a><a href="#s10">10. 3. Price Change Over Time</a><a href="#s11">11. 4. PRICING CHALLENGES</a><a href="#s12">12. Real-World Bonds: Pricing is not so</a><a href="#s13">13. 5. PRICING FLOATERS AND</a><a href="#s14">14. 5. Pricing Floater &amp; Inverse Floater</a><a href="#s15">15. 5. Pricing Floater &amp; Inverse</a><a href="#s16">16. How to price an inverse floater?</a><a href="#s17">17. How to price an inverse floater? (continued)</a><a href="#s18">18. 6. CLEAN, DIRTY PRICES OF</a><a href="#s19">19. 6. Price Quotes:</a><a href="#s20">20. 6. Price Quotes: Clean &amp; Dirty Price</a><a href="#s21">21. 6. Price Quotes: Clean &amp; Dirty Price</a><a href="#s22">22. 6. Price</a><a href="#s23">23. Quick Quiz</a><a href="#s24">24. Summary &amp; Key Takeaways</a>
+  </div>
 </div>
-<div class="example">
-  <div class="tag">迷你算例（讲义风格数字）</div>
-  面值 1000，年票息 5%（每年约 50）。若市场要求 6% 的 yield，价格会落到面值以下（讲义示意约 925 量级）。<br>
-  反过来：7% 票息 vs 6% yield → 溢价（示意约 1075）。
+
+<p class="section-anchor" id="s1">§ Pricing of Bonds</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">Pricing of Bonds</h3>
+      <pre class="lecture-text">Pricing of Bonds
+
+Roadmap
+
+1.   Pricing of a vanilla bond
+2.   Coupon, price, and yield relationship
+3.   Bond prices evolve over time
+4.   Pricing challenges
+5.   Pricing floaters and inverse floaters
+6.   Clean price and dirty price of bonds</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>
+<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>
+    </div>
+  </section>
 </div>
-<div class="card">
-  <h2>价格为何随时间变？</h2>
-  <ol>
-    <li><strong>信用变化</strong>：发行人变差 → 要求更高 yield → 价格跌。</li>
-    <li><strong>向面值收敛（Pull-to-Par）</strong>：即使收益率不变，折价债会慢慢涨向面值，溢价债慢慢跌向面值——因为到期必须兑付面值。</li>
-    <li><strong>市场利率变化</strong>：整体收益率上移/下移。</li>
-  </ol>
+
+
+<p class="section-anchor" id="s2">§ 1. PRICING OF A VANILLA BOND</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">1. PRICING OF A VANILLA BOND</h3>
+      <pre class="lecture-text">1. Pricing of a Vanilla Bond
+Review: Time Value of Money
+               Time (t)    0         1               2                ...     n
+            Cash Flow     PV=?      A               A             …           A
+
+         Present Value of Money                   Recall the Math Formula:
+                 (Period 0)                       The sum of a geometric series:
+                                                         𝑎 + 𝑎q + 𝑎q2 + ⋯ + 𝑎q𝑛−1 ,
+•   Suppose 𝑟 is the interest rate per
+                                                  is (first 𝑛 tems):
+    period
+                                                                     1 − q𝑛
+•   𝐴 is paid at the end of each period,                      𝑆𝑛 = 𝑎              for 𝑟 ≠ 1.
+                                                                     1−q
+•   Then the present value of such
+    series of money is:                                  That is:
+            𝑨     𝑨           𝑨                                       𝒏
+    𝑷𝑽 =       +       + ⋯ +                                        𝟏       𝟏 − 𝟏 + 𝒓 −𝒏
+           𝟏+𝒓   𝟏+𝒓 𝟐       𝟏+𝒓 𝒏                        𝑷𝑽 = 𝑨 ෍       =𝑨
+                                                                   𝟏+𝒓 𝒕         𝒓
+                                                                    𝒕=𝟏</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>定价第一性原理：债券价格 = 未来现金流的<strong>现值之和</strong>。利率越高，同样的未来钱今天越不值钱 → 价格越低。</p>
+<div class="kf">P = Σ C_t / (1+r)^t   +   F / (1+r)^N</div>
+<p>等比数列求和公式是为了把「每期固定票息」收成闭式，考试常直接用年金公式加速计算。</p>
+<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
+    </div>
+  </section>
 </div>
-<div class="card">
-  <h2>浮息债与反向浮息债（入门）</h2>
-  <p><strong>Floater：</strong>票息 = 参考利率 + 利差（spread）。参考利率如 SOFR（替代 LIBOR）、€STR、中国 LPR、联邦基金目标利率等。若市场要求的利差≈债券利差，价格常接近面值。</p>
-  <p><strong>Inverse floater：</strong>票息 = 常数 − 参考利率。利率升时票息降，风险很大。交易商常把一只固息债拆成「浮息 + 反向浮息」；无套利下：抵押品价格 ≈ 浮息价格 + 反向浮息价格。</p>
+
+
+<p class="section-anchor" id="s3">§ 1. Pricing of a Vanilla Bond</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">1. Pricing of a Vanilla Bond</h3>
+      <pre class="lecture-text">1. Pricing of a Vanilla Bond
+  Time (t)         1              2                        3    ...          N
+Cash Flow          𝐶             𝐶                        𝐶     …          𝐶 +𝑀
+
+The price of a plain vanilla bond is just the sum of the PV of its coupons and its
+maturity value:
+Or,
+                    𝑛
+                   𝐶       𝑀        𝟏 − 𝟏 + 𝒓 −𝒏    𝑴
+              𝑷=෍       +       = 𝑪              +
+                  1+𝑟 𝑡   1+𝑟 𝑛          𝒓         𝟏+𝒓 𝒏
+                   𝑡=1
+Where:
+  •C = periodic coupon payment
+  •r = periodic yield (e.g., annual yield / 2 for semiannual)
+  •M = maturity (par) value
+  •n = total number of periods</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>定价第一性原理：债券价格 = 未来现金流的<strong>现值之和</strong>。利率越高，同样的未来钱今天越不值钱 → 价格越低。</p>
+<div class="kf">P = Σ C_t / (1+r)^t   +   F / (1+r)^N</div>
+<p>等比数列求和公式是为了把「每期固定票息」收成闭式，考试常直接用年金公式加速计算。</p>
+    </div>
+  </section>
 </div>
-<div class="card">
-  <h2>干净价与脏价</h2>
-  <div class="formula">Dirty Price（全价/发票价）= Clean Price（净价）+ Accrued Interest（应计利息）</div>
-  <p>报价常见净价；真正交割付钱按脏价。应计利息 ≈（距上次付息已过天数 / 付息期天数）× 当期票息。</p>
-  <p>计日惯例：国债常用 Actual/Actual；公司债/市政债常用 30/360。</p>
-  <p>国债报价还有「32 分之几」传统：如 99-16 = 99 + 16/32 = 99.50。</p>
+
+
+<p class="section-anchor" id="s4">§ 2. COUPON, PRICE, YIELD</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">2. COUPON, PRICE, YIELD</h3>
+      <pre class="lecture-text">2. COUPON, PRICE, YIELD
+
+What is a Yield?
+
+               Recall, the bond price is
+                                1 − 1 + 𝑟 −𝑛    𝑀
+                         𝑃=𝐶                 +
+                                        𝑟      1+𝑟 𝑛
+
+               Yield = The interest rate that makes the present
+2. Coupon,     value of a bond’s future cash flows equal to its
+Yield, Price   current market price.
+
+Relationship   •  In reality, you don’t usually calculate the price of
+                  a bond from the interest rate.
+                  Instead, you see the bond’s price in the market,
+                  then figure out:
+               What return (interest rate) am I really getting if I
+               buy it at this price?
+                               That return is the Yield.
+
+                   Important: Yield ≠ Coupon Rate!</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Yield</strong> 是使模型价格等于市价的折现率（对息票债常称 YTM）。它把「价格」翻译成「年化回报语言」。</p>
+<div class="kf">Coupon ↑  →  Price ↑；  Yield ↑  →  Price ↓；  平价时 Yield ≈ Coupon Rate</div>
+<div class="trap"><strong>易错点：</strong>价格与收益率反向：利率升 → 旧债跌。不要把 coupon rate 当成你实际能锁定的回报。</div>
+    </div>
+  </section>
 </div>
-<div class="example">
-  <div class="tag">应计利息例（讲义）</div>
-  年票息 6%，半年付息 30；上次付息 3/1，交割 7/17，下次 9/1。<br>
-  30/360：AI = 136/180 × 30 ≈ 22.67<br>
-  Actual/Actual：AI = 138/184 × 30 ≈ 22.5
+
+
+<p class="section-anchor" id="s5">§ 2. Coupon, Yield, Price</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">2. Coupon, Yield, Price</h3>
+      <pre class="lecture-text">2. Coupon, Yield, Price
+Relationship
+What is a Yield? And why it is different from Coupon Rate?
+
+   Important: Yield ≠ Coupon Rate!
+
+   Coupon Rate                         Yield
+
+           at issuance                               with market price
+
+   How much                            How much</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Yield</strong> 是使模型价格等于市价的折现率（对息票债常称 YTM）。它把「价格」翻译成「年化回报语言」。</p>
+<div class="kf">Coupon ↑  →  Price ↑；  Yield ↑  →  Price ↓；  平价时 Yield ≈ Coupon Rate</div>
+<div class="trap"><strong>易错点：</strong>价格与收益率反向：利率升 → 旧债跌。不要把 coupon rate 当成你实际能锁定的回报。</div>
+    </div>
+  </section>
 </div>
-<div class="callout warn">
-  <div class="label">容易混淆</div>
-  报价看到的是 Clean Price，但你账户扣的是 Dirty Price。另：Yield ≠ Coupon Rate——这是全课最高频坑。
+
+
+<p class="section-anchor" id="s6">§ 2. Coupon,</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">2. Coupon,</h3>
+      <pre class="lecture-text">2. Coupon,
+                         coupon rates, bond prices and yields
+Yield, Price
+Relationship
+    if         then                 Intuition                 Example
+
+ Coupon    Price &lt; Par   Bond pays    than             5% coupon vs 6% yield
+ Rate                    market demands → must         → bond pays $50/yr but
+ &lt; Yield                 sell at a      to             market wants $60 →
+                         compensate                    price ≈ $925
+
+ Coupon    Price = Par   Bond pays exactly what        6% coupon vs 6% yield
+ Rate                    market wants →                → $60/year is acceptable
+ = Yield                 is at par                     → price = $1,000
+
+ Coupon    Price &gt; Par   Bond pays        than         7% coupon vs 6% yield
+ Rate                    market demands →              → $70/yr is generous →
+ &gt; Yield                 investors will pay a          price ≈ $1,075</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>本页围绕定价主题「2. Coupon,」。核心仍是：选对现金流、选对折现率、注意计息惯例。</p>
+<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
+    </div>
+  </section>
 </div>
-<div class="card"><h3>本模块术语</h3><ul class="clean"><li><strong>Present Value</strong></li><li><strong>YTM</strong></li><li><strong>Pull-to-Par</strong></li><li><strong>Floater</strong></li><li><strong>SOFR</strong></li><li><strong>Clean Price</strong></li><li><strong>Dirty Price</strong></li><li><strong>Accrued Interest</strong></li></ul><p class="muted">更多定义见 <a href="../glossary.html">全站术语表</a>。</p></div><div class="quiz"><h3>自测题（点开看答案）</h3>
-<div class="q">
-  <div class="qtext">Q1. 净价 985、应计利息 12，买方实付（脏价）多少？</div>
-  <button type="button" data-reveal>显示答案</button>
-  <div class="ans"><strong>答：</strong>997。</div>
+
+
+<p class="section-anchor" id="s7">§ 2. Coupon, Yield, Price-Yield Relationship:</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">2. Coupon, Yield, Price-Yield Relationship:</h3>
+      <pre class="lecture-text">2. Coupon, Yield,                          Price-Yield Relationship:
+Price Relationship                         Inverse and convex
+
+This means:
+•   (inverse) If yield goes up, price goes down,
+    and vice versa.
+•   (convex) As yields fall, prices rise faster. As
+    yields rise, prices fall more slowly. That is,
+    the price gain from a decrease in yield is
+    larger than the price loss from an
+    equivalent increase in yield.
+•   (convex) At low yields → bond price is very
+    sensitive to small yield changes.
+•   (convex) At high yields → bond price
+    becomes less sensitive to further increases</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Yield</strong> 是使模型价格等于市价的折现率（对息票债常称 YTM）。它把「价格」翻译成「年化回报语言」。</p>
+<div class="kf">Coupon ↑  →  Price ↑；  Yield ↑  →  Price ↓；  平价时 Yield ≈ Coupon Rate</div>
+<div class="trap"><strong>易错点：</strong>价格与收益率反向：利率升 → 旧债跌。不要把 coupon rate 当成你实际能锁定的回报。</div>
+    </div>
+  </section>
 </div>
-<div class="q">
-  <div class="qtext">Q2. 票息 5%、yield 6%，价格相对面值？</div>
-  <button type="button" data-reveal>显示答案</button>
-  <div class="ans"><strong>答：</strong>折价（Price &lt; Par）。</div>
+
+
+<p class="section-anchor" id="s8">§ 3. PRICE EVOLUTION OF BONDS</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">3. PRICE EVOLUTION OF BONDS</h3>
+      <pre class="lecture-text">3. PRICE EVOLUTION OF BONDS
+
+3. Bond Price
+Change Over     Example: U.S. Treasury Yields
+Time                   (2019-2024)</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>即使收益率不变，折价债会随时间<strong>向面值靠拢（pull to par）</strong>；溢价债则逐渐回落至面值。</p>
+<p>价格变化 = 时间流逝效应 + 收益率变动效应 +（若有）应计利息效应。分析时要拆开看。</p>
+    </div>
+  </section>
 </div>
-<div class="q">
-  <div class="qtext">Q3. Pull-to-Par 指什么？</div>
-  <button type="button" data-reveal>显示答案</button>
-  <div class="ans"><strong>答：</strong>随到期临近，价格自然向面值靠拢。</div>
+
+
+<p class="section-anchor" id="s9">§ 3. Bond Price Change Over Time</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">3. Bond Price Change Over Time</h3>
+      <pre class="lecture-text">3. Bond Price Change Over Time
+What causes bond prices to change?
+Three main reasons:
+1. Credit Risk Change
+    – If issuer gets riskier, investors demand higher yield → price drops.
+    – If safer, yield falls → price rises.
+2. Pull-to-Par (Time Effect)
+    – Discount bond? Price slowly rises to 1,000.
+    – Premium bond? Price slowly falls to1,000.
+           All bonds "pull" toward par as maturity nears.
+3. Market Yield Changes
+    – Rates go up? Old bond prices drop.
+    – Rates go down? Old bond prices rise.
+          (They adjust to stay competitive.)</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>即使收益率不变，折价债会随时间<strong>向面值靠拢（pull to par）</strong>；溢价债则逐渐回落至面值。</p>
+<p>价格变化 = 时间流逝效应 + 收益率变动效应 +（若有）应计利息效应。分析时要拆开看。</p>
+    </div>
+  </section>
 </div>
-<div class="q">
-  <div class="qtext">Q4. 浮息债票息一般怎么写？</div>
-  <button type="button" data-reveal>显示答案</button>
-  <div class="ans"><strong>答：</strong>参考利率 + 利差（spread）。</div>
+
+
+<p class="section-anchor" id="s10">§ 3. Price Change Over Time</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">3. Price Change Over Time</h3>
+      <pre class="lecture-text">3. Price Change Over Time
+  Pull-to-Par Effect: Why bond prices drift towards their face values?
+    As a bond gets closer to maturity, its price
+naturally moves toward par, even if nothing else
+changes. Why?
+This is because:
+• The time value of money is diminishing, and
+• At maturity, all bonds pay their face value
+   (par), final price is fixed = face value,
+   regardless of how much you paid for the bond.
+   So, as time passes, the bond’s market price
+   must converge toward that terminal cash flow.             e.g., a bond priced ￥80
+Indeed, we have, in Mathes:                                  (discount), as maturity
+              1 − 1 + 𝑟 −(𝑛−𝑡)        𝑀                      nears, prices rises to ￥100.
+       𝑃𝑡 = 𝐶                   +
+                      𝑟            1 + 𝑟 𝑛−𝑡
+                𝑷𝒕 → Par, as 𝒕 → 𝑻</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>定价第一性原理：债券价格 = 未来现金流的<strong>现值之和</strong>。利率越高，同样的未来钱今天越不值钱 → 价格越低。</p>
+<div class="kf">P = Σ C_t / (1+r)^t   +   F / (1+r)^N</div>
+<p>等比数列求和公式是为了把「每期固定票息」收成闭式，考试常直接用年金公式加速计算。</p>
+    </div>
+  </section>
 </div>
-<div class="q">
-  <div class="qtext">Q5. 国债报价 99-16 的小数价格约是多少？</div>
-  <button type="button" data-reveal>显示答案</button>
-  <div class="ans"><strong>答：</strong>99.50（99 + 16/32）。</div>
+
+
+<p class="section-anchor" id="s11">§ 4. PRICING CHALLENGES</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">4. PRICING CHALLENGES</h3>
+      <pre class="lecture-text">4. PRICING CHALLENGES
+
+Real-World Bonds: Pricing is not so simple!
+                                            𝑛
+                                             𝐶𝐹𝑡
+                                        𝑃=෍
+                                            1+𝑟 𝑡
+4. Pricing                                  𝑡=1
+
+Complications       – Coupon payments may not be regular.
+
+                    – Cash flows not certain:</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>现实难题：付息频率、节假日惯例、嵌入期权、信用风险、流动性折价、税收等都会让「教科书公式」需要调整。</p>
+<p>课程后面会用更精细的折现曲线（零息曲线）来替代单一收益率假设。</p>
+    </div>
+  </section>
 </div>
+
+
+<p class="section-anchor" id="s12">§ Real-World Bonds: Pricing is not so</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">Real-World Bonds: Pricing is not so</h3>
+      <pre class="lecture-text">Real-World Bonds: Pricing is not so
+                simple! (continued)
+                                            𝑛
+                                                  𝐶𝐹𝑡
+                                          𝑃=෍
+                                                 1+𝑟 𝑡
+                                           𝑡=1
+                        – Determination of discount rate r
+4. Pricing
+Complications           – Different rates for different cash flows
+
+                    Bottom Line: Real bond pricing accounts
+                for uncertainty, timing, and market reality —
+                not just a simple formula!</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>现实难题：付息频率、节假日惯例、嵌入期权、信用风险、流动性折价、税收等都会让「教科书公式」需要调整。</p>
+<p>课程后面会用更精细的折现曲线（零息曲线）来替代单一收益率假设。</p>
+    </div>
+  </section>
 </div>
+
+
+<p class="section-anchor" id="s13">§ 5. PRICING FLOATERS AND</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">5. PRICING FLOATERS AND</h3>
+      <pre class="lecture-text">5. PRICING FLOATERS AND
+
+5. Pricing Floater &amp; Inverse
+Floater
+
+We now examine the pricing of two special bonds:
+floating-rate and inverse-floating-rate bonds.
+
+1. Floater: a bond whose coupon rate is floating with
+   reference
+𝐜𝐨𝐮𝐩𝐨𝐧 𝐫𝐚𝐭𝐞 (floater) = 𝒓𝒆𝒇𝒆𝒓𝒆𝒏𝒄𝒆 𝒓𝒂𝒕𝒆 + 𝐬𝐩𝐫𝐞𝐚𝐝
+
+e.g., suppose 𝑠𝑝𝑟𝑒𝑎𝑑 = 1%, then
+        Floater Coupon = 𝑟𝑒𝑓𝑒𝑟𝑒𝑛𝑐𝑒 𝑟𝑎𝑡𝑒 + 1%
+Therefore,
+Price ≈ par if Market required spread ≈ bond spread
+Why?</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Floater</strong>（浮息债）票息随参考利率重置，久期通常较短，价格相对稳定。</p>
+<p><strong>Inverse floater</strong> 可理解为：固定票息债多头 + 浮息债空头的组合；杠杆放大利率敏感度。</p>
+<div class="kf">Fixed coupon bond ≈ Floater + Inverse floater  （在适当面值搭配下）</div>
+<div class="trap"><strong>易错点：</strong>逆浮息在利率上升时票息下降且价格往往更痛，风险不对称。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s14">§ 5. Pricing Floater &amp; Inverse Floater</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">5. Pricing Floater &amp; Inverse Floater</h3>
+      <pre class="lecture-text">5. Pricing Floater &amp; Inverse Floater
+Common reference rate like LIBER (phased out), SOFR (the new LIBER)
+Rate   Region   Full Name      What Is It?                      Used For
+                Secured        A safe, daily rate based on real
+                Overnight      U.S. Treasury repo               Floating-rate loans,
+SOFR U.S.
+                Financing      transactions. Replaced USD       bonds, swaps, FRNs
+                Rate           LIBOR.
+                               Risk-free overnight rate
+                                                                Euro-denominated
+              Euro Short-      reflecting eurozone banks’
+€STR Eurozone                                                   bonds, derivatives,
+              Term Rate        borrowing costs. Replaced
+                                                                ECB policy
+                               EONIA.
+                               Set monthly; guides bank         Mortgages, corporate
+                Loan Prime
+LPR    China                   lending rates. China’s main      loans, floating-rate
+                Rate
+                               benchmark for loans.             bonds
+Fed                           The key policy rate set by the Monetary policy,
+                Federal Funds
+Funds U.S.                    U.S. Federal Reserve.            interest rate forecasts,
+                Target Rate
+Rate                          Influences all short-term rates. short-term pricing</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Floater</strong>（浮息债）票息随参考利率重置，久期通常较短，价格相对稳定。</p>
+<p><strong>Inverse floater</strong> 可理解为：固定票息债多头 + 浮息债空头的组合；杠杆放大利率敏感度。</p>
+<div class="kf">Fixed coupon bond ≈ Floater + Inverse floater  （在适当面值搭配下）</div>
+<div class="trap"><strong>易错点：</strong>逆浮息在利率上升时票息下降且价格往往更痛，风险不对称。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s15">§ 5. Pricing Floater &amp; Inverse</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">5. Pricing Floater &amp; Inverse</h3>
+      <pre class="lecture-text">5. Pricing Floater &amp; Inverse
+Floater
+
+2. Inverse Floater:
+
+          𝐂𝐨𝐮𝐩𝐨𝐧 𝐑𝐚𝐭𝐞 (Inverse Floater)
+          = 𝐜𝐨𝐧𝐬𝐭𝐚𝐧𝐭 − 𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐜𝐞 𝐫𝐚𝐭𝐞
+
+It is created for investors who want to bet on
+• It is very sensitive to rising interest rates (very
+     risky!)
+• May need models for rate projections.</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Floater</strong>（浮息债）票息随参考利率重置，久期通常较短，价格相对稳定。</p>
+<p><strong>Inverse floater</strong> 可理解为：固定票息债多头 + 浮息债空头的组合；杠杆放大利率敏感度。</p>
+<div class="kf">Fixed coupon bond ≈ Floater + Inverse floater  （在适当面值搭配下）</div>
+<div class="trap"><strong>易错点：</strong>逆浮息在利率上升时票息下降且价格往往更痛，风险不对称。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s16">§ How to price an inverse floater?</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">How to price an inverse floater?</h3>
+      <pre class="lecture-text">How to price an inverse floater?
+          Dealers can restructure a fixed-rate bond into:
+
+5.        1. A regular floater
+          2. An inverse floater
+
+Pricing   That is:
+          A fixed rate bond =
+Floater            a regular floater + an inverse floater
+          Why? This lets them customize risk-return profiles
+&amp;         and sell to different investors.
+
+Inverse   Example:
+          Suppose a floater/inverse floater pair is created
+Floater   from a 7.5% bond:
+                      Floater Coupon = R + 1%
+                     Inverse Coupon = 14% − R
+          Average = 0.5(R + 1%) + 0.5(14% − R) = 7.5%</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Floater</strong>（浮息债）票息随参考利率重置，久期通常较短，价格相对稳定。</p>
+<p><strong>Inverse floater</strong> 可理解为：固定票息债多头 + 浮息债空头的组合；杠杆放大利率敏感度。</p>
+<div class="kf">Fixed coupon bond ≈ Floater + Inverse floater  （在适当面值搭配下）</div>
+<div class="trap"><strong>易错点：</strong>逆浮息在利率上升时票息下降且价格往往更痛，风险不对称。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s17">§ How to price an inverse floater? (continued)</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">How to price an inverse floater? (continued)</h3>
+      <pre class="lecture-text">How to price an inverse floater? (continued)
+5.        Therefore, by non-arbitrage rule, we have:
+Pricing     Collateral Price = Inverse Price + Floater Price
+Floater   So,
+
+&amp;              Inverse Price
+               = Price of Whole Bond − Floater Price
+Inverse
+          That is, if the collateral bond is worth $1000, And
+Floater   the floater is priced at $970, Then the inverse
+          floater is worth $30.</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Floater</strong>（浮息债）票息随参考利率重置，久期通常较短，价格相对稳定。</p>
+<p><strong>Inverse floater</strong> 可理解为：固定票息债多头 + 浮息债空头的组合；杠杆放大利率敏感度。</p>
+<div class="kf">Fixed coupon bond ≈ Floater + Inverse floater  （在适当面值搭配下）</div>
+<div class="trap"><strong>易错点：</strong>逆浮息在利率上升时票息下降且价格往往更痛，风险不对称。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s18">§ 6. CLEAN, DIRTY PRICES OF</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">6. CLEAN, DIRTY PRICES OF</h3>
+      <pre class="lecture-text">6. CLEAN, DIRTY PRICES OF
+
+6. Price Quotes: Clean &amp; Dirty Price
+Bond Price Quotation: What Do Those Numbers Mean?
+• Bonds are not quoted in dollars — they’re shown as a percentage of par
+  value (usually $1,000).
+   – So 99.1 means 99.1*1000=$991.
+
+But wait — there’s a twist with Treasuries! They use fractions, not decimals.
+    e.g., How to Read Treasury Quotes: "99-05" → What Does It Mean?
+Treasuries are quoted in 32nds (and sometimes 64ths):e.g.,
+     Quoted Price Meaning                      Decimal         % of Par     Dollar Price*
+     99-16        99 + 16/32                   99.50           99.5%        $995.00
+     102-08       102 + 8/32                   102.25          102.25%      $1,022.50
+     99-24+       99 + 24/32 +1/64             99.765625       99.765625%   $997.66
+
+   The "+" means add an extra 1/64 (half of 1/32)</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Dirty price（全价）</strong> = 实际成交支付的钱；<strong>Clean price（净价）</strong> = 全价 − 应计利息，是行情常用报价。</p>
+<div class="kf">Dirty = Clean + Accrued Interest</div>
+<div class="trap"><strong>易错点：</strong>看到报价先问是 clean 还是 dirty；算回报时用的是你真正支付的 dirty price。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s19">§ 6. Price Quotes:</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">6. Price Quotes:</h3>
+      <pre class="lecture-text">6. Price Quotes:
+ Treasury vs. Corporate Bonds           Clean &amp; Dirty Price
+
+    Type        Increment    Example                    Meaning
+                1/32 or                                 Uses fractions like
+    Treasury                 100-10 = 100.3125
+                1/64                                    old-school pricing
+    Corporate/                                          Usually in decimals or
+               1/8 (0.125)   99.125 = 99-1/8
+    Municipal                                           eighths
+
+• It’s just a convention — but now you speak the language of bond
+  traders! ☺</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>本页围绕定价主题「6. Price Quotes:」。核心仍是：选对现金流、选对折现率、注意计息惯例。</p>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s20">§ 6. Price Quotes: Clean &amp; Dirty Price</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">6. Price Quotes: Clean &amp; Dirty Price</h3>
+      <pre class="lecture-text">6. Price Quotes: Clean &amp; Dirty Price
+What is Accrued Interest – Part 1
+• When someone sells a bond, they don’t wait for the next coupon
+  payment — they get paid right away for the interest they’ve earned
+  since the last coupon.
+• That’s called accrued interest.
+
+    Key Idea: The seller earns interest every day they hold the bond.
+So, even if the next coupon is weeks away, the seller deserves a fair
+share for the time they owned it</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Dirty price（全价）</strong> = 实际成交支付的钱；<strong>Clean price（净价）</strong> = 全价 − 应计利息，是行情常用报价。</p>
+<div class="kf">Dirty = Clean + Accrued Interest</div>
+<div class="trap"><strong>易错点：</strong>看到报价先问是 clean 还是 dirty；算回报时用的是你真正支付的 dirty price。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s21">§ 6. Price Quotes: Clean &amp; Dirty Price</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">6. Price Quotes: Clean &amp; Dirty Price</h3>
+      <pre class="lecture-text">6. Price Quotes: Clean &amp; Dirty Price
+Accrued Interest – Part 2
+
+How It’s Calculated:
+                              Days Since Last Coupon
+                       AI =                          × Coupon Payment
+                              Days in Coupon Period
+•   Two Day-Count Conventions:
+     – Actual/Actual: used for Treasuries
+     – 30/360: used for corporates, municipals
+•   E.g., 6% annual coupon, semiannual $30 payments. Last coupon: Mar 1. Next coupon:
+    Sep 1. Settlement: July 17.
+                                        136
+     – Day count using 30/360: 𝐴𝐼 = 180 × 30 = 22.67 (Coupon period = 180, July 17 to
+       Sep 1 = 1 months + 13+1 day = 44 days, Mar 1 to July 17 = 180-44=136 days.)
+                                                  138
+     – Day count using Actual/Actual: AI = 184 × 30 = 22.5 (actual coupon period
+       between Mar 1 and Sep 1= 184 days, actual days since July 17 to Sep 1 = 46 days,
+       so actual days tween Mar 1 and July 17 is 138 days.)</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Dirty price（全价）</strong> = 实际成交支付的钱；<strong>Clean price（净价）</strong> = 全价 − 应计利息，是行情常用报价。</p>
+<div class="kf">Dirty = Clean + Accrued Interest</div>
+<div class="trap"><strong>易错点：</strong>看到报价先问是 clean 还是 dirty；算回报时用的是你真正支付的 dirty price。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s22">§ 6. Price</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">6. Price</h3>
+      <pre class="lecture-text">6. Price
+                              Clean Price and Dirty Price
+Quotes: Clean
+&amp; Dirty Price
+               𝐃𝐢𝐫𝐭𝐲 𝐏𝐫𝐢𝐜𝐞 = 𝐂𝐥𝐞𝐚𝐧 𝐏𝐫𝐢𝐜𝐞 + 𝐀𝐜𝐜𝐫𝐮𝐞𝐝 𝐈𝐧𝐭𝐞𝐫𝐞𝐬𝐭
+
+ Term                What It Means?
+
+                     The interest the seller earned for holding the bond since
+ Accrued Interest
+                     the last coupon payment.
+
+                     The listed price of the bond — without accrued interest.
+ Clean Price
+                        This is the price you see quoted in markets.
+                     The total cost the buyer actually pays.
+ Dirty Price         = Clean Price + Accrued Interest.
+                         Also called the "full" or "invoice" price.
+
+ Why It Matters      ?</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p><strong>Dirty price（全价）</strong> = 实际成交支付的钱；<strong>Clean price（净价）</strong> = 全价 − 应计利息，是行情常用报价。</p>
+<div class="kf">Dirty = Clean + Accrued Interest</div>
+<div class="trap"><strong>易错点：</strong>看到报价先问是 clean 还是 dirty；算回报时用的是你真正支付的 dirty price。</div>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s23">§ Quick Quiz</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">Quick Quiz</h3>
+      <pre class="lecture-text">Quick Quiz
+
+Quiz Question 1:
+A bond is quoted at a clean price of 985,and the accrued interest is
+12. What is the total amount the buyer will pay (i.e., the dirty price)?
+• A) 985.00; B) 997.00
+
+Quiz Question 2:
+A bond has a coupon rate of 5%, but its yield is currently 6%. Which
+one is true?
+• A) Price&gt;Par; B) Price &lt; Par</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>
+<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>
+    </div>
+  </section>
+</div>
+
+
+<p class="section-anchor" id="s24">§ Summary &amp; Key Takeaways</p>
+<div class="dual-block">
+  <section class="pane lecture" aria-label="讲义原文">
+    <div class="pane-label">讲义原文</div>
+    <div class="pane-body">
+      <h3 class="lecture-title">Summary &amp; Key Takeaways</h3>
+      <pre class="lecture-text">Summary &amp; Key Takeaways
+
+• Bond pricing: A vanilla bond is worth the present value of future
+  coupons and principal, discounted at the yield.
+• Price-yield relation: Bond prices move inversely to yields, with a
+  convex curve that favors price gains when yields fall.
+• Price over time: Even if yields stay the same, bond prices pull toward
+  par as maturity approaches.
+• Floaters vs. Inverse floaters: Floating-rate bonds adjust coupons with
+  the market, while inverse floaters gain when rates drop.
+• Quoted prices: Investors pay the clean price plus accrued interest—
+  the total is the dirty price.</pre>
+    </div>
+  </section>
+  <section class="pane explain" aria-label="解析">
+    <div class="pane-label">解析</div>
+    <div class="pane-body explain-body">
+      <p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>
+<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>
+    </div>
+  </section>
+</div>
+
   <div class="card checklist">
     <label>
       <input type="checkbox" data-module-check="m2">
-      <span>我学完了本模块，打勾存进度 <span class="done-mark" data-done-mark="m2"></span></span>
+      <span>我已完成本模块（对照讲义原文 + 解析），标记进度</span>
     </label>
   </div>
-  <div class="nav-mod"><a href="m1.html"><span class="dir">← 上一模块</span>模块 1：债券是什么</a><a href="m3.html"><span class="dir">下一模块 →</span>模块 3：收益率</a></div>
+  <div class="nav-mod"><a href="m1.html"><span class="dir">上一模块</span>债券是什么</a><a href="m3.html"><span class="dir">下一模块</span>收益率怎么算</a></div>
 </div>
 <footer class="site">
-  <p>改写自 Fin4120 Fixed Income Securities 讲义（Prof. Linlin Ye, CUHKSZ）。教育用途重组讲解。</p>
+  <p>讲义原文摘自港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ），仅供个人学习对照。右侧解析为学习辅助改写，不构成对原课件的署名主张。</p>
 </footer>
 <script src="../assets/app.js"></script>
 </body>
