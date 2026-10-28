@@ -355,7 +355,45 @@
       });
   }
 
-  function importFiles(fileList) {
+  function importOneToModule(file, buf, text, pageCount, id) {
+    var entry = Fin4120Slides.catalogById(id);
+    if (!entry) {
+      return Promise.resolve({
+        fileName: file.name,
+        ok: false,
+        reason: "未知模块 " + id,
+      });
+    }
+    var storeBuf = cloneBuf(buf);
+    return Fin4120Slides.putPdf({
+      id: id,
+      title: entry.title,
+      fileName: file.name,
+      pageCount: pageCount,
+      data: storeBuf,
+      importedAt: new Date().toISOString(),
+    })
+      .then(function () {
+        return {
+          fileName: file.name,
+          ok: true,
+          id: id,
+          title: entry.title,
+          pageCount: pageCount,
+        };
+      })
+      .catch(function (err) {
+        return {
+          fileName: file.name,
+          ok: false,
+          reason:
+            "保存失败（浏览器存储空间不足？）" +
+            (err && err.message ? ": " + err.message : ""),
+        };
+      });
+  }
+
+  function importFiles(fileList, forceModuleId) {
     var files = Array.prototype.slice.call(fileList || []);
     if (!files.length) return Promise.resolve([]);
     var results = [];
@@ -364,34 +402,35 @@
       chain = chain.then(function () {
         return readFileAsArrayBuffer(file).then(function (buf) {
           return peekFirstPageText(buf).then(function (text) {
-            var match = Fin4120Slides.matchModule(file.name, text);
-            if (!match) {
-              results.push({
-                fileName: file.name,
-                ok: false,
-                reason: "无法识别对应模块（请检查文件名或是否为 Fin4120 讲义）",
-              });
-              return;
-            }
-            var id = match.entry.id;
-            var storeBuf = cloneBuf(buf);
             return openArrayBuffer(cloneBuf(buf)).then(function (pdf) {
               var pageCount = pdf.numPages;
-              return Fin4120Slides.putPdf({
-                id: id,
-                title: match.entry.title,
-                fileName: file.name,
-                pageCount: pageCount,
-                data: storeBuf,
-                importedAt: new Date().toISOString(),
-              }).then(function () {
+              var match = forceModuleId
+                ? {
+                    entry: Fin4120Slides.catalogById(forceModuleId),
+                    score: 999,
+                  }
+                : Fin4120Slides.matchModule(file.name, text, pageCount);
+              if (!match || !match.entry) {
                 results.push({
                   fileName: file.name,
-                  ok: true,
-                  id: id,
-                  title: match.entry.title,
+                  ok: false,
                   pageCount: pageCount,
+                  firstPageHint: (text || "").slice(0, 80),
+                  reason:
+                    "无法自动识别（常见于 m8：文件名不含 zero/零息，且首页文字读失败）。可点「手动指定为 m8」或把文件改名为 Zero-Coupon.pdf 再导入。",
+                  buf: buf,
+                  text: text,
                 });
+                return;
+              }
+              return importOneToModule(
+                file,
+                buf,
+                text,
+                pageCount,
+                match.entry.id
+              ).then(function (r) {
+                results.push(r);
               });
             });
           });
@@ -445,6 +484,88 @@
     });
   }
 
+  function showImportResults(results) {
+    var status = $("#import-live");
+    if (!status) return;
+    var ok = results.filter(function (r) {
+      return r.ok;
+    });
+    var fail = results.filter(function (r) {
+      return !r.ok;
+    });
+    var lines =
+      "完成：成功 " +
+      ok.length +
+      (fail.length ? "，未识别 " + fail.length : "") +
+      "。";
+    if (fail.length) {
+      lines += "<ul class=\"import-fail-list\">";
+      fail.forEach(function (r, idx) {
+        lines +=
+          "<li><code>" +
+          escapeHtml(r.fileName) +
+          "</code> — " +
+          escapeHtml(r.reason || "失败");
+        if (r.pageCount) lines += "（" + r.pageCount + " 页）";
+        lines +=
+          ' <button type="button" class="btn small" data-force-m8="' +
+          idx +
+          '">手动指定为 m8</button>';
+        lines +=
+          ' <button type="button" class="btn small" data-force-pick="' +
+          idx +
+          '">指定模块…</button></li>';
+      });
+      lines += "</ul>";
+      status._failResults = fail;
+    }
+    status.innerHTML = lines;
+    $all("[data-force-m8]", status).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var r = status._failResults[Number(btn.getAttribute("data-force-m8"))];
+        if (!r || !r.buf) return;
+        importOneToModule(
+          { name: r.fileName },
+          r.buf,
+          r.text || "",
+          r.pageCount || 0,
+          "m8"
+        ).then(function (out) {
+          status.textContent = out.ok
+            ? "已手动导入为 m8：" + r.fileName
+            : out.reason;
+          refreshImportStatus();
+          if (state.moduleId) loadModulePdf(state.moduleId);
+        });
+      });
+    });
+    $all("[data-force-pick]", status).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var r = status._failResults[Number(btn.getAttribute("data-force-pick"))];
+        if (!r || !r.buf) return;
+        var id = prompt(
+          "指定模块 id（m1–m8）。m8 = Zero-Coupon Yield Curve",
+          "m8"
+        );
+        if (!id) return;
+        id = String(id).trim().toLowerCase();
+        importOneToModule(
+          { name: r.fileName },
+          r.buf,
+          r.text || "",
+          r.pageCount || 0,
+          id
+        ).then(function (out) {
+          status.textContent = out.ok
+            ? "已手动导入为 " + id + "：" + r.fileName
+            : out.reason;
+          refreshImportStatus();
+          if (state.moduleId) loadModulePdf(state.moduleId);
+        });
+      });
+    });
+  }
+
   function wireImporter(root) {
     root = root || document;
     $all("[data-import-pdfs]", root).forEach(function (btn) {
@@ -460,15 +581,9 @@
       input.addEventListener("change", function () {
         var status = $("#import-live");
         if (status) status.textContent = "正在导入…";
-        importFiles(input.files).then(function (results) {
-          var ok = results.filter(function (r) {
-            return r.ok;
-          }).length;
-          var fail = results.length - ok;
-          if (status) {
-            status.textContent =
-              "完成：成功 " + ok + (fail ? "，未识别 " + fail : "") + "。";
-          }
+        var force = btn.getAttribute("data-force-module") || "";
+        importFiles(input.files, force || null).then(function (results) {
+          showImportResults(results);
           refreshImportStatus();
           if (state.moduleId) {
             loadModulePdf(state.moduleId);

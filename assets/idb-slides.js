@@ -50,17 +50,27 @@
     {
       id: "m7",
       title: "Yield Curve & Yield Curve Management",
-      keywords: ["yield curve &", "yield curve management", "yield curve"],
+      keywords: [
+        "yield curve & yield curve management",
+        "yield curve management",
+        "yield curve &",
+      ],
       expectedPages: 58,
+      // bare "yield curve" alone is too broad (also appears on m8 title)
     },
     {
       id: "m8",
       title: "Deriving The Zero-Coupon Yield Curve",
       keywords: [
         "zero-coupon yield curve",
-        "zero coupon",
-        "deriving the zero",
+        "zero coupon yield curve",
         "treasury zero-coupon",
+        "treasury zero coupon",
+        "deriving the zero",
+        "zero coupon",
+        "zero-coupon",
+        "zerocurve",
+        "zero curve",
       ],
       expectedPages: 66,
     },
@@ -206,33 +216,69 @@
    * Score filename (+ optional first-page text) against a catalog entry.
    * Higher is better; 0 = no match.
    */
-  function scoreMatch(entry, fileName, firstPageText) {
-    var name = (fileName || "").toLowerCase().replace(/[_\-.]+/g, " ");
-    var text = (firstPageText || "").toLowerCase().replace(/\s+/g, " ");
+  function normalizeKey(s) {
+    return (s || "")
+      .toLowerCase()
+      .replace(/[\u2010-\u2015\u2212\-]+/g, " ") // hyphens/dashes → space
+      .replace(/[_\.]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function scoreMatch(entry, fileName, firstPageText, pageCount) {
+    var name = normalizeKey(fileName);
+    var text = normalizeKey(firstPageText);
+    var blob = name + " " + text;
     var score = 0;
     var kws = entry.keywords;
     for (var i = 0; i < kws.length; i++) {
-      var kw = kws[i];
+      var kw = normalizeKey(kws[i]);
+      if (!kw) continue;
       if (name.indexOf(kw) !== -1) score += 100 - i * 5;
       if (text.indexOf(kw) !== -1) score += 80 - i * 5;
     }
-    // module id in filename e.g. m1, Fin4120_m1
-    if (new RegExp("\\b" + entry.id + "\\b", "i").test(fileName || "")) score += 40;
+    // module id in filename e.g. m1, Fin4120_m1, m8.pdf
+    if (new RegExp("\\b" + entry.id + "\\b", "i").test(fileName || "")) score += 50;
+    // Chinese shortcuts
+    if (entry.id === "m8" && /零息/.test(fileName || "")) score += 90;
+    if (entry.id === "m7" && /收益[率]?曲线管理|收益率曲线(?!.*零息)/.test(fileName || "")) score += 60;
+
+    // Zero-curve decks must not be swallowed by m7
+    var looksZero =
+      /zero\s*coupon|zerocurve|zero\s*curve|deriving\s+the\s+zero|treasury\s+zero|零息/.test(
+        blob
+      );
+    if (looksZero) {
+      if (entry.id === "m8") score += 120;
+      if (entry.id === "m7") score -= 100;
+    }
+
+    // Page-count hint (m8=66, m7=58 are distinctive)
+    if (pageCount && entry.expectedPages) {
+      var d = Math.abs(pageCount - entry.expectedPages);
+      if (d === 0) score += 55;
+      else if (d <= 2) score += 25;
+      else if (d >= 8) score -= 15;
+    }
     return score;
   }
 
-  function matchModule(fileName, firstPageText) {
+  function matchModule(fileName, firstPageText, pageCount) {
     var best = null;
     var bestScore = 0;
+    var second = 0;
     for (var i = 0; i < CATALOG.length; i++) {
-      var s = scoreMatch(CATALOG[i], fileName, firstPageText);
+      var s = scoreMatch(CATALOG[i], fileName, firstPageText, pageCount);
       if (s > bestScore) {
+        second = bestScore;
         bestScore = s;
         best = CATALOG[i];
+      } else if (s > second) {
+        second = s;
       }
     }
     if (bestScore < 40) return null;
-    return { entry: best, score: bestScore };
+    return { entry: best, score: bestScore, margin: bestScore - second };
   }
 
   function catalogById(id) {

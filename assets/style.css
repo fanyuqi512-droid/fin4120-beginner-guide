@@ -357,3 +357,8 @@ table.simple th { background: #f0ebe3; }
   .pdf-body { max-height: 70vh; }
   .toolbar-sep { display: none; }
 }
+
+
+.import-fail-list { margin: .6rem 0 0; padding-left: 1.1rem; }
+.import-fail-list li { margin: .35rem 0; }
+.btn.small { font-size: .85rem; padding: .2rem .55rem; margin-left: .35rem; }
