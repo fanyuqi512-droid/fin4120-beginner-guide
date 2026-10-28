@@ -3,15 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>模块 0 · 导论：如何使用讲义原文+解析对照 · Fin4120 零基础学习站</title>
+<title>模块 0 · 导论：导入课件与双栏用法 · Fin4120 零基础学习站</title>
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
-
 </head>
-<body>
+<body data-module="m0" data-assets-base="../assets">
 <header class="site">
   <div class="inner">
     <a class="brand" href="../index.html">Fin4120 零基础固收</a>
@@ -24,26 +19,41 @@
 </header>
 <div class="wrap wide">
   <p class="muted"><a href="../index.html">← 返回首页</a></p>
-  <h1 class="mod-title">模块 0 · 导论：如何使用讲义原文+解析对照</h1>
+  <h1 class="mod-title">模块 0 · 导论：导入课件与双栏用法</h1>
   
-<div class="source-note">本模块无对应单份幻灯片；说明如何使用「左讲义原文 / 右解析」双栏学习法。</div>
+<div class="source-note">本模块说明如何导入课件 PDF，以及「左原件 / 右解析」双栏怎么用。PDF 只存你本机浏览器，不会上传。</div>
 <div class="dual-legend">
-  <span><i class="dot L"></i> 左侧：讲义原文（英文为主，保留术语）</span>
-  <span><i class="dot R"></i> 右侧：零基础解析（中文 + 公式 + 易错点）</span>
+  <span><i class="dot L"></i> 左侧：课件原件 PDF 页（PDF.js 渲染）</span>
+  <span><i class="dot R"></i> 右侧：按页同步的零基础解析</span>
 </div>
+
 <div class="card">
-  <h2>怎么用这个站点</h2>
+  <h2>导入全部讲义 PDF</h2>
+  <p>一次可选多份（8 份）。按文件名或首页标题自动匹配到 m1–m8。</p>
+  <p>
+    <button type="button" class="btn accent" data-import-pdfs>导入全部讲义 PDF</button>
+    <button type="button" class="btn ghost" data-clear-pdfs>清除本机 PDF</button>
+  </p>
+  <p class="muted tiny" id="import-live"></p>
+  <div id="import-status"><p class="muted">读取中…</p></div>
+</div>
+
+<div class="card">
+  <h2>怎么用双栏</h2>
   <ol>
-    <li>先扫右侧解析，建立直觉；再读左侧原文，对齐老师课件用语。</li>
-    <li>桌面端两栏并排，可各自滚动；手机端变为「先原文、后解析」的区块堆叠。</li>
-    <li>每学完一个模块，底部打卡；首页进度条会更新（存在本机浏览器）。</li>
-    <li>遇到生词，打开 <a href="../glossary.html">术语表</a>；术语也会在讲义原文栏原样出现。</li>
+    <li>先在本页或首页导入 8 份讲义 PDF（只需一次，换浏览器需重导）。</li>
+    <li>打开模块后：左侧翻页/缩放看课件原件；右侧自动切换到该页解析。</li>
+    <li>若某页以图/表为主，右侧会提示并展示最近相关页的解析。</li>
+    <li>没导入 PDF 时，可用「文字摘录」模式继续学；解析数据已内置。</li>
+    <li>桌面端左右并排；手机端先 PDF、后解析堆叠。</li>
   </ol>
 </div>
+
 <div class="callout tip">
   <div class="label">学习顺序</div>
   模块 1→3 打地基（工具、定价、收益率）→ 4→6 认识市场产品 → 7→8 曲线与零息构造。不要跳过 2/3 直接啃 8。
 </div>
+
 <div class="card">
   <h2>你会反复用到的三个直觉</h2>
   <ul class="clean">
@@ -52,32 +62,35 @@
     <li><strong>多出来的收益，通常买的是某种风险</strong>（久期 / 信用 / 流动性 / 汇率）</li>
   </ul>
 </div>
+
 <div class="card">
   <h2>八份讲义对照表</h2>
   <table class="simple">
-    <tr><th>模块</th><th>讲义</th></tr>
-    <tr><td>m1</td><td>Fundamentals of Bonds</td></tr>
-    <tr><td>m2</td><td>Pricing of Bonds</td></tr>
-    <tr><td>m3</td><td>Yield of Bonds</td></tr>
-    <tr><td>m4</td><td>Treasury Securities</td></tr>
-    <tr><td>m5</td><td>Corporate Debt</td></tr>
-    <tr><td>m6</td><td>International Bond</td></tr>
-    <tr><td>m7</td><td>Yield Curve &amp; Management</td></tr>
-    <tr><td>m8</td><td>Deriving Zero-Coupon Curve</td></tr>
+    <tr><th>模块</th><th>讲义</th><th>约页数</th></tr>
+    <tr><td>m1</td><td>Fundamentals of Bonds</td><td>28</td></tr>
+    <tr><td>m2</td><td>Pricing of Bonds</td><td>32</td></tr>
+    <tr><td>m3</td><td>Yield of Bonds</td><td>32</td></tr>
+    <tr><td>m4</td><td>Treasury Securities</td><td>29</td></tr>
+    <tr><td>m5</td><td>Corporate Debt</td><td>43</td></tr>
+    <tr><td>m6</td><td>International Bond</td><td>24</td></tr>
+    <tr><td>m7</td><td>Yield Curve &amp; Management</td><td>58</td></tr>
+    <tr><td>m8</td><td>Deriving Zero-Coupon Curve</td><td>66</td></tr>
   </table>
 </div>
 
   <div class="card checklist">
     <label>
       <input type="checkbox" data-module-check="m0">
-      <span>我已完成本模块（对照讲义原文 + 解析），标记进度</span>
+      <span>我已完成本模块（了解导入与双栏），标记进度</span>
     </label>
   </div>
   <div class="nav-mod"><span></span><a href="m1.html"><span class="dir">下一模块</span>债券是什么</a></div>
 </div>
 <footer class="site">
-  <p>讲义原文摘自港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ），仅供个人学习对照。右侧解析为学习辅助改写，不构成对原课件的署名主张。</p>
+  <p>课件原件归港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ）。PDF 仅存本机；解析为学习辅助。</p>
 </footer>
 <script src="../assets/app.js"></script>
+<script src="../assets/idb-slides.js"></script>
+<script src="../assets/pdf-viewer.js"></script>
 </body>
 </html>

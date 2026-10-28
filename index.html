@@ -6,7 +6,7 @@
 <title>学习路径 · Fin4120 零基础学习站</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-assets-base="assets">
 <header class="site">
   <div class="inner">
     <a class="brand" href="index.html">Fin4120 零基础固收</a>
@@ -20,11 +20,22 @@
 
 <div class="wrap">
   <section class="hero">
-    <div class="badge">CUHKSZ · Fin4120 · 讲义原文 + 解析对照</div>
-    <h1>固定收益证券：左原文 · 右解析</h1>
-    <p>把叶琳琳老师（Prof. Linlin Ye）Fin4120 八份讲义做成<strong>双栏对照</strong>：左边是讲义原文摘录，右边是零基础中文解析与公式直觉。共 9 个模块（含导论）。</p>
-    <p style="opacity:.9">桌面端左右并排；手机端按「每一节：先原文、后解析」堆叠。</p>
+    <div class="badge">CUHKSZ · Fin4120 · 课件原件（本地）+ 解析对照</div>
+    <h1>固定收益证券：左课件 · 右解析</h1>
+    <p>把叶琳琳老师（Prof. Linlin Ye）Fin4120 八份讲义做成<strong>双栏对照</strong>：左边用 PDF.js 渲染<strong>课件原件页</strong>（你在浏览器本地导入，存 IndexedDB，绝不上传），右边是按页同步的零基础中文解析。</p>
+    <p style="opacity:.9">桌面端左右并排；手机端先课件、后解析。无 PDF 时仍可切换「文字摘录」。</p>
   </section>
+
+  <div class="card">
+    <h2>导入全部讲义 PDF</h2>
+    <p>选择你的 8 份 Fin4120 讲义（可多选）。按文件名/首页标题自动归入 m1–m8。文件<strong>只保存在本机浏览器</strong>，不会进 GitHub、不会上传。</p>
+    <p>
+      <button type="button" class="btn accent" data-import-pdfs>导入全部讲义 PDF</button>
+      <button type="button" class="btn ghost" data-clear-pdfs>清除本机 PDF</button>
+    </p>
+    <p class="muted tiny" id="import-live"></p>
+    <div id="import-status"><p class="muted">读取中…</p></div>
+  </div>
 
   <div class="card">
     <h2 id="progress">我的学习进度</h2>
@@ -36,15 +47,15 @@
   <div class="card">
     <h2>怎么读双栏</h2>
     <ul class="clean">
-      <li><strong>讲义原文</strong>：保留课件英文术语与结构，便于和 PDF 对照。</li>
-      <li><strong>解析</strong>：中文讲解、关键公式、易错点；不是把左边再抄一遍。</li>
-      <li>建议顺序：先看解析建立直觉，再精读原文标记老师原话。</li>
+      <li><strong>课件原件</strong>：左侧 PDF 逐页显示老师幻灯片；可用 ← → 键翻页。</li>
+      <li><strong>解析</strong>：随当前页切换；图/表页会提示并展示近邻解析。</li>
+      <li><strong>隐私</strong>：PDF 永不提交到仓库或服务器，仅 IndexedDB。</li>
     </ul>
   </div>
 
   <h2>推荐学习路线</h2>
   <div class="road">
-    <div class="step"><span class="n">0</span><div><strong>导论</strong> — 双栏用法与名词直觉</div></div>
+    <div class="step"><span class="n">0</span><div><strong>导论</strong> — 导入 PDF 与双栏用法</div></div>
     <div class="step"><span class="n">1</span><div><strong>债券是什么</strong> — Fundamentals</div></div>
     <div class="step"><span class="n">2</span><div><strong>怎么定价</strong> — Pricing</div></div>
     <div class="step"><span class="n">3</span><div><strong>收益率</strong> — Yield</div></div>
@@ -95,17 +106,19 @@
   <div class="card" style="margin-top:1.6rem">
     <h2>使用说明</h2>
     <ul class="clean">
-      <li>每模块含：讲义原文分节 + 对应解析、目录锚点、进度打卡、上一/下一模块。</li>
-      <li>术语亦可在 <a href="glossary.html">全站术语表</a> 查阅；讲义原文栏会出现同样的英文词。</li>
+      <li>每模块：课件 PDF 页 + 页级解析、进度打卡、上一/下一模块。</li>
+      <li>术语见 <a href="glossary.html">全站术语表</a>。</li>
       <li>源讲义：Fin4120 lecture slides by Prof. Linlin Ye (CUHKSZ)。原文归授课教师；本站解析为个人学习辅助。</li>
     </ul>
   </div>
 </div>
 
 <footer class="site">
-  <p>讲义原文摘自港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ）。本站为教育用途的原文+解析对照，非官方教材，请勿替代原课件。</p>
-  <p>本地进度保存在浏览器 localStorage，不会上传。</p>
+  <p>课件原件归港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ）。本站不托管 PDF；解析为教育用途对照，非官方教材。</p>
+  <p>本地进度与 PDF 保存在浏览器（localStorage / IndexedDB），不会上传。</p>
 </footer>
 <script src="assets/app.js"></script>
+<script src="assets/idb-slides.js"></script>
+<script src="assets/pdf-viewer.js"></script>
 </body>
 </html>

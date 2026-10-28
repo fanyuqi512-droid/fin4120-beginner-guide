@@ -1,0 +1,210 @@
+{
+ "module": "m4",
+ "deck": "Treasury Securities",
+ "pageCount": 29,
+ "pages": [
+  {
+   "page": 1,
+   "title": "Fundamental Instruments",
+   "thin": false,
+   "explainHtml": "<p>本页属于国债模块「Fundamental Instruments」。记住：国债曲线是其它信用债定价的起点。</p>",
+   "excerpt": "Fundamental Instruments\nPart I: Treasury Securities\n\nFin4120: Fixed Income Securities\nInstructor: Prof. Linlin Ye (CUHKSZ)"
+  },
+  {
+   "page": 2,
+   "title": "Roadmap",
+   "thin": false,
+   "explainHtml": "<p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>\n<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>",
+   "excerpt": "Roadmap\n\n1.   Key Facts of U.S. Treasury Securities\n2.   Types of Treasury Securities\n3.   The Primary and Secondary Trading Market of Treasury\n4.   Stripped Treasury Securities (STRIPS)\n5.   GSE Securities (Quasi-Government)"
+  },
+  {
+   "page": 3,
+   "title": "1. KEY FACTS OF THE U.S.",
+   "thin": true,
+   "explainHtml": "<p>美国国债通常被视为接近无信用风险的基准利率资产，市场规模大、流动性好，是全球定价锚。</p>\n<p>关注：存量规模、所有权结构（国内外投资者）、以及它在折扣率/抵押品中的核心地位。</p>",
+   "excerpt": "1. KEY FACTS OF THE U.S.\nTREASURY SECURITIES"
+  },
+  {
+   "page": 4,
+   "title": "2001/1/1",
+   "thin": false,
+   "explainHtml": "<p>本页属于国债模块「2001/1/1」。记住：国债曲线是其它信用债定价的起点。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "0\n                                         5000000\n                                                   10000000\n                                                                    15000000\n                                                                               20000000\n                                                                                          25000000\n                                                                                                     30000000\n                                                                                                                 35000000\n                          2001/1/1\n                          2001/9/1\n                          2002/5/1\n                          2003/1/1\n                          2003/9/1\n                          2004/5/1\n\n                                                   $2.97 Trillion\n                          2005/1/1\n                          2005/9/1\n                          2006/5/1\n                          2007/1/1\n                          2007/9/1\n                          2008/5/1\n                          2009/1/1\n                          2009/9/1\n                          2010/5/1\n                          2011/1/1\n                          2011/9/1\n                          2012/5/1\n                          2013/1/1\n                          2013/9/1\n                          2014/5/1\n\n                          2015/1/1\n                          2015/9/1\n                          2016/5/1\n                          2017/1/1\n                          2017/9/1\n                          2018/5/1\n                          2019/1/1\n                          2019/9/1\n                                                                                                                                  U.S. Treasury Debt Outstanding (in Millions)\n\n                          2020/5/1\n                          2021/1/1\n                          2021/9/1\n                          2022/5/1\n                          2023/1/1\n                          2023/9/1\n                          2024/5/1\n                          2025/1/1\n                                                                                                                                                                                 1. Key Facts of U.S. Treasury Securities\n\n4\n                                                                                                                $28.96 Trillion"
+  },
+  {
+   "page": 5,
+   "title": "1. Key Facts of U.S. Treasury Securities",
+   "thin": false,
+   "explainHtml": "<p>美国国债通常被视为接近无信用风险的基准利率资产，市场规模大、流动性好，是全球定价锚。</p>\n<p>关注：存量规模、所有权结构（国内外投资者）、以及它在折扣率/抵押品中的核心地位。</p>",
+   "excerpt": "1. Key Facts of U.S. Treasury Securities\n\nU.S. Securities,\nA Black Hole\nSucking All\nCapital Around\nThe World."
+  },
+  {
+   "page": 6,
+   "title": "1. Key Facts of U.S. Treasury Securities",
+   "thin": false,
+   "explainHtml": "<p>美国国债通常被视为接近无信用风险的基准利率资产，市场规模大、流动性好，是全球定价锚。</p>\n<p>关注：存量规模、所有权结构（国内外投资者）、以及它在折扣率/抵押品中的核心地位。</p>",
+   "excerpt": "1. Key Facts of U.S. Treasury Securities\n\n     Issued by U.S.                    Minimal credit\n     Treasury, backed by               risk, very liquid\n     full faith and credit             due to large issue\n     of the government.                size.\n\n     All are noncallable;\n     Issued in book-entry                    Interest is\n     form (no physical                   federally taxable\n     certificate;                        but exempt from\n     ownership is                         state and local\n     recorded                                  taxes.\n     electronically)."
+  },
+  {
+   "page": 7,
+   "title": "2. TYPES OF TREASURY",
+   "thin": true,
+   "explainHtml": "<p>工具谱系：T-Bills（贴现短期）、T-Notes、T-Bonds、TIPS（通胀挂钩）、FRN 等；期限与计息方式不同。</p>\n<p>TIPS 的实际收益率与名义国债之差近似 <strong>breakeven inflation</strong>（盈亏平衡通胀预期）。</p>",
+   "excerpt": "2. TYPES OF TREASURY\nSECURITIES"
+  },
+  {
+   "page": 8,
+   "title": "2. Types of Treasuries",
+   "thin": false,
+   "explainHtml": "<p>工具谱系：T-Bills（贴现短期）、T-Notes、T-Bonds、TIPS（通胀挂钩）、FRN 等；期限与计息方式不同。</p>\n<p>TIPS 的实际收益率与名义国债之差近似 <strong>breakeven inflation</strong>（盈亏平衡通胀预期）。</p>",
+   "excerpt": "2. Types of Treasuries\n (a) U.S. Treasury Securities\n         Type           Maturity     Coupon Type                       Key Features\nTreasury Bills (T-bills) ≤1 year   None                      Sold at discount;\nTreasury Notes         2 to 10     Fixed-Rate                Semiannual coupons; sold near\n(T-notes)              years                                 par\nTreasury Bonds         >10 years Fixed-Rate                  Longest maturity; semiannual\n(T-bonds)                                                    coupons\nFloating Rate Notes 2 years        Floating-Rate             Quarterly reset; index = 13-\n(FRNs)                 (typical)                             week T-bill yield + spread; rate\n\nTIPS                   5, 10, 30   Fixed Real Rate Inflation-adjusted principal and\n                       years                                 coupon; based on CPI-U"
+  },
+  {
+   "page": 9,
+   "title": "2. Types of Treasuries",
+   "thin": false,
+   "explainHtml": "<p>工具谱系：T-Bills（贴现短期）、T-Notes、T-Bonds、TIPS（通胀挂钩）、FRN 等；期限与计息方式不同。</p>\n<p>TIPS 的实际收益率与名义国债之差近似 <strong>breakeven inflation</strong>（盈亏平衡通胀预期）。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2. Types of Treasuries\n    (b) 中国的政府债券\n\n      Type           Issuer         Maturity           Coupon Type       Key Features\nTreasury Bonds ( Ministry of     1–50 years            Fixed-rate Central government debt;\n国债)              Finance (MOF)                                     often used as policy tool;\n                                                                   auction-based issuance.\nT-Bills (贴现国债 Ministry of        <1 year               Zero-coupon Short-term financing;\n)               Finance (MOF)(commonly 3, 6, (discount)            auctioned and traded in\n                              12 months)                           interbank market.\nSavings Bonds ( Ministry of   1–5 years      Fixed-rate            Sold to individuals via\n储蓄国债)           Finance (MOF)                                      banks; not traded; exempt\n                                                                   from some taxes.\nCentral Bank People’s Bank <1 year                     Zero-coupon Previously used for\nBills (央行票据) of China                                              monetary policy; now\n             (PBoC)                                                rarely issued."
+  },
+  {
+   "page": 10,
+   "title": "3. THE TRADING MARKET OF",
+   "thin": true,
+   "explainHtml": "<p>本页属于国债模块「3. THE TRADING MARKET OF」。记住：国债曲线是其它信用债定价的起点。</p>",
+   "excerpt": "3. THE TRADING MARKET OF\nTREASURY SECURITIES"
+  },
+  {
+   "page": 11,
+   "title": "3. Market Structure of U.S. Treasuries",
+   "thin": false,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>",
+   "excerpt": "3. Market Structure of U.S. Treasuries\n\n              (a) Primary Market\n\n              Auction\n             Sold via sealed-\n             bid auctions.      Bids\n                                Two types of Bids:\n                                Competitive (yield +\n                                quantity) vs Noncompetitive\n    Rule\n                                (only quantity).\nStop-out Yield\n     = Highest                         Price\naccepted yield.                        Single-price auction:\n                                       All bidders pay price at\n                                       stop-out yield."
+  },
+  {
+   "page": 12,
+   "title": "3. Market Structure of U.S. Treasuries",
+   "thin": false,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>",
+   "excerpt": "3. Market Structure of U.S. Treasuries\n\n                       (a) Primary Market\n\n    Key Concepts\n                                                             Same maturity date,\n•    Reopening: Additional                                   same coupon rate, and\n                                                             other terms..\n     issuance of an existing security.\n                                                           Question: Why not simply\n                                                           issue new securities?"
+  },
+  {
+   "page": 13,
+   "title": "3. Market Structure of U.S. Treasuries",
+   "thin": false,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>",
+   "excerpt": "3. Market Structure of U.S. Treasuries\n\n(b) Secondary Market\n\n• 24-hour OTC market (New York, London,\n  Tokyo).\n     • On-the-run = Most recently issued;\n\n     • Off-the-run = Older issues.\n\n     • Dealers use interdealer brokers for\n\n       anonymous and efficient execution.\n• When-issued (wi) market: Trading before\n\n  issuance. (Why such market?)"
+  },
+  {
+   "page": 14,
+   "title": "3. Market Structure of U.S. Treasuries",
+   "thin": true,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>",
+   "excerpt": "3. Market Structure of U.S. Treasuries"
+  },
+  {
+   "page": 15,
+   "title": "3. Market Structure of U.S. Treasuries",
+   "thin": true,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>",
+   "excerpt": "3. Market Structure of U.S. Treasuries\n         中国的政府债券: Market Structure"
+  },
+  {
+   "page": 16,
+   "title": "Aspect China U.S.",
+   "thin": false,
+   "explainHtml": "<p>美债市场：一级拍卖（Treasury auction）+ 二级 OTC 为主；有 when-issued（WI）市场做价格发现。</p>\n<p>中美在托管、做市、投资者结构上有差异；比较表格时抓住「谁发行、谁交易、谁监管」。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "Aspect                                China            U.S.\n                           Market         • Two parallel bond markets:       • More unified\n                           Segmentation                                      bond markets.\n                                          – Interbank Market (main venue,\n                                          90%+ of volume): for banks &\n\n3. Market                                 large institutions only.\n\nStructure                                 – Exchange Market (Shanghai &\n                                          Shenzhen Stock Exchanges): for\nof U.S.                                   retail & funds.\n\nTreasuries                 Retail Access • Very limited retail access.       • Anyone can bid\n                                                                           directly via\n                                          • Typically via Savings Bonds (储\n                                          蓄国债) sold at bank counters.      TreasuryDirect.\n\n                           Monetary       • PBoC relies on central bank bills, • Fed conducts open\n                           Policy Tools repos, and window guidance rather market operations\n(c) Key difference                   than outright Treasury                  directly in\nbetween U.S. Treasuries\n                                     transactions.                           Treasuries.\nand Chinese govn’t\nbonds                   Transparency • Improving but still less              • Highly transparent,\n                                          transparent, especially for non-   with real-time yield\n                                          institutional observers.           data."
+  },
+  {
+   "page": 17,
+   "title": "4. STRIPPED TREASURY",
+   "thin": true,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. STRIPPED TREASURY\nSECURITIES (STRIPS)"
+  },
+  {
+   "page": 18,
+   "title": "4. Stripped Treasuries (STRIPS)",
+   "thin": false,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. Stripped Treasuries (STRIPS)\n• The Treasury does NOT issue zero-coupon notes or bonds.\n• However, due to the demand for zero-coupon instruments with no\n  credit risk, the dealers has created such securities by coupon\n  stripping.\nCoupon Stripping\n• Dealer strips coupon + principal into separate zero-coupon\n  securities, each representing a single future payment, which can\n  then be traded separately as zero-coupon bonds."
+  },
+  {
+   "page": 19,
+   "title": "4. Stripped Treasuries (STRIPS)",
+   "thin": false,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. Stripped Treasuries (STRIPS)\nCoupon Stripping Example:\n\nImagine a 10-year Treasury note with\n• Face value: $1,000,\n• Coupon rate: 4% (so $40 annual interest = $20 every 6 months)\n• Maturity: 10 years\nThen\n• Total cash flows = 20 coupons + 1 principal repayment = 21 STRIPS\n   – 20 separate securities for the $20 semiannual coupons\n   – 1 strip for the $1,000 principal repayment"
+  },
+  {
+   "page": 20,
+   "title": "4. Stripped Treasuries (STRIPS)",
+   "thin": false,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. Stripped Treasuries (STRIPS)\nCoupon Stripping Example:\nA 10-year Treasury note with Face value = $1,000, Coupon rate = 4%."
+  },
+  {
+   "page": 21,
+   "title": "4. Stripped Treasuries (STRIPS)",
+   "thin": false,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. Stripped Treasuries (STRIPS)\nCoupon Stripping\nIn this way,\n   𝐚 𝐜𝐨𝐮𝐩𝐨𝐧 𝐛𝐨𝐧𝐝 = 𝐚 𝐩𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨 𝐨𝐟 𝐳𝐞𝐫o 𝐜𝐨𝐮𝐩𝐨𝐧 𝐛𝐨𝐧𝐝𝐬 (𝐒𝐓𝐑𝐈𝐏𝐒)\nThe price, duration, and convexity of the bond must be equal to the\nprice, the duration, and the convexity of the portfolio.\n\nWhy Important?\n• STRIPS allow precise control over duration and cash flows.\n• Serve as a source of the spot rate curve (used in term structure\n  modeling)."
+  },
+  {
+   "page": 22,
+   "title": "4. Stripped Treasuries (STRIPS)",
+   "thin": false,
+   "explainHtml": "<p><strong>STRIPS</strong>：把附息国债的每笔票息与本金拆成独立零息债。无套利关系要求：附息债价格 ≈ 对应 STRIPS 包的价格之和。</p>\n<div class=\"kf\">P_coupon bond ≈ Σ P_STRIP,i</div>\n<div class=\"trap\"><strong>易错点：</strong>若拆开后更贵/更便宜，就存在重组或拆分套利空间（还需考虑摩擦与融资）。</div>",
+   "excerpt": "4. Stripped Treasuries (STRIPS)\n\n• STRIPS Program\n   – Since 1985, authorized by Treasury; all fixed-principal notes and\n     bonds eligible.\n   – Book-entry system, zero-coupon, traded as \"strips.\"\n• Notations and CUSIPs\n   – ci = coupon strip, np = principal of a note, bp = principal of a\n     bond.\n• Tax treatment:\n   – Accrued interest taxed annually (even if unpaid) → negative\n     cash flow before maturity.\n   – Foreign investors prefer principal strips due to favorable tax\n     treatment in some countries."
+  },
+  {
+   "page": 23,
+   "title": "5. GSE SECURITIES (QUASI-",
+   "thin": true,
+   "explainHtml": "<p>GSE / Agency 证券：政府支持企业相关债务，信用介于国债与公司债之间，常带隐含或显性支持预期。</p>\n<p>中国可对照政策性金融机构债等「准主权」品种，但法律支持力度并不相同，不能简单划等号。</p>",
+   "excerpt": "5. GSE SECURITIES (QUASI-\nGOVERNMENT)"
+  },
+  {
+   "page": 24,
+   "title": "5. GSE Federal Agency Securities",
+   "thin": false,
+   "explainHtml": "<p>GSE / Agency 证券：政府支持企业相关债务，信用介于国债与公司债之间，常带隐含或显性支持预期。</p>\n<p>中国可对照政策性金融机构债等「准主权」品种，但法律支持力度并不相同，不能简单划等号。</p>",
+   "excerpt": "5. GSE                Federal Agency Securities\nSecurities\n    TYPE            EXAMPLES                            GUARANTEE\n\n Government   Ginnie Mae (GNMA)                    Full faith and credit of\n Agencies                                          the U.S.\n\n GSEs         Fannie Mae (FNMA),                   No explicit guarantee,\n              Freddie Mac (FHLMC),                 but implied support\n              Federal Home Loan Banks              (especially clear after\n              (FHLB), Farmer Mac                   2008 crisis)"
+  },
+  {
+   "page": 25,
+   "title": "5. GSE Federal Agency Securities",
+   "thin": false,
+   "explainHtml": "<p>GSE / Agency 证券：政府支持企业相关债务，信用介于国债与公司债之间，常带隐含或显性支持预期。</p>\n<p>中国可对照政策性金融机构债等「准主权」品种，但法律支持力度并不相同，不能简单划等号。</p>",
+   "excerpt": "5. GSE                   Federal Agency Securities\nSecurities\n  Key Features:\n  •   Used to finance housing, agriculture, and infrastructure.\n  •   May issue mortgage-backed securities (MBS), discount\n      notes, or bonds.\n  •   Often higher yields than Treasuries due to slightly higher\n      credit risk.\n  •   Deep and liquid market; widely held by banks, pensions,\n      insurers."
+  },
+  {
+   "page": 26,
+   "title": "5. GSE China’s ?",
+   "thin": false,
+   "explainHtml": "<p>GSE / Agency 证券：政府支持企业相关债务，信用介于国债与公司债之间，常带隐含或显性支持预期。</p>\n<p>中国可对照政策性金融机构债等「准主权」品种，但法律支持力度并不相同，不能简单划等号。</p>",
+   "excerpt": "5. GSE                       China’s ?\nSecurities\nChina does not have a perfect one-to-one equivalent, but the closest\ncounterparts can be grouped as follows:\n      U.S. Instrument                         Closest Chinese Equivalent\nGovernment Agency           政策性银行债（如国开行、农发行、进出口行）\nSecurities(e.g., GNMA)      Debt from Policy Banks like China Development Bank\n                            (CDB), Agricultural Development Bank, Export-Import\n                            Bank\nGSEs (Fannie Mae, Freddie   政策性银行金融债 with some implicit policy backing\nMac, etc.)                  但无严格意义上的“半官方企业债” like GSEs."
+  },
+  {
+   "page": 27,
+   "title": "Quick Quiz",
+   "thin": false,
+   "explainHtml": "<p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>\n<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>",
+   "excerpt": "Quick Quiz\n\n1. A bond trading \"on-the-run\" means it is:\nA) the most recently issued\nB) an older issue\n\n2. STRIPS are created by separating a Treasury bond into:\nA) coupon and principal payments\nB) short-term and long-term maturities"
+  },
+  {
+   "page": 28,
+   "title": "Summary & Key Takeaways",
+   "thin": false,
+   "explainHtml": "<p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>\n<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>",
+   "excerpt": "Summary & Key Takeaways\n• Types: U.S. Treasuries include T-bills (discount), T-notes/bonds\n  (coupon), TIPS (inflation-adjusted), and FRNs (floating rate).\n• Safety: Backed by the U.S. government, making them virtually\n  default-risk-free.\n• Primary Market: Issued via single-price auctions to primary dealers.\n• Secondary Market: Trade OTC 24/7; \"on-the-run\" refers to the most\n  recent issue.\n• STRIPS: Zero-coupon bonds created by stripping the coupons and\n  principal of a Treasury note/bond.\n• GSEs: Quasi-government agencies (e.g., Fannie Mae) have an\n  implicit government guarantee and higher yields than Treasuries."
+  },
+  {
+   "page": 29,
+   "title": "Reference",
+   "thin": true,
+   "explainHtml": "<p>本页属于国债模块「Reference」。记住：国债曲线是其它信用债定价的起点。</p>",
+   "excerpt": "Reference\n\n• Fabozzi, Chapter 7."
+  }
+ ]
+}

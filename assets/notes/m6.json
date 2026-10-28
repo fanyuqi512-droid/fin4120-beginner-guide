@@ -1,0 +1,175 @@
+{
+ "module": "m6",
+ "deck": "International Bond",
+ "pageCount": 24,
+ "pages": [
+  {
+   "page": 1,
+   "title": "Fundamental Instruments",
+   "thin": false,
+   "explainHtml": "<p>国际债主题「Fundamental Instruments」。跨境投资 = 利率观点 + 信用观点 + 汇率观点，三者要分开记账。</p>",
+   "excerpt": "Fundamental Instruments\nPart III: International Bond\n\nFin4120: Fixed Income Securities\nInstructor: Prof. Linlin Ye (CUHKSZ)"
+  },
+  {
+   "page": 2,
+   "title": "Roadmap",
+   "thin": false,
+   "explainHtml": "<p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>\n<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>",
+   "excerpt": "Roadmap\n\n1.   Motivation for Investing in International Bonds\n2.   Classification of Global Bond Markets\n3.   Foreign Exchange (FX) Risk and Hedging\n4.   International Issuers and Bond Structure\n5.   Global Bond Index"
+  },
+  {
+   "page": 3,
+   "title": "1. MOTIVATION FOR INVESTING",
+   "thin": true,
+   "explainHtml": "<p>投国际债的动机：分散单一国家利率/信用风险、寻找更高实际收益、匹配外币负债等。</p>\n<p>但分散化会被汇率波动「搅局」——后面必须谈 hedging。</p>",
+   "excerpt": "1. MOTIVATION FOR INVESTING\n   IN INTERNATIONAL BONDS"
+  },
+  {
+   "page": 4,
+   "title": "1. Motivation for International Bonds",
+   "thin": false,
+   "explainHtml": "<p>投国际债的动机：分散单一国家利率/信用风险、寻找更高实际收益、匹配外币负债等。</p>\n<p>但分散化会被汇率波动「搅局」——后面必须谈 hedging。</p>",
+   "excerpt": "1. Motivation for International Bonds\n\n• Diversification: Don’t Put All Eggs in One\n  Basket\n   – spreading investment across different\n     assets to lower risk\n   – Bonus: Can unlock new sources of return\n     (alpha) beyond your home market.\n\n• Currency hedging:\n   – Hedged portfolios remove currency\n     swings and can focus on local interest\n     rate & yields.\n   – Unhedged portfolios keep currency\n     exposure (potential win or lose based on\n     FX changes).                                       Diversification ≠ Hedging"
+  },
+  {
+   "page": 5,
+   "title": "1. Motivation for Example",
+   "thin": false,
+   "explainHtml": "<p>投国际债的动机：分散单一国家利率/信用风险、寻找更高实际收益、匹配外币负债等。</p>\n<p>但分散化会被汇率波动「搅局」——后面必须谈 hedging。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "1. Motivation for                                    Example\n                                                     How Big Companies Borrowed in Euros to\nInternational Bonds                                  Beat U.S. Interest Rates (2024)\n\n•   U.S. companies are                              10Y Yield: U.S. Treasury vs. EuroZone Gov Bonds (2024)\n    borrowing billions in                      5\n    Europe to exploit                         4.5\n\n    lower ECB rates (1.75%                     4\n                                              3.5\n    below the Fed's),                          3\n                                    Yield %\n\n    cutting costs amid U.S.                   2.5\n\n    economic uncertainty.                      2\n                                              1.5\n•   Firms like IBM and T-                      1\n\n    Mobile issued €23.4B                      0.5\n                                               0\n    in 2024—the most\n                                                    01/02/2024\n                                                    01/12/2024\n                                                    01/25/2024\n                                                    02/06/2024\n                                                    02/16/2024\n                                                    02/29/2024\n                                                    03/12/2024\n                                                    03/22/2024\n                                                    04/04/2024\n                                                    04/16/2024\n                                                    04/26/2024\n                                                    05/08/2024\n                                                    05/20/2024\n                                                    05/31/2024\n                                                    06/12/2024\n                                                    06/25/2024\n                                                    07/08/2024\n                                                    07/18/2024\n                                                    07/30/2024\n                                                    08/09/2024\n                                                    08/21/2024\n                                                    09/03/2024\n                                                    09/13/2024\n                                                    09/25/2024\n                                                    10/07/2024\n                                                    10/18/2024\n                                                    10/30/2024\n                                                    11/12/2024\n                                                    11/22/2024\n                                                    12/05/2024\n                                                    12/17/2024\n                                                    12/30/2024\n    since 2007—while\n    investors bet on more\n    ECB cuts and delayed                                                     U.S. 10Y Treasury\n\n                                                                             EuroZone 10Y GovBonds\n    Fed easing."
+  },
+  {
+   "page": 6,
+   "title": "2. CLASSIFICATION OF GLOBAL",
+   "thin": true,
+   "explainHtml": "<p>常见分类：外国债（在某国国内市场、由外资发行人、以该国货币发行，如 Yankee / Samurai / Panda）vs <strong>Eurobond</strong>（在发行人母国以外、以离岸形式发行）。</p>\n<p>也可按货币、发行人居住地、投资人类型划分。名字容易混，抓住「发行地 + 货币 + 监管」三要素。</p>",
+   "excerpt": "2. CLASSIFICATION OF GLOBAL\n       BOND MARKETS"
+  },
+  {
+   "page": 7,
+   "title": "2.",
+   "thin": false,
+   "explainHtml": "<p>国际债主题「2.」。跨境投资 = 利率观点 + 信用观点 + 汇率观点，三者要分开记账。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2.\nClassification a. By location of issuance\n               (i) Internal Bonds\nof Global Bond -- issued & traded within country\nMarket\n\n                                                 Example (U.S.  Example (China\n Market Type Category     Description\n                                                  Perspective)   Perspective)\n                        Bonds issued by        U.S. Treasury   国债、地方政府\n               Domestic local entities in      bond, Apple USD 债、中石化在中\n Internal Bond Bond     local currency,        bond issued in 国银行间市场发\n Market        Market   traded locally.      U.S.             行的人民币债券\n (issued &\n traded within Foreign  Bonds issued in      Yankee bond:     熊猫债：德国开\n country)               local market by      Toyota issues    发银行在中国发\n               Bond\n                        foreign entities, in USD bond in U.S. 行人民币债券\n               Market\n                        local currency."
+  },
+  {
+   "page": 8,
+   "title": "2. Classification of",
+   "thin": false,
+   "explainHtml": "<p>常见分类：外国债（在某国国内市场、由外资发行人、以该国货币发行，如 Yankee / Samurai / Panda）vs <strong>Eurobond</strong>（在发行人母国以外、以离岸形式发行）。</p>\n<p>也可按货币、发行人居住地、投资人类型划分。名字容易混，抓住「发行地 + 货币 + 监管」三要素。</p>",
+   "excerpt": "2. Classification of\nGlobal Bond Market\nMarket Nicknames:\n• Yankee (US), Samurai (Japan), Bulldog\n  (UK), Rembrandt (Netherlands), Matador\n  (Spain), Panda (China);\n\n• E.g., A Yankee bond is a bond issued by\n  a foreign company or government in\n  the United States, denominated in U.S.\n  dollars (USD), and sold to American\n  investors.\n• E.g., A Samurai bond is a bond issued by\n  a foreign company or\n  government in Japan, denominated\n  in Japanese yen (JPY), and sold\n  to Japanese investors."
+  },
+  {
+   "page": 9,
+   "title": "2. Classification a. By location of issuance",
+   "thin": false,
+   "explainHtml": "<p>常见分类：外国债（在某国国内市场、由外资发行人、以该国货币发行，如 Yankee / Samurai / Panda）vs <strong>Eurobond</strong>（在发行人母国以外、以离岸形式发行）。</p>\n<p>也可按货币、发行人居住地、投资人类型划分。名字容易混，抓住「发行地 + 货币 + 监管」三要素。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2. Classification             a. By location of issuance\nof Global Bond                 (ii) External (Eurobond market)\nMarket                        -- Issued and trade outside country\n\n                                                         Example (U.S.  Example (China\n Market Type Category         Description\n                                                          Perspective)   Perspective)\n                        Bonds issued                    Eurodollar     中石油在伦敦发行\n               Eurobond internationally, outside bond: Apple    美元债券\n               Market home country, in any issues USD           （Eurodollar bond）\nExternal Bond\n                        currency.                bond in London\nMarket (issued\n                        Bonds issued             Apple global 国家开发银行发行\noutside home\n                        simultaneously in        USD bond       的全球债券，覆盖\njurisdiction) Global\n                        multiple markets with issued in U.S., 欧、美、亚市场\n               Bonds\n                        large size and tranches. Europe, Asia"
+  },
+  {
+   "page": 10,
+   "title": "2. Classification of Global Bond Market",
+   "thin": false,
+   "explainHtml": "<p>常见分类：外国债（在某国国内市场、由外资发行人、以该国货币发行，如 Yankee / Samurai / Panda）vs <strong>Eurobond</strong>（在发行人母国以外、以离岸形式发行）。</p>\n<p>也可按货币、发行人居住地、投资人类型划分。名字容易混，抓住「发行地 + 货币 + 监管」三要素。</p>",
+   "excerpt": "2. Classification of Global Bond Market\n\nb. Trading Blocs:\n• Dollar bloc, Euro bloc (Eurozone & Non-Eurozone), Japan, Emerging\n  Markets\n\n Note: China is unique in having a dual-currency territory system:\n• 在岸人民币 (CNY)：受中国人民银行完全监管\n• 离岸人民币 (CNH)：主要在香港、新加坡、伦敦市场流通，不\n   受央行直接监管\nThis gives rise to:\n• 点心债 (Dim Sum Bonds): RMB-denominated bonds issued in HK,\n   e.g., by Bank of China in Hong Kong.\n• While these resemble Eurobonds, they’re uniquely tied to China’s\n   currency liberalization strategy."
+  },
+  {
+   "page": 11,
+   "title": "2. Classification",
+   "thin": false,
+   "explainHtml": "<p>常见分类：外国债（在某国国内市场、由外资发行人、以该国货币发行，如 Yankee / Samurai / Panda）vs <strong>Eurobond</strong>（在发行人母国以外、以离岸形式发行）。</p>\n<p>也可按货币、发行人居住地、投资人类型划分。名字容易混，抓住「发行地 + 货币 + 监管」三要素。</p>",
+   "excerpt": "2. Classification\n                           China Offshore USD Bond Issuance\nof Global Bond             (2005-2025)\nMarket\n\n                                  Peak in 2018 at around\n                                  US$214 billion\n\n                                                                   Signs of\n                                                                   recovery\n    Steady growth\n    from 2005 to 2017.\n                                                           Sharp slowdown\n                                                           post-2021"
+  },
+  {
+   "page": 12,
+   "title": "3. FOREIGN EXCHANGE RISK",
+   "thin": true,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "3. FOREIGN EXCHANGE RISK\n      AND HEDGING"
+  },
+  {
+   "page": 13,
+   "title": "3. Foreign Exchange Risk & Hedging",
+   "thin": false,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "3. Foreign Exchange Risk & Hedging\nHow foreign-currency bonds’ return swing with exchange-rate risk\n\n                                                                •   Blue line: The return in\n                                                                    USD fluctuated due to\n                                                                    actual FX changes, falling\n                                                                    below 0% for much of the\n                                                                    period before recovering in\n                                                                    early 2025.\n                                                                •   Red dashed line: The\n                                                                    EUR/USD exchange rate —\n                                                                    you can clearly see the\n  Example (Illustration): How A USD-based investor’s return         euro weakened in late\n  from a €1,000 bond (5% coupon) fluctuated from January            2024 before strengthening\n  2024 to May 2025, using real EUR/USD exchange rates               again in 2025."
+  },
+  {
+   "page": 14,
+   "title": "3. Foreign Exchange Risk & Hedging",
+   "thin": false,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "3. Foreign Exchange Risk & Hedging\nHedging Tools – Part 1\n   Tool              Mechanism / Intuition                   When to use?\nForward Lock in a fixed exchange rate for future cash A student locking in a rate to\nContracts flows (e.g. bond coupons and principal)    pay future tuition abroad\nCurrency Exchange principal and interest payments in Two students from\nSwaps     one currency for another through swap             different countries\n                                                            swapping living expense\n          agreement                                         payments\nFutures   Standardized contracts to buy/sell currencies Quickly hedging a short\nContracts at a future date on an exchange                   trip abroad using a simple,\n                                                            tradable contract\nCurrency Pay a fee for the right to exchange the            Planning a study trip but\nOptions   currency at a set rate (but don’t have to)        not sure—want protection\n                                                            without losing flexibility"
+  },
+  {
+   "page": 15,
+   "title": "3. Foreign Exchange Risk & Hedging",
+   "thin": false,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "3. Foreign Exchange Risk & Hedging\nHedging Tools – Part 2\nTool        How It Works                                  When It’s Used\n            Invest asset in a foreign currency to A student working\nNatural\n            pay expenses in that same currency— abroad and using local\nHedging\n            no conversion needed                  income to pay local rent\n                                                    Planning to spend in a\n            When you can’t hedge the exact\nProxy                                               rare currency but using\n            currency, use a similar, more available\nHedging                                             USD as a close\n            one (like using USD instead)\n                                                    substitute\nCross-                                                    Two students swapping\n            Swap loans with someone in another\nCurrency                                                  loans in different\n            country, but also account for interest\nBasis                                                     countries, adjusting for\n            rate differences\nSwaps                                                     interest costs"
+  },
+  {
+   "page": 16,
+   "title": "3. Foreign Exchange Risk & Hedging",
+   "thin": false,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "3. Foreign Exchange Risk & Hedging\nQuick Intuition Behind Each Tools:\n\n Tool                 Intuition\n Forwards                 Fix cost now\n Swaps                    Turn foreign → domestic\n Futures                  Trade on exchange\n Options                  Safety net\n Natural Hedge            Match currency in/out\n Proxy Hedge              Hedge with similar FX\n Basis Swaps              Bet on interest rate spread"
+  },
+  {
+   "page": 17,
+   "title": "4. INTERNATIONAL ISSUERS",
+   "thin": true,
+   "explainHtml": "<p>谁能在国际市场借钱：主权、超主权、金融机构、公司等。准入取决于评级、披露与投资者需求。</p>",
+   "excerpt": "4. INTERNATIONAL ISSUERS\n   AND BOND STRUCTURE"
+  },
+  {
+   "page": 18,
+   "title": "a. Who can borrow in the",
+   "thin": false,
+   "explainHtml": "<p>谁能在国际市场借钱：主权、超主权、金融机构、公司等。准入取决于评级、披露与投资者需求。</p>",
+   "excerpt": "a. Who can borrow in the\n                                            4. International\nglobal market? – the big                    Issuers & Bond\nborrowers                                   Structure\n• Sovereigns: Countries (e.g., U.S., Japan) → borrow for national needs.\n• Subnationals: States, cities (e.g., California, Tokyo) → borrow for local\n  projects.\n• Supranationals: Global groups (e.g., World Bank) → lend to help\n  countries.\n• Corporates: Companies (e.g., Apple, Toyota) → borrow to grow.\n• SPVs: One-time \"shell\" companies → fund single projects (like a bridge)."
+  },
+  {
+   "page": 19,
+   "title": "4. International",
+   "thin": false,
+   "explainHtml": "<p>未对冲时，本币回报 ≈ 当地债券回报 + 汇率回报。外币升值增厚收益，贬值侵蚀收益。</p>\n<div class=\"kf\">R_home ≈ R_local + R_FX</div>\n<p>对冲可用远期/期货卖出外币本息；对冲后近似拿走利差，但有对冲成本（利率平价）。</p>\n<div class=\"trap\"><strong>易错点：</strong>「当地债很香」可能只是货币风险溢价；对冲后超额收益可能消失。</div>",
+   "excerpt": "4. International\nIssuers & Bond                              b. Internation bond structure\nStructure\nThough International bonds resemble domestic bonds but may have cross-\nborder features. For example, key differences include:\n\n        Domestic Bonds                               International Bonds\n\nStandard legal/tax structure     Must accommodate multiple jurisdictions\n                                 May include multi-/dual-currency, FX\nSimple currency/cash flows\n                                 protection, etc.\n                                 Often governed by other country’s law or\nOne legal system (e.g., NY)\n                                 includes choice-of-law clauses\nDTC clearing (U.S. bonds)        Euroclear, Clearstream, HKMA, etc."
+  },
+  {
+   "page": 20,
+   "title": "5. GLOBAL BOND INDEX",
+   "thin": true,
+   "explainHtml": "<p>全球债券指数决定被动资金的配置基准；纳入/剔除某国债券会引发大规模再平衡。</p>\n<p>关注货币对冲指数 vs 未对冲指数——二者历史表现可差很多。</p>",
+   "excerpt": "5. GLOBAL BOND INDEX"
+  },
+  {
+   "page": 21,
+   "title": "5. Global Bond Index",
+   "thin": false,
+   "explainHtml": "<p>全球债券指数决定被动资金的配置基准；纳入/剔除某国债券会引发大规模再平衡。</p>\n<p>关注货币对冲指数 vs 未对冲指数——二者历史表现可差很多。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "5. Global Bond Index\nIndex Type      What It Tracks                          Examples (You Should Know)\n                                                        • FTSE World Government\n                ONLY government bonds\nGovernment                                              Bond Index (WGBI)\n                (safe, low risk) → Like U.S.\nBond Index                                              • Bloomberg Global Treasury\n                Treasuries, German Bunds\n                                                        Index\n               All kinds of bonds — govt,               • Bloomberg Global Aggregate\nAggregate Bond corporate, mortgage, etc.                (\"The Agg\")\nIndex          → The \"total market\" of                  • ICE BofA Global Broad\n               bonds                                    Market\n                                            • JPMorgan EMBI (most\nEmerging        Bonds from fast-growing\n                                            famous)\nMarket (EM)     but riskier countries → Can\n                                            • Bloomberg EM Aggregate\nIndex           be in USD or local currency\n                                            • ICE EM Sovereign"
+  },
+  {
+   "page": 22,
+   "title": "Quick Quiz",
+   "thin": false,
+   "explainHtml": "<p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>\n<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>",
+   "excerpt": "Quick Quiz\n\n1. Which one is Yankee bond?\nA) Foreign issuer, U.S. market, USD\nB) U.S. issuer, foreign market, local currency\n\n2. If a U.S. investor holds a euro-denominated bond and the euro\nweakens against the dollar, what happens to their investment return\nin USD?\nA) Goes up\nB) Goes down"
+  },
+  {
+   "page": 23,
+   "title": "Summary & Key Takeaways",
+   "thin": false,
+   "explainHtml": "<p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>\n<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>",
+   "excerpt": "Summary & Key Takeaways\n\n• Diversification & Yield: International bonds offer risk reduction and alpha\n  via currency/rate differentials (e.g., U.S. firms borrowing in euros).\n• Market Types:\n   – Internal: Domestic (local issuers) and foreign (e.g., Yankee, Panda\n       bonds).\n   – External: Eurobonds (issued offshore) and global bonds (multi-market).\n• FX Risk: Returns hinge on currency movements—hedge via forwards,\n  swaps, or natural/proxy hedges.\n• Structures: Cross-border bonds feature multi-currency clauses, UK law, and\n  Euroclear/Clearstream settlement.\n• Indices: Track sovereign (FTSE WGBI), aggregate (Bloomberg Global Agg),\n  and EM (JPM EMBI)"
+  },
+  {
+   "page": 24,
+   "title": "Reference",
+   "thin": false,
+   "explainHtml": "<p>国际债主题「Reference」。跨境投资 = 利率观点 + 信用观点 + 汇率观点，三者要分开记账。</p>",
+   "excerpt": "Reference\n\n• Chapter 10, Fabozzi: Bond Markets, Analysis, And Strategies,\n  10th edition."
+  }
+ ]
+}

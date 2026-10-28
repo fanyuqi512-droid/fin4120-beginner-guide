@@ -7,11 +7,9 @@
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false});"></script>
-
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </head>
-<body>
+<body data-module="m1" data-deck-keywords="Fundamentals of Bonds" data-assets-base="../assets">
 <header class="site">
   <div class="inner">
     <a class="brand" href="../index.html">Fin4120 零基础固收</a>
@@ -22,693 +20,78 @@
     </nav>
   </div>
 </header>
-<div class="wrap wide">
+<div class="wrap wide viewer-wrap">
   <p class="muted"><a href="../index.html">← 返回首页</a></p>
   <h1 class="mod-title">模块 1 · 债券是什么 · Fundamentals of Bonds</h1>
-  
-<div class="source-note">
-  <strong>Source:</strong> Fin4120 slides — <em>Fundamentals of Bonds</em>, Prof. Linlin Ye (CUHKSZ) — for personal study.
-  左侧为讲义文本摘录（按幻灯片分页整理）；右侧为学习解析，非讲义原文照搬。
-</div>
-<div class="dual-legend">
-  <span><i class="dot L"></i> 讲义原文</span>
-  <span><i class="dot R"></i> 解析（中文）</span>
-</div>
-<div class="card">
-  <h2>本模块目录（共 18 节）</h2>
-  <div class="toc-dual">
-    <a href="#s1">1. Fundamentals of Bonds</a><a href="#s2">2. 1. WHAT IS A BOND</a><a href="#s3">3. Basic Components of a Bond</a><a href="#s4">4. 2. Sectors of the Bond Market</a><a href="#s5">5. 2.1. Sectors of the Bond Market (U.S.)-Part 1</a><a href="#s6">6. 2.1. Sectors of the Bond Market (U.S.)-Part 2</a><a href="#s7">7. 2.1. Sectors of the Bond Market (U.S.)-Part 3</a><a href="#s8">8. 2. Sectors of the Bond Market</a><a href="#s9">9. 2.1. Sectors of the Bond Market</a><a href="#s10">10. 2. Sectors of the Bond Market: Regulators</a><a href="#s11">11. 2. Sectors of the Bond Market: Regulators</a><a href="#s12">12. 3. Key Bond 3.1. Special Coupon Structure</a><a href="#s13">13. 3. Key Bond 3.2. Embedded Options</a><a href="#s14">14. 4. KEY RISKS OF BOND</a><a href="#s15">15. 5.1. Main Risks</a><a href="#s16">16. 5. BOND IDENTIFICATION AND</a><a href="#s17">17. 5. Bond Identification &amp; Quoting</a><a href="#s18">18. Summary &amp; Key Takeaways</a>
+  <div class="source-note">
+    <strong>Source:</strong> Fin4120 slides — <em>Fundamentals of Bonds</em>, Prof. Linlin Ye (CUHKSZ)。
+    左侧为<strong>课件原件 PDF 页</strong>（需在本机导入，存 IndexedDB，不会上传）；右侧为按页同步的学习解析。
   </div>
-</div>
+  <div class="dual-legend">
+    <span><i class="dot L"></i> 左侧：课件原件（PDF.js）</span>
+    <span><i class="dot R"></i> 右侧：本页解析</span>
+  </div>
 
-<p class="section-anchor" id="s1">§ Fundamentals of Bonds</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">Fundamentals of Bonds</h3>
-      <pre class="lecture-text">Fundamentals of Bonds
-
-Roadmap
-
-1.   What is a bond?
-2.   Sectors of bond markets
-3.   Key features of bonds
-4.   Key risks of bond investment
-5.   Name convention &amp; quoting of bonds</pre>
+  <div class="pdf-toolbar card">
+    <div class="pdf-toolbar-row">
+      <button type="button" class="btn" id="pdf-prev" title="上一页">← 上一页</button>
+      <span class="page-indicator">第 <strong id="pdf-page-label">—</strong> 页</span>
+      <button type="button" class="btn" id="pdf-next" title="下一页">下一页 →</button>
+      <span class="toolbar-sep"></span>
+      <button type="button" class="btn ghost" id="pdf-zoom-out">−</button>
+      <span id="pdf-zoom-label" class="muted">115%</span>
+      <button type="button" class="btn ghost" id="pdf-zoom-in">+</button>
+      <span class="toolbar-sep"></span>
+      <button type="button" class="btn ghost" id="mode-toggle" title="无 PDF 时可用文字摘录">文字摘录</button>
+      <button type="button" class="btn accent" data-import-pdfs>导入讲义 PDF</button>
     </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>
-<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s2">§ 1. WHAT IS A BOND</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">1. WHAT IS A BOND</h3>
-      <pre class="lecture-text">1. What Is A Bond
-What is a bond?
-A bond = an "I.O.U." from a borrower to you (the investor)
-• The borrower promises:
-    – Regular Interest Payments → coupon payments
-        • Usually paid every 6 months.
-    – Return of Your Original Money → principal or “face value”
-        • Paid back on the maturity date (the end), usually $1000 per bond.
-
-The payment structure
-  Time (t)        1             2                     3    ...       N
-Cash Flow         𝐶1           𝐶2                     𝐶3   …       𝐶𝑁 + 𝐹
-    – 𝑪𝒕 = coupon payment each period
-    – 𝑭 = face value (principal), repaid at maturity (time N)</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>债券 = 借款人给你的 <strong>I.O.U.（欠条）</strong>：承诺定期付票息（coupon），到期还本金（principal / face / par）。</p>
-<p>现金流时间线：前 N−1 期收票息 C；最后一期收 C + 面值 F。美国公司债常见每半年付一次息。</p>
-<div class="kf">CF_t = C (t &lt; N);  CF_N = C + F</div>
-<div class="trap"><strong>易错点：</strong>「固定收益」≠ 零风险：票息合同可固定，但市价、通胀、违约、汇率仍会变。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s3">§ Basic Components of a Bond</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">Basic Components of a Bond</h3>
-      <pre class="lecture-text">Basic Components of a Bond
-
-    Par Value      Coupon Rate                  Maturity Date        Coupon
-  (Face Value)                                                       Payment
-
-                      Annual                   When the bond          Usually
-Typically $1,000
-                   interest rate                 matures and       semiannual in
-(￥100 in China,)
-                   applied to par            principal is repaid    U.S. market</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>四大零件：<strong>Par Value</strong>（面值）、<strong>Coupon Rate</strong>（年票息率）、<strong>Maturity</strong>（到期）、<strong>Payment Frequency</strong>（付息频率）。</p>
-<p>每期票息 ≈（票息率 × 面值）/ 年付息次数。美国常见面值 $1,000；中国国债常见面值 ¥100。</p>
-<div class="trap"><strong>易错点：</strong>票息率是合同写死的；收益率（yield）是按现价算出来的——两者只有在平价时才常相等。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s4">§ 2. Sectors of the Bond Market</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2. Sectors of the Bond Market</h3>
-      <pre class="lecture-text">2. SECTORS OF BOND MARKET
-
-2. Sectors of the
-Bond Market
-
-Question:
-
-• What does it mean by sector?
-
-2. Sectors of the Bond Market
-                  U.S.                                       China
-⁻ U.S. Treasury
-                                              ⁻ Government Bonds （政府债券）
-
-⁻ Agency
-                                              ⁻ Policy Bank Bonds （政策银行债券）
-
-⁻ Municipal
-                                              ⁻ Corporate Bonds （公司债、企业债等）
-
-⁻ Corporate
-                                              ⁻ Commercial Bank Bonds （商业银行债）
-
-⁻ Asset-Backed Securities (ABS)
-                                              ⁻ ABS / Structured Bonds
-
-⁻ Mortgage &amp; MBS
-                                              ⁻ Foreign (Panda) Bonds (熊猫债）
-
-⁻ Foreign / Eurobond</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>市政债利息常有税收优惠，但<strong>免税 ≠ 无风险</strong>；GO（税收担保）与 Revenue（项目收入担保）风险来源不同。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s5">§ 2.1. Sectors of the Bond Market (U.S.)-Part 1</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2.1. Sectors of the Bond Market (U.S.)-Part 1</h3>
-      <pre class="lecture-text">2.1. Sectors of the Bond Market (U.S.)-Part 1
-
-         Who Issues
-Sector              Examples Key Features                Maturity         Main Risks
-         It?
-
-                                - Safest (almost     -      T-Bills: ≤1
-                                  risk-free!)               yr
-         The U.S.   T-Bills,
-U.S.                            - Super liquid       -       T-Notes:
-         Government T-Notes,
-Treasury                          (easy to buy/sell)        1–10 yrs
-                    T-Bonds
-                                - Global             -       T-Bonds:
-                                  benchmark                 &gt;10 yrs
-
-                     Fannie     - Not always fully
-         Gov’t-
-                     Mae,         guaranteed             Varies (often
-         Sponsored
-Agency               Freddie    - Mostly                 medium to
-         Companies
-                     Mac,         unsecured              long)
-                     FHLB         (debentures)</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s6">§ 2.1. Sectors of the Bond Market (U.S.)-Part 2</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2.1. Sectors of the Bond Market (U.S.)-Part 2</h3>
-      <pre class="lecture-text">2.1. Sectors of the Bond Market (U.S.)-Part 2
-
-          Who
-Sector               Examples Key Features               Maturity      Main Risks
-          Issues It?
-                              - Tax-free interest!
-          Cities,
-                    NY State,
-          States,
-Municipal           LA City   - GO (tax-backed) 1–30+ years
-          Local
-                    bonds       vs. Revenue
-          Govts
-                                (project income)
-
-          U.S. &amp;                                         - CP: &lt;1 yr
-                    Apple,   - Wide range of
-Corporate Foreign                                        - Bonds: 1–
-                    Ford, GE   credit quality;
-          Companies                                        30+ yrs</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>市政债利息常有税收优惠，但<strong>免税 ≠ 无风险</strong>；GO（税收担保）与 Revenue（项目收入担保）风险来源不同。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s7">§ 2.1. Sectors of the Bond Market (U.S.)-Part 3</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2.1. Sectors of the Bond Market (U.S.)-Part 3</h3>
-      <pre class="lecture-text">2.1. Sectors of the Bond Market (U.S.)-Part 3
-
-Sector       Issuers   Examples Key Features         Maturity Main Risks
-Asset-                          - Made from pools of
-           Special- Auto loans,
-Backed                             loans             Usually 2–
-           Purpose  credit
-Securities                      - Cash flow comes 10 years
-           Entities cards
-(ABS)                              from payments
-                                - Backed by home or
-                                                     - RMBS:
-Mortgage Banks,                    commercial
-                                                        5–30 yrs
-Backed     GSEs,    RMBS,          mortgages
-                                                     - CMBS:
-Securities Private  CMBS        - Cash flow comes
-                                                        3–10+
-(MBS)      Issuers                 from mortgage
-                                                        yrs
-                                   payments
-           Foreign              - Issued in foreign  1–30+
-Foreign / Govts &amp;   EU gov’ts,     currency          years
-Eurobonds Companies intl. corps - Great for global   (varies
-                                   diversification   widely)</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s8">§ 2. Sectors of the Bond Market</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2. Sectors of the Bond Market</h3>
-      <pre class="lecture-text">2. Sectors of the Bond Market
-Note: What is a structured bond?
-
-                                                     Real Life Example:
-                                                     • Mortgage-Backed
-                                                        Securities (MBS)
-                                                     • Collateralized Debt
-                                                        Obligation (CDO)
-                                                     • Inverse Floaters.</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s9">§ 2.1. Sectors of the Bond Market</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2.1. Sectors of the Bond Market</h3>
-      <pre class="lecture-text">2.1. Sectors of the Bond Market
-
-2. Sectors of the Bond Market: Regulators
-
-                         U.S. vs. China Regulators
-(i) U.S. System: One Team, Clear Roles
-  Regulator      Role                                       Quick Tip
-                 Watches corporate, muni,                   "Truth checker" – enforces
-  SEC
-                 ABS                                        disclosures
-                                                            "Money boss" – controls
-  Fed            Sets rates, supervises banks
-                                                            economy
-                                                            "Referees" – no cheating
-  FINRA/MSRB Polices fair trading
-                                                            allowed
-                                                            "Borrower-in-chief" – sells T-
-  Treasury       Issues government bonds
-                                                            Bills</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s10">§ 2. Sectors of the Bond Market: Regulators</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2. Sectors of the Bond Market: Regulators</h3>
-      <pre class="lecture-text">2. Sectors of the Bond Market: Regulators
-
-                       U.S. vs. China Regulators
-(ii) China System: Split by Type
-  Regulator         Role                                 Quick Tip
-                    Runs interbank market,
-  PBOC (央行)                                              "China’s Fed" – bank trading hub
-                    money policy
-                    Oversees exchange
-  CSRC (证监会)                                             Like SEC, but only for listed bonds
-                    bonds
-                    Approves SOE &amp; project               "Project gatekeeper" – greenlights
-  NDRC (发改委)
-                    bonds                                big plans
-  MOF (财政部)         Issues govt bonds (国债)               China’s Treasury – sells national debt</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s11">§ 2. Sectors of the Bond Market: Regulators</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">2. Sectors of the Bond Market: Regulators</h3>
-      <pre class="lecture-text">2. Sectors of the Bond Market: Regulators
-
-3. KEY FEATURES OF BONDS
-
-3. Key Bond Features
-Feature                  What It Means                                Tip
-1. Who Issues
-                     Can be the government, cities, or companies
-It?(Issuer Type)
-
-2. How Long Until    - Short: ≤5 years
-Paid Back?(Term to   - - Medium: 5–12 years
-Maturity)            - - Long: &gt;12 years
-
-3. How &amp; When You
-                     - Principal: $1,000 back at end (usually)
-Get Paid(Principal &amp;
-                     - Coupon: see more later
-Coupon)
-4. Pay Back         - Amortizing: paid bit by bit (like a mortgage)
-Style(Amortization) - Nonamortizing: all at once at the end
-
-5. Special
-Features(Embedded                    See more later
-Options)</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p><strong>Sector</strong> = 按发行人/担保类型划分的市场板块。美国常见：Treasury、Agency、Municipal、Corporate、ABS/MBS、外国债/欧洲债等。</p>
-<p>中国常见：国债、政策性银行债、公司债/企业债、商行债、ABS、熊猫债等。监管架构也不同：美国相对「机构分工」，中国更多「按品种分管」。</p>
-<p>看监管是为了理解：谁批准发行、谁管交易场所、违约时谁介入——这会影响流动性与信息透明度。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s12">§ 3. Key Bond 3.1. Special Coupon Structure</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">3. Key Bond 3.1. Special Coupon Structure</h3>
-      <pre class="lecture-text">3. Key Bond                       3.1. Special Coupon Structure
-Features
-Type               What It Does                      When to Use Best for Investors?
-Fixed              Rate stays the same               Predictable income. Best when rates are
-
-Floating           Rate changes with market Use when rates
-Inverse Floating   Pays more when rates fall Rare. Use if you expect rates to
-
-Zero-Coupon        No interest paid                  Buy low, get full at maturity. Great for
-
-Capped/Floored Rate has max (cap) or min Caps protect                       floors protect
-               (floor)
-Step-Up        Rate increases over time Hold
-Deferred           No interest at first, starts      Used for
-Interest           later. Delay payout.
-PIK                Pays interest in more             No cash? Get extra bonds. High risk —
-                   bonds                             common in</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>票息结构可以很花：固定、浮动（挂钩 SOFR/LPR 等）、零息、step-up、延期付息、PIK（用新债抵利息）等。</p>
-<p>结构一变，利率风险与再投资风险的分配就会变——后面定价与收益率模块会反复用到。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s13">§ 3. Key Bond 3.2. Embedded Options</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">3. Key Bond 3.2. Embedded Options</h3>
-      <pre class="lecture-text">3. Key Bond                      3.2. Embedded Options
-Features
-Option Type    Controller What It Does                             Why Matters / When to Use
-Callable           Issuer   Company can repay you              Bad for you if rates    Common
-               (not you)    early and cancel the               in corporate bonds.
-                            bond
-Puttable           You      You can sell it back to            Use when rates      — get your
-               (Investor)   issuer at par on certain           money back and reinvest higher.
-                            dates
-Convertible        You      You can turn the bond              Mix of bond + stock upside. Win
-               (Investor)   into stock of the same             if the company’s stock goes
-                            company
-Exchangeable       You      You can swap bond for              Like convertible, but
-               (Investor)   stock of a different
-                            company
-Currency       Depends      Pay interest or principal          Protects against
-Option                      in different currency</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>嵌入期权改变「谁有提前终止权」：<strong>Callable</strong> 利好发行人；<strong>Puttable</strong> 利好投资者；还有 Convertible / Exchangeable 等。</p>
-<div class="trap"><strong>易错点：</strong>利率大降时，可赎回债容易被 call → 投资者面临再投资风险（call risk）。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s14">§ 4. KEY RISKS OF BOND</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">4. KEY RISKS OF BOND</h3>
-      <pre class="lecture-text">4. KEY RISKS OF BOND
-
-5.1. Main Risks
-   4. Risks in Bond                    –Part 1: Market &amp; Economic Risks
-   Investing                           Risks that affect all bonds - driven by the
-                                       economy and markets
-
-Risk                 What It Means                            Tip
-                     When rates go up, bond prices            Long-term bonds = bigger
-Interest Rate Risk
-                     go down                                  swings
-                     Your interest buys less over
-Inflation Risk                                                "Silent killer" of fixed income
-                     time
-Exchange Rate                                                 Only if bond pays in non-local
-                     Foreign currency loses value
-Risk                                                          currency
-                     Shape of interest rate curve
-Yield Curve Risk                                              Affects trading strategies
-                     changes
-
-Volatility Risk      Bond price swings wildly                 Mostly in junk/high-yield bonds</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>债券风险可粗分为两类：①市场/宏观（利率、通胀、汇率、曲线形态、波动）；②发行人/结构（信用违约、赎回、流动性、事件、税制变化）。</p>
-<p>直觉：期限越长、票息越低，价格对利率越敏感；信用越差，利差补偿通常越高。</p>
-<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s15">§ 5.1. Main Risks</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">5.1. Main Risks</h3>
-      <pre class="lecture-text">5.1. Main Risks
- 4. Risks in Bond                  –Part 2: Issuer &amp; Structure Risks
- Investing                         Risks tied to the borrower or bond design —
-                                   specific to the bond itself
-
-Risk             What It Means                             Tip
-                                                           Check credit ratings (AAA, BB,
-Credit Risk      Issuer might default (fail to pay)
-                                                           etc.)
-Call Risk        Issuer pays you back early                Loses income when rates drop
-                 Hard to sell quickly without losing       Small or obscure bonds =
-Liquidity Risk
-                 money                                     higher risk
-                 Sudden event (merger,                     Watch for takeovers or debt
-Event Risk
-                 bankruptcy, disaster)                     spikes
-                 Tax rules change or bond loses
-Tax Risk                                                   Big for muni bond investors
-                 tax-free status</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>债券风险可粗分为两类：①市场/宏观（利率、通胀、汇率、曲线形态、波动）；②发行人/结构（信用违约、赎回、流动性、事件、税制变化）。</p>
-<p>直觉：期限越长、票息越低，价格对利率越敏感；信用越差，利差补偿通常越高。</p>
-<div class="trap"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s16">§ 5. BOND IDENTIFICATION AND</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">5. BOND IDENTIFICATION AND</h3>
-      <pre class="lecture-text">5. BOND IDENTIFICATION AND
-
-5. Bond Identification &amp; Quoting
-
-Naming Convention
-
-E.g.: in swift
-                   Coca-Cola 4.25s 5/15/2029
-Means: 4.25% coupon, matures May 15, 2029
-
-Translation: A Coca-Cola bond that pays 4.25% interest and matures on May
-15, 2029.
-
-Note: the notation does not tell the payment frequency, yet most of the US
-corporate bonds are paid semiannually</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>报价记号例如「Coca-Cola 4.25s 5/15/2029」= 发行人 + 票息率 + 到期日。美国常用 <strong>CUSIP</strong> 识别码；跨境常用更长的 CINS 等。</p>
-<p>记号往往不写付息频率——但美债公司债默认多半是半年付息，做题时要确认。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s17">§ 5. Bond Identification &amp; Quoting</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">5. Bond Identification &amp; Quoting</h3>
-      <pre class="lecture-text">5. Bond Identification &amp; Quoting
-
-CUSIP: the bond’s ID number (U.S. &amp; Canada)
-•9-character identifier (U.S. securities):
-•Used for: Clearing, trading, and tracking bonds in the U.S. and Canada.
-    •1–6: issuer, e.g. 191216 = Coca-Cola
-    •7–8: issue (which specific bond), e.g. AC = this version
-    •9: check digit (verifies the code is correct).
-
-CINS: for bonds outside the U.S. and Canada (international version of CUSIP)
-• 12 characters (instead of 9)
-• Starts with a country code (e.g. J for Japan)
-• Example: U12345678901 → A bond from the UK.</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>报价记号例如「Coca-Cola 4.25s 5/15/2029」= 发行人 + 票息率 + 到期日。美国常用 <strong>CUSIP</strong> 识别码；跨境常用更长的 CINS 等。</p>
-<p>记号往往不写付息频率——但美债公司债默认多半是半年付息，做题时要确认。</p>
-    </div>
-  </section>
-</div>
-
-
-<p class="section-anchor" id="s18">§ Summary &amp; Key Takeaways</p>
-<div class="dual-block">
-  <section class="pane lecture" aria-label="讲义原文">
-    <div class="pane-label">讲义原文</div>
-    <div class="pane-body">
-      <h3 class="lecture-title">Summary &amp; Key Takeaways</h3>
-      <pre class="lecture-text">Summary &amp; Key Takeaways
-
-• Bond = Loan contract with fixed payments + return of
-  principal.
-• Key parts: Par Value, Coupon Rate, Maturity, Payment
-  Frequency.
-• Market split into sectors: Treasury, Corporate, Municipal,
-  ABS/MBS, etc.
-• Bonds can include embedded options (call, put, convert) and
-  variable coupon structures.
-• Core risks: Interest rate, credit, reinvestment, inflation,
-  liquidity, and etc.
-• Bottom line: Understand structure and risks to invest wisely</pre>
-    </div>
-  </section>
-  <section class="pane explain" aria-label="解析">
-    <div class="pane-label">解析</div>
-    <div class="pane-body explain-body">
-      <p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>
-<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>
-    </div>
-  </section>
-</div>
+    <p class="muted tiny" id="import-live"></p>
+  </div>
+
+  <div class="pdf-dual">
+    <section class="pane pdf-pane" aria-label="课件原件">
+      <div class="pane-label">课件原件</div>
+      <div class="pane-body pdf-body">
+        <div id="pdf-cta" class="pdf-cta" hidden>
+          <p><strong>尚未导入本模块课件 PDF</strong></p>
+          <p class="muted">点击上方「导入讲义 PDF」选择文件（可一次多选 8 份）。文件只保存在你浏览器的 IndexedDB，不会上传到 GitHub。</p>
+          <p class="muted">期望文件：<em>Fundamentals of Bonds</em>（文件名含 Fundamentals / Pricing 等亦可自动识别）。</p>
+          <button type="button" class="btn accent" data-import-pdfs>选择 PDF 文件</button>
+          <p class="muted" style="margin-top:.8rem">也可先点工具栏「文字摘录」用文本对照学习。</p>
+        </div>
+        <div id="pdf-canvas-wrap" class="pdf-canvas-wrap" hidden>
+          <canvas id="pdf-canvas"></canvas>
+        </div>
+        <div id="text-fallback" class="text-fallback" hidden></div>
+      </div>
+    </section>
+    <section class="pane explain" aria-label="解析">
+      <div class="pane-label">解析（随页同步）</div>
+      <div class="pane-body explain-body" id="page-note">
+        <p class="muted">加载解析中…</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <h2>本机导入状态</h2>
+    <div id="import-status"><p class="muted">读取中…</p></div>
+    <p><button type="button" class="btn ghost" data-clear-pdfs>清除本机全部 PDF</button></p>
+  </div>
 
   <div class="card checklist">
     <label>
       <input type="checkbox" data-module-check="m1">
-      <span>我已完成本模块（对照讲义原文 + 解析），标记进度</span>
+      <span>我已完成本模块（对照课件原件 + 解析），标记进度</span>
     </label>
   </div>
   <div class="nav-mod"><a href="m0.html"><span class="dir">上一模块</span>导论：如何使用讲义原文+解析对照</a><a href="m2.html"><span class="dir">下一模块</span>债券怎么定价</a></div>
 </div>
 <footer class="site">
-  <p>讲义原文摘自港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ），仅供个人学习对照。右侧解析为学习辅助改写，不构成对原课件的署名主张。</p>
+  <p>课件原件归港中深 <strong>Fin4120 Fixed Income Securities</strong>（Prof. Linlin Ye, CUHKSZ）。本站不托管 PDF；右侧解析为个人学习辅助。</p>
 </footer>
 <script src="../assets/app.js"></script>
+<script src="../assets/idb-slides.js"></script>
+<script src="../assets/pdf-viewer.js"></script>
 </body>
 </html>

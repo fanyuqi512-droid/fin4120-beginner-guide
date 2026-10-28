@@ -1,0 +1,308 @@
+{
+ "module": "m5",
+ "deck": "Corporate Debt",
+ "pageCount": 43,
+ "pages": [
+  {
+   "page": 1,
+   "title": "Fundamental Instruments",
+   "thin": false,
+   "explainHtml": "<p>公司债主题「Fundamental Instruments」。始终问：现金流谁承诺、违约谁先赔、流动性够不够。</p>",
+   "excerpt": "Fundamental Instruments\nPart II: Corporate Debt\n\nFin4120: Fixed Income Securities\nInstructor: Prof. Linlin Ye (CUHKSZ)"
+  },
+  {
+   "page": 2,
+   "title": "Roadmap",
+   "thin": false,
+   "explainHtml": "<p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>\n<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>",
+   "excerpt": "Roadmap\n\n 1.   Three Pillars of Corporate Debt\n 2.   Liquidation Waterfall in Corporate Insolvencies\n 3.   Corporate Debt Ratings\n 4.   Traditional Corporate Bonds\n 5.   Medium-Term Notes (MTNs)\n 6.   Commercial Paper\n 7.   Bank Loans"
+  },
+  {
+   "page": 3,
+   "title": "1. THREE PILLARS OF",
+   "thin": true,
+   "explainHtml": "<p>公司债务三大支柱常被概括为：公司债券、中期票据（MTN）、商业票据（CP）/银行贷款等融资渠道——讲义按工具类型展开。</p>\n<p>不同支柱在期限、信息披露、投资者群体、监管上不同，企业会「期限匹配」地选择融资。</p>",
+   "excerpt": "1. THREE PILLARS OF\n CORPORATE DEBT"
+  },
+  {
+   "page": 4,
+   "title": "1. Three Pillars of Corporate Debt",
+   "thin": false,
+   "explainHtml": "<p>公司债务三大支柱常被概括为：公司债券、中期票据（MTN）、商业票据（CP）/银行贷款等融资渠道——讲义按工具类型展开。</p>\n<p>不同支柱在期限、信息披露、投资者群体、监管上不同，企业会「期限匹配」地选择融资。</p>",
+   "excerpt": "1. Three Pillars of Corporate Debt\nCorporate debt can be broadly categorized into three key funding sources:\n(1) Bank Loans (private credit),\n(2) Money Market Debt (short-term instruments), and\n(3) Capital Market Debt (long-term securities)\n\nThese instruments are further categorized by sector:\n• Utilities (electric, gas, water)\n• Financials (banks, insurers, mortgage firms, etc.)\n• Industrials (all other corporations)\n\nIn this slide, we will focus on corporate bonds, MTNs, Commercial Papers,\nand Bank Loans. Convertible bonds and asset-backed securities are\naddressed in other chapters."
+  },
+  {
+   "page": 5,
+   "title": "1. Three Pillars of Corporate Debt",
+   "thin": false,
+   "explainHtml": "<p>公司债务三大支柱常被概括为：公司债券、中期票据（MTN）、商业票据（CP）/银行贷款等融资渠道——讲义按工具类型展开。</p>\n<p>不同支柱在期限、信息披露、投资者群体、监管上不同，企业会「期限匹配」地选择融资。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "1. Three Pillars of Corporate Debt\n\nCategory         What Is It?               Why Use It?           How Long?\n\n                 Loans from                For big needs:        Short to long:\nBank Loans       banks (one-on-            buying companies,     months up to\n                 one or group of           building factories,   7+ years\n                 banks)                    day-to-day cash\n\n                 Super short-              To cover short-\nMoney Market     term IOUs (like           term cash needs       Very short:\nDebt             Commercial                (e.g., payroll,       days to 1 year\n                 Paper, CDs)               inventory)\n\n                 Bonds and long-           For long-term\n                                                                 Medium to long: 1\nCapital Market   term notes (like          growth: expansion,\n                                                                 to 30+ years\nDebt             corporate bonds,          R&D, M&A\n                 MTNs, convertibles)"
+  },
+  {
+   "page": 6,
+   "title": "2. LIQUIDATION WATERFALL IN",
+   "thin": true,
+   "explainHtml": "<p>破产清偿大致优先级：<strong>Secured（有担保）≻ Unsecured senior ≻ Subordinated ≻ Equity</strong>。</p>\n<p>同一层内部还可能有契约细节（担保品、保证、结构性后偿）。评级与价差高度依赖你在瀑布中的位置。</p>\n<div class=\"trap\"><strong>易错点：</strong>「高级债」若无担保，仍可能损失惨重；看的是有效优先级与回收率，不只是名字。</div>",
+   "excerpt": "2. LIQUIDATION WATERFALL IN\n   CORPORATE INSOLVENCY"
+  },
+  {
+   "page": 7,
+   "title": "2. Secured > unsecured > subordinated > equity",
+   "thin": false,
+   "explainHtml": "<p>破产清偿大致优先级：<strong>Secured（有担保）≻ Unsecured senior ≻ Subordinated ≻ Equity</strong>。</p>\n<p>同一层内部还可能有契约细节（担保品、保证、结构性后偿）。评级与价差高度依赖你在瀑布中的位置。</p>\n<div class=\"trap\"><strong>易错点：</strong>「高级债」若无担保，仍可能损失惨重；看的是有效优先级与回收率，不只是名字。</div>",
+   "excerpt": "2.                     Secured > unsecured > subordinated > equity\nLiquidation            Priority          Claim Type                Examples\n\nWaterfall              1          Secured Creditors\n                                  （有担保债权人）\n                                                         Bank loans secured by\n                                                         collateral, asset-backed loans\n\n                       2          Unsecured Senior       Senior unsecured bonds,\n• From top to                     Creditors（普通债权人）term loans\n  bottom: the\n                       3          Subordinated Creditors Subordinated bonds,\n  priority of claims              （次级债权人）                mezzanine debt\n  during a\n  liquidation          4          Hybrid Instruments     Convertible bonds, CoCo\n  process, from the               （混合资本工具）               bonds, perpetual bonds\n  highest to the       5          Preferred Equity       Holders of preference shares\n  lowest-priority.                Holders（优先股东）\n\n                       6          Common Shareholders    Ordinary equity holders\n                                  （普通股东）                 (residual claimants)"
+  },
+  {
+   "page": 8,
+   "title": "3. CORPORATE DEFAULT RISK",
+   "thin": true,
+   "explainHtml": "<p>评级是违约风险的「速记符号」；notch（如 A+ / A / A−）是微调。投资级 vs 投机级（高收益）是重要分界。</p>\n<p>评级是滞后且离散的；市场信用利差往往更早反映恶化。历史违约率与回收率（recovery）用来粗估期望损失。</p>\n<div class=\"kf\">Approx. expected loss ≈ default rate × (1 − recovery)</div>",
+   "excerpt": "3. CORPORATE DEFAULT RISK\n     AND DEBT RATINGS"
+  },
+  {
+   "page": 9,
+   "title": "3. Corporate Debt Ratings",
+   "thin": false,
+   "explainHtml": "<p>评级是违约风险的「速记符号」；notch（如 A+ / A / A−）是微调。投资级 vs 投机级（高收益）是重要分界。</p>\n<p>评级是滞后且离散的；市场信用利差往往更早反映恶化。历史违约率与回收率（recovery）用来粗估期望损失。</p>\n<div class=\"kf\">Approx. expected loss ≈ default rate × (1 − recovery)</div>",
+   "excerpt": "3. Corporate Debt Ratings\n(a) Credit risk vs. default risk\n  Default Risk = The Risk of Missing A Payment or Can’t Pay At All.\n  • Example: A company goes bankrupt and stops paying interest on its\n    bonds.\n\n  Credit Risk = The Overall Risk of Losing Money\n  • It includes multiple types of risk, not just missing payments.\n  • Can lead to financial loss even if no default happens (for example?).\n\nQuestion: think of any risk that is credit risk but not default risk?"
+  },
+  {
+   "page": 10,
+   "title": "3. Corporate Debt Ratings",
+   "thin": false,
+   "explainHtml": "<p>评级是违约风险的「速记符号」；notch（如 A+ / A / A−）是微调。投资级 vs 投机级（高收益）是重要分界。</p>\n<p>评级是滞后且离散的；市场信用利差往往更早反映恶化。历史违约率与回收率（recovery）用来粗估期望损失。</p>\n<div class=\"kf\">Approx. expected loss ≈ default rate × (1 − recovery)</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "3. Corporate Debt Ratings\n(b) Default risk, recovery rate, and default loss rate\n Default Rate:                                         Recovery Rate:\n the percentage of bonds (or issuers) that             the percentage of the bond’s face\n fail to make scheduled payments                       value that investors recover after\n (interest or principal) within a year.                default — usually through\n 𝑫𝒆𝒇𝒂𝒖𝒍𝒕 𝑹𝒂𝒕𝒆 =                                        bankruptcy or restructuring.\n             # 𝐨𝐟 𝐃𝐞𝐟𝐚𝐮𝐥𝐭𝐬 𝐢𝐧 𝐚 𝒀𝒆𝒂𝒓\n 𝐓𝐨𝐭𝐚𝐥 # 𝐨𝐟 𝐁𝐨𝐧𝐝𝐬 𝐎𝐮𝐭𝐬𝐭𝐚𝐧𝐝𝐢𝐧𝐠 𝐚𝐭 𝐒𝐭𝐚𝐫𝐭 𝐨𝐟 𝒀𝒆𝒂𝒓         𝑹𝒆𝒄𝒐𝒗𝒆𝒓𝒚 𝑹𝒂𝒕𝒆\n × 𝟏𝟎𝟎%                                                    𝐀𝐦𝐨𝐮𝐧𝐭 𝐑𝐞𝐜𝐨𝐯𝐞𝐫𝐞𝐝 𝐀𝐟𝐭𝐞𝐫 𝐃𝐞𝐟𝐚𝐮𝐥𝐭\n                                                       =\n Issuer-weighted (by number of issuers)                  𝐅𝐚𝐜𝐞 𝐕𝐚𝐥𝐮𝐞 𝐨𝐫 𝐌𝐚𝐫𝐤𝐞𝐭 𝐕𝐚𝐥𝐞 𝐚𝐭 𝐃𝐞𝐟𝐚𝐮𝐥𝐭\n                                                       × 𝟏𝟎𝟎%\n or Dollar-weighted (by total debt value)\n\n      Therefore, Default Loss Rate is:\n           Default Loss Rate = Default Rate × 𝟏 − Recovery Rate"
+  },
+  {
+   "page": 11,
+   "title": "3. Corporate Debt Ratings",
+   "thin": false,
+   "explainHtml": "<p>评级是违约风险的「速记符号」；notch（如 A+ / A / A−）是微调。投资级 vs 投机级（高收益）是重要分界。</p>\n<p>评级是滞后且离散的；市场信用利差往往更早反映恶化。历史违约率与回收率（recovery）用来粗估期望损失。</p>\n<div class=\"kf\">Approx. expected loss ≈ default rate × (1 − recovery)</div>",
+   "excerpt": "3. Corporate Debt Ratings\n(b) Default risk, recovery rate, and default loss rate\n\n             Term           Typical Range                     Depends On\n\n      Default Rate       1%–10%+                         Credit cycle, sector\n\n                                                         Seniority, collateral,\n      Recovery Rate      0%–80%\n                                                         legal process\n\nHigh yield debt may outperform Treasuries even with some defaults if yield\nspreads compensate sufficiently."
+  },
+  {
+   "page": 12,
+   "title": "\"Notches\" = Small differences (e.g., A+, A, A−) → Like \"A is good, A+ is better\"",
+   "thin": false,
+   "explainHtml": "<p>评级是违约风险的「速记符号」；notch（如 A+ / A / A−）是微调。投资级 vs 投机级（高收益）是重要分界。</p>\n<p>评级是滞后且离散的；市场信用利差往往更早反映恶化。历史违约率与回收率（recovery）用来粗估期望损失。</p>\n<div class=\"kf\">Approx. expected loss ≈ default rate × (1 − recovery)</div>",
+   "excerpt": "\"Notches\" = Small differences (e.g., A+, A, A−) → Like \"A is good, A+ is better\"\n\n3. Corporate Debt Ratings\n (b) Corporate debt ratings\n  By Who? Rating is conducted by nationally recognized statistical rating\n  organizations (NRSROs) (e.g., Moody’s, S&P, Fitch). Ratings are divided into:\n      • Investment Grade (Aaa to Baa3 / AAA to BBB-)\n      • Non-Investment Grade / High-Yield (Junk) (Ba1 or BB+ and below)\n\n  Ratings reflect the probability of timely payments. Refinements (e.g., A1,\n  A2, A3) indicate notch distinctions.\n                  \"Notches\" = Small differences (e.g., A+, A, A−)\n\n  ✓ Non-traditional bonds? Yes, especially those with fixed income risk\n    (default, cash flow),\n  • Market-linked bonds or derivative payoffs? No (too\n    unpredictable/complicated)."
+  },
+  {
+   "page": 13,
+   "title": "3. Corporate",
+   "thin": false,
+   "explainHtml": "<p>公司债主题「3. Corporate」。始终问：现金流谁承诺、违约谁先赔、流动性够不够。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "3. Corporate\n                                                (b) Corporate debt ratings\n       Debt Ratings\n\n    Moody's           S&P             Fitch                               Brief Definition\nAaa             AAA             AAA                    Highest quality, minimal credit risk.\nAa1, Aa2, Aa3   AA+, AA, AA-    AA+, AA, AA-           High quality, very low credit risk.\nA1, A2, A3      A+, A, A-       A+, A, A-              Upper-medium grade, low credit risk.\nBaa1, Baa2,     BBB+, BBB,      BBB+, BBB,             Medium grade, adequate capacity to meet\nBaa3            BBB-            BBB-            obligations but more susceptible to risk.\nBa1, Ba2, Ba3   BB+, BB, BB-    BB+, BB, BB-    Speculative; significant credit risk.\nB1, B2, B3      B+, B, B-       B+, B, B-       Highly speculative; elevated vulnerability to default.\nCaa1, Caa2,     CCC+, CCC, CCC- CCC+, CCC, CCC- Substantial risk of default; vulnerable to adverse\nCaa3                                                   conditions.\nCa              CC               CC                     Highly vulnerable to default; limited recovery\n                                                       prospects.\nC               C               C                      Default is imminent or has occurred, with little\n                                                       likelihood of recovery.\nD (Default)     D (Default)      D (Default)            The issuer has defaulted on its financial obligations."
+  },
+  {
+   "page": 14,
+   "title": "3. Corporate",
+   "thin": false,
+   "explainHtml": "<p>公司债主题「3. Corporate」。始终问：现金流谁承诺、违约谁先赔、流动性够不够。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "3. Corporate\n  Debt Ratings                           Major credit rating agencies\n\nRegion       Agency              Who Owns It?                       What’s Special?\n                                                      Oldest U.S. agency; rates governments,\n U.S. Moody’s         Public company (NYSE: MCO) companies, and complex financial\n                                                      products\n       S&P Global                                     Most widely used; sets global standards\n                      Public company (NYSE: SPGI)\n       Ratings                                        (like the S&P 500)\n                                                      Strong in emerging markets; known for\n       Fitch Ratings Owned by Hearst Corporation\n                                                      clear ratings\n                      Started as a joint venture with\n       China Chengxin                                 Oldest major Chinese agency; dominates\n China                Moody’s, now mainly Chinese-\n       (中诚信)                                          local corporate bond ratings\n                      owned\n         Lianhe Credit ( Was a Fitch joint venture; now Trusted for bank and local government\n         联合资信)           fully local                    financing vehicle (LGFV) bonds\n         Pengyuan /                                             Focuses on regional and local\n                        Independent Chinese firm\n         CSPengyuan (                                           government bonds; rebranded as\n                        based in Shenzhen\n         中证鹏元)                          Fin4120 Prof. Linlin Ye\n                                                                CSPengyuan                       14"
+  },
+  {
+   "page": 15,
+   "title": "4. TRADITIONAL CORPORATE",
+   "thin": true,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>",
+   "excerpt": "4. TRADITIONAL CORPORATE\n          BONDS"
+  },
+  {
+   "page": 16,
+   "title": "a. By Payment Structure 4. Traditional",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>",
+   "excerpt": "a. By Payment Structure                 4. Traditional\n                                        Corporate Bonds\nBond Type     What It Means         Key Features        Example\n\n              Pay all the money\n                                                        Like paying off a car loan\nTerm Bond     back at once (at\n                                                        in one big final payment\n              maturity)\n\n                                                        Used by governments —\n              Pay back in                               e.g., Chinese local govt\nSerial Bond                                             special-purpose bonds\n              chunks over time\n                                                        repay principal in\n                                                        installments"
+  },
+  {
+   "page": 17,
+   "title": "4. Traditional b. By coupon Type",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>",
+   "excerpt": "4. Traditional                              b. By coupon Type\nCorporate Bonds\n\nBond Type       What It Pays        Key Features         Example / When Used\n\n                                    Predictable          Like a fixed gym\n                Coupon rate\nFixed-Rate Bond                     income               membership — you\n                fixed\n                                                         know the cost up front\n\n                Coupon rate         Rate resets (e.g.,   Used when rates are\nFloating-Rate\n                changes over        every 3 months)      rising — protects\nNote (FRN)\n                time                based on SOFR or     investors from\n                                    other benchmark      missing out"
+  },
+  {
+   "page": 18,
+   "title": "4. Traditional",
+   "thin": false,
+   "explainHtml": "<p>破产清偿大致优先级：<strong>Secured（有担保）≻ Unsecured senior ≻ Subordinated ≻ Equity</strong>。</p>\n<p>同一层内部还可能有契约细节（担保品、保证、结构性后偿）。评级与价差高度依赖你在瀑布中的位置。</p>\n<div class=\"trap\"><strong>易错点：</strong>「高级债」若无担保，仍可能损失惨重；看的是有效优先级与回收率，不只是名字。</div>",
+   "excerpt": "4. Traditional\nCorporate               c. By Seniority and Security\nBonds\n\n    Bond Type          What It Means                 Why It Matters\n                           Backed by\n                       collateral (like              Safest: gets paid first if\n    Senior Secured\n                       buildings or                  company fails\n                       machines)\n                            No collateral —          Still high priority, but\n    Senior Unsecured\n                       just a promise to pay         riskier than secured\n                                                     Riskier → pays higher\n    Subordinated          Paid only after\n                                                     interest to attract\n    (Junior)           other debts\n                                                     investors"
+  },
+  {
+   "page": 19,
+   "title": "4. Traditional Corporate Bonds",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>",
+   "excerpt": "4. Traditional Corporate Bonds\nd. By Call Provision\nCall provisions: Some bonds let the issuer \"call\" (pay back) the bond\nearly. This benefits the company — especially if interest rates drop.\n   Feature             Traditional Call                        Make-Whole Call\nWhen can it be After a set date (call\n                                                  Usually anytime\ncalled?        protection period ends)\n                 Par value or with a fixed        Present value of remaining payments +\nCall price\n                 premium (e.g., 102)              small spread (e.g., Treasury rate + 1%)\nCost to issuer\n\nInvestor risk\n\nWho is more\nfavorated?"
+  },
+  {
+   "page": 20,
+   "title": "4. Traditional Corporate Bonds",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Traditional Corporate Bonds\nd. Call Provision\nHow to calculate the fair price? – Part 1\n    Bond Type              Discount Rate Used                      Why This Rate?\n                                                       This is what investors expect to earn\nTraditional Callable Market interest rate (e.g., 4%)\n                                                       on similar bonds right now\nMake-Whole           Treasury rate + Spread (e.g.,     Pays investor fairly based on safe\nCallable             3.5%)                             bonds + extra for risk\n\nExample:\n  The bond: face value=1,000, coupon rate = 5% annually. Maturity = 10 years.\n  • If the bond includes a traditional call provision, the call date is after 5\n    years and call price is $1020, with discount rate 4%.\n  • If the bond includes a make-whole provision, the make-whole spread is\n    50 basis points (0.50%) above the comparable Treasury rate, which is\n    currently 3%.              Fin4120 Prof. Linlin Ye                   20"
+  },
+  {
+   "page": 21,
+   "title": "4. Traditional Corporate Bonds",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Traditional Corporate Bonds\nd. Call Provision: How to calculate the call price? – Part 2\n [1] Traditional callable bonds: Suppose the bond is called at year 5 at $1,020. The\ninvestor receives: 5 annual coupons of $50, and $1,020 at year 5.\nWe discount at the market rate (4%):\n                                   5\n                                   50      1,020\n    Fair Price at time 0 = PV = ෍        +        = $1,061.01 < $1081.11\n                                  1.04 𝑡   1.04 5\n                                  𝑡=1\n                           Q: why it is smaller than 1081.11?           Price if non-callable\n\n[2] Make-Whole Callable Bonds: issuer can call anytime, but must pay the present\nvalue of remaining payments discounted at:\n           Discount Rate = Treasury Rate + Spread = 3% + 0.5% = 3.5%\nSo the made-whole call price (at time 0) = PV of 10 coupons of $50 and $1,000 face\nvalue Discounted at 3.5%,\n                           Call Price (at time 0) ≈ $1,146.40\nThis is the price issuer pays if the bond is called immediately at issuance."
+  },
+  {
+   "page": 22,
+   "title": "4. Traditional Corporate Bonds",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Traditional Corporate Bonds\ne. Sinking fund provision\nA sinking fund requires the issuer to retire a portion of bonds regularly—by\nbuying them back on the market or redeeming them randomly at face value.\n\nComparison: Sinking Fund vs. Serial Bond\n\nFeature           Serial Bond                                Sinking Fund Bond\n              One issue split into pieces,                One issue, one maturity — but\nFeature\n              each with its own maturity                  parts retired early each year\nMaturity      Many dates (e.g., 2027, 2028,\n                                                          One final date\nDates         2029…)\nWhich        Each series at its own date —                 Picked by lottery —\nBonds Retire known at issuance                             unknown until called\n             Municipal bonds (match                        Corporate bonds\nCommon In\n             project revenue over time)"
+  },
+  {
+   "page": 23,
+   "title": "4. Traditional Corporate Bonds",
+   "thin": false,
+   "explainHtml": "<p>公司债可按支付结构、票息类型、嵌入期权、担保情况分类。先画出现金流，再谈价差相对国债是多少。</p>\n<p>契约条款（covenant）限制发行人行为，是信用分析的一部分，不只是看票息。</p>",
+   "excerpt": "4. Traditional Corporate Bonds\nf. Types of High-Yield Bond Structures (垃圾债)\n\n1. Deferred-Interest Bonds: no coupons for initial years, pays later\n   – wait for interests.\n2. Step-Up Bonds: coupons stars low, increase over time – starts\n   low but climbs.\n3. Payment-in-Kind (PIK): issuer may pay interest with more\n   bonds, not cash – paid in more debt.\n4. Extendable Reset Bonds: coupon resets based market rates +\n   credit spreads – rate gest a reality check!"
+  },
+  {
+   "page": 24,
+   "title": "5. MEDIUM-TERM NOTES (MTNS)",
+   "thin": true,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>",
+   "excerpt": "5. MEDIUM-TERM NOTES (MTNS)"
+  },
+  {
+   "page": 25,
+   "title": "5. Medium-Term Notes (MTNs)",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>",
+   "excerpt": "5. Medium-Term Notes (MTNs)\nWhat is a Medium-Term Notes (MYN)?\n                MTN = “Bond Vending Machine”\n•     Instead of launching one big bond at a time (like a soda\n      machine that only sells one drink),\n•     an MTN program lets companies or banks \"vend\" different\n      bonds whenever they want, with different flavors:\n    Feature         Can Vary? Example\n    Maturity                 1 year, 5 years, 10 years\n    Interest Rate            Fixed, floating, or zero\n    Currency                 USD, EUR, JPY\n    Special                  Linked to stocks, oil, etc. (hello,\n    Features                 structured notes!)\n                Question: Why Is It Called “Medium-Term Notes”?"
+  },
+  {
+   "page": 26,
+   "title": "5. Medium-Term Notes (MTNs)",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>",
+   "excerpt": "5. Medium-Term Notes (MTNs)\n                       MTN = “Standby bond program”\n How It Works:\n• Set It Once: The company sets up the MTN program (like loading the vending\n   machine).\n• Sell Over Time: They issue notes as needed, in small batches.\n• Customize: Each note can have different terms — no two have to be the same!\n\nKey Facts (Simple!):\n• Legal Shortcut: Uses shelf registration (Rule 415) — approved once, sell many\n   times.\n• Maturity Range: 9 months to 30+ years.\n• Who Buys? Banks, funds, insurers, sometimes even retail investors.\n• Why Use It? Fast, flexible, and efficient fundraising."
+  },
+  {
+   "page": 27,
+   "title": "5. Medium-Term",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "5. Medium-Term\nNotes (MTNs)\n                                                    MTN vs. Regular Bond:\nExample: A bank wants to sell:\n                                                            Regular Bond MTN\n• A 3-year note paying 5%\n                                        Issued all                             No —\n• A 7-year note linked to the                                  Yes\n                                        at once?                           staggered\n   S&P 500\n• A euro-denominated note               Flexible               Usually\n                                                                              Many types\n                                        terms?              one type\n   with floating rate\n    All can be issued under one                                            Faster (program\n                                        Setup               Slower (each\nMTN program — no need for                                                  already\n                                        speed?              new issue)\nthree separate bond launches!                                              approved)"
+  },
+  {
+   "page": 28,
+   "title": "5. Medium-Term Notes (MTNs)",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>",
+   "excerpt": "5. Medium-Term Notes (MTNs)\nStructured Notes often issued through a MTN program\n\nA structured note is a (hybrid) bond that combines a traditional fixed-\nincome component (like a zero-coupon bond) with an embedded\nderivative to create customized risk/return profiles. That is,"
+  },
+  {
+   "page": 29,
+   "title": "5. Medium-Term Notes (MTNs)",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>",
+   "excerpt": "5. Medium-Term Notes (MTNs)\nStructured Notes\n\n                          Structured Note =\n\n   Debt Instrument                          Derivative Component\n                                +\n   (pays a base return)                     (links return to stock, FX,\n                                            interest rate, etc.)\n   Like a normal bond\n   e.g. 2% annual                           Links return to something\n   coupon                                   risky,\n                                            e.g. “If Apple stock rises 10%,\n                                            you get extra profit!”"
+  },
+  {
+   "page": 30,
+   "title": "5. Medium-Term Notes (MTNs)",
+   "thin": false,
+   "explainHtml": "<p><strong>MTN</strong> 是灵活的连续发行平台：发行人可在程序额度内选择币种、期限、结构，贴近投资者需求。</p>\n<p>相对「一次到位的大额公募」，MTN 更强调定制与节奏控制。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "5. Medium-Term Notes (MTNs)\n                              Structure Notes\n\n  Common Types:                 Why Use Them                   Key Risks\n\nEquity-Linked      - Tied     Potential for higher         Market Risk: If the\n                              returns than regular         linked asset crashes,\nto stocks (e.g., S&P 500)\n                              bonds                        you lose\nCommodity-Linked          -   Customizable (banks          Complexity: Harder\nTied to oil/gold prices       build them to your           to understand than\nCurrency-Linked       -       specs)                       plain bonds\n                              Diversification without      Liquidity Risk: Can\nTied to USD/EUR rates                                      be tough to sell\n                              buying stocks directly\nInverse Floaters     - Pay                                 quickly\nmore when rates FALL                                                。"
+  },
+  {
+   "page": 31,
+   "title": "6. COMMERCIAL PAPER",
+   "thin": true,
+   "explainHtml": "<p><strong>CP</strong>：通常 ≤1 年的短期融资，属货币市场；很多以贴现发行。信用与展期（rollover）风险关键。</p>\n<div class=\"trap\"><strong>易错点：</strong>CP 不是「短版债券」那么简单：披露、投资者、期限与监管框架都不同。</div>",
+   "excerpt": "6. COMMERCIAL PAPER"
+  },
+  {
+   "page": 32,
+   "title": "6. Commercial Paper",
+   "thin": false,
+   "explainHtml": "<p>破产清偿大致优先级：<strong>Secured（有担保）≻ Unsecured senior ≻ Subordinated ≻ Equity</strong>。</p>\n<p>同一层内部还可能有契约细节（担保品、保证、结构性后偿）。评级与价差高度依赖你在瀑布中的位置。</p>\n<div class=\"trap\"><strong>易错点：</strong>「高级债」若无担保，仍可能损失惨重；看的是有效优先级与回收率，不只是名字。</div>",
+   "excerpt": "6. Commercial Paper\nA commercial paper (CP) 短期融资券is a short-term, unsecured\npromissory note issued by corporations to finance working capital or\nshort-term liabilities.\n• Commercial Paper (CP) is NOT considered a bond, but rather a\n   short-term money market instrument."
+  },
+  {
+   "page": 33,
+   "title": "6. Commercial Why CPs are not bonds?",
+   "thin": false,
+   "explainHtml": "<p><strong>CP</strong>：通常 ≤1 年的短期融资，属货币市场；很多以贴现发行。信用与展期（rollover）风险关键。</p>\n<div class=\"trap\"><strong>易错点：</strong>CP 不是「短版债券」那么简单：披露、投资者、期限与监管框架都不同。</div>",
+   "excerpt": "6. Commercial              Why CPs are not bonds?\nPaper\n\nFeature       Commercial Paper (CP)                    Traditional Bonds\nMaturity      <1 year (ultra-short)                    1+ years (long-term)\nMarket        Money market                             Capital market\nStructure     Simple (zero-coupon)                     Complex (fixed/floating rates)\nPurpose       Emergency cash needs                     Big projects\nWho Issues?   Top corporations                         Gov'ts + companies\nWho Buys?     Big players (banks/funds)                Everyone\nTrading       Buy & hold                               Actively traded"
+  },
+  {
+   "page": 34,
+   "title": "7. BANK LOANS",
+   "thin": true,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>",
+   "excerpt": "7. BANK LOANS"
+  },
+  {
+   "page": 35,
+   "title": "7. Bank Loans",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>",
+   "excerpt": "7. Bank Loans\nWhat Are Bank Loans?\n• Privately negotiated debt (no public trading like bonds).\n• They are not securities\n• Used for (like bonds): Operations, projects, or restructuring.\n\nTwo Key Types:\n\n Type                  Features                         Example\n Investment-Grade      Revolving credit, low risk,\n                                                        Apple’s credit line.\n                       held by banks.\n                       Risky (BB or below),\n                                                        Tesla’s buyout\n Leveraged Loans       floating rates (SOFR +\n                                                        financing.\n                       spread)."
+  },
+  {
+   "page": 36,
+   "title": "7. Bank Loans",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>",
+   "excerpt": "7. Bank Loans\nSyndication explained:\nHow it works:\n• Multiple banks pool funds → lend to one\n  company.\n• Traded privately among banks (not like\n  bonds) via LSTA.\nWho’s involved:\n• CLO Manager       → Packages loans into\n  CLOs.\n• Lenders      → Banks/investors sharing\n  risk.\nWhy It Matters?"
+  },
+  {
+   "page": 37,
+   "title": "7. Bank Collateralized Loan Obligations (CLOs)",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>",
+   "excerpt": "7. Bank                      Collateralized Loan Obligations (CLOs)\nLoans\nWhat is a CLO? A \"loan smoothie\"       :\nTakes 100+ corporate loans (usually risky   )\nBlends them → slices into tranches (AAA to Equity)\nThen sells to investors\n\n            Tranches:\n            Senior Tranches (AAA): Paid first (safer),\n            Equity Tranche: Gets leftovers (riskiest)\n                Active Management: Pros swap loans to\n            avoid defaults"
+  },
+  {
+   "page": 38,
+   "title": "7. Bank Collateralized Loan Obligations (CLOs)",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "7. Bank                         Collateralized Loan Obligations (CLOs)\nLoans\n• Some basic facts about CLO\n Feature                Plain-English Description             Why It Matters?\n                        100-200+ corporate loans              More loans = more diversification\n What's Inside?\n                        (usually risky ones)                  (but still risky!)\n                        A \"shell company\" (SPV) run by        Keeps risks separate from the\n Who Issues It?\n                        pros                                  bank/manager\n                        Slices: AAA (safest) → Equity         Lets investors pick their risk level\n Tranches\n                        (riskiest)                            (like cake portions!)\n Who Gets Paid First?   AAA → AA → A → BBB → BB               Seniors get cash first; equity bets\n                        → Equity (in that order!)             on leftovers\n Active Management      Manager can swap loans in/out\n                                                      Helps avoid defaults (hopefully!)\n                        over time\n                        Rates adjust with SOFR/LIBOR          Protects against rising rates (but\n Interest Rates\n                        (no fixed rates!)                     adds complexity)"
+  },
+  {
+   "page": 39,
+   "title": "7. Bank Collateralized Loan Obligations (CLOs)",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "7. Bank                         Collateralized Loan Obligations (CLOs)\nLoans\nStatement             True or False?   Quick Explanation       Fun Fact\n                                                              Think of it like a \"debt\n                                       CLOs are repackaged\n\"A CLO is a                                                   smoothie\"        —\n                                       loans (not bonds) sold\ncorporate bond.\"                                              blended loans, not a\n                                       as tranches.\n                                                              single bond!\n                                                               Example: A CLO might\n\"The loans inside a                    Usually leveraged\n                                                               contain 150 loans from\nCLO are corporate                      loans from companies\n                                                               firms like Tesla or\ndebt.\"                                 (risky but high-yield).\n                                                               Netflix.\n                                       Same category as\n\"CLOs are part of\n                                       mortgage-backed         Popular in 2008 crisis—\nstructured\n                                       securities (MBS) and    but safer today!\nfinance.\"\n                                       CDOs."
+  },
+  {
+   "page": 40,
+   "title": "7. Bank Collateralized Loan Obligations (CLOs)",
+   "thin": false,
+   "explainHtml": "<p>银行贷款常为浮动利率、可能有担保与严格契约；可被打包成 <strong>CLO</strong> 分层出售。</p>\n<p>CLO 把信用风险切片：高层更安全、低层更厚收益更厚风险——本质是结构化优先级。</p>",
+   "excerpt": "7. Bank                     Collateralized Loan Obligations (CLOs)\nLoans\n\n• CLOs in 2008 crisis? Not the cause – but still got burned. Why?\n\n   Lesson:\n   Complexity + high leverage = risk, even with AAA labels.\n   → Even “safe” debt isn’t sage in a crisis."
+  },
+  {
+   "page": 41,
+   "title": "Quick Quiz",
+   "thin": false,
+   "explainHtml": "<p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>\n<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>",
+   "excerpt": "Quick Quiz\n\n1. Which debt type has priority: secured loans or equity?\n\n2. Which is not a bond feature? (a) Maturity <1 year, (b)\nFixed coupons, (c) Sinking funds.\n\n3. Which CLO tranche has the lowest risk? (a) Equity, (b) BBB,\n(c) AAA."
+  },
+  {
+   "page": 42,
+   "title": "Summary & Key Takeaways",
+   "thin": false,
+   "explainHtml": "<p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>\n<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>",
+   "excerpt": "Summary & Key Takeaways\n\n• Funding Tools: Loans (private), CP (liquidity), bonds/MTNs\n  (mid to long-term).\n• Who Gets Paid First?: Secured creditors → Equity .\n• Rating Impact: Downgrades raise costs; HY = High\n  risk/reward.\n• Bond Types: Callable, step-up, PIK (high-yield).\n• CP ≠ Bonds: Short-term, no coupons.\n• CLOs: Repackaged loans."
+  },
+  {
+   "page": 43,
+   "title": "Reference",
+   "thin": false,
+   "explainHtml": "<p>公司债主题「Reference」。始终问：现金流谁承诺、违约谁先赔、流动性够不够。</p>",
+   "excerpt": "Reference\n\n• Chapter 8, Fabozzi: Bond Markets, Analysis, And Strategies,\n  10th edition."
+  }
+ ]
+}

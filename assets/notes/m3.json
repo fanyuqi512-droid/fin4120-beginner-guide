@@ -1,0 +1,231 @@
+{
+ "module": "m3",
+ "deck": "Yield of Bonds",
+ "pageCount": 32,
+ "pages": [
+  {
+   "page": 1,
+   "title": "Yield of Bonds",
+   "thin": false,
+   "explainHtml": "<p>本页讲收益率度量「Yield of Bonds」。先分清指标假设，再决定能不能拿来比较两只债券。</p>",
+   "excerpt": "Yield of Bonds\n\nFin4120: Fixed Income Securities\nInstructor: Prof. Linlin Ye (CUHKSZ)"
+  },
+  {
+   "page": 2,
+   "title": "Roadmap",
+   "thin": false,
+   "explainHtml": "<p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>\n<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>",
+   "excerpt": "Roadmap\n\n1.   Compute yields\n2.   Various yield measures\n3.   Yields of portfolios and floaters\n4.   Total return and horizon analysis\n5.   Return and risk tradeoff"
+  },
+  {
+   "page": 3,
+   "title": "1. COMPUTE YIELDS",
+   "thin": true,
+   "explainHtml": "<p>投资的 yield / IRR 是使 NPV=0 的折现率：把所有流出、流入放在时间轴上求解。</p>\n<p>债券 YTM 就是把现价当作流出、票息与本金当作流入时的 IRR。通常需数值法（财务计算器 / Excel IRR）。</p>\n<div class=\"kf\">0 = −P + Σ C_t/(1+y)^t + F/(1+y)^N</div>",
+   "excerpt": "1. COMPUTE YIELDS"
+  },
+  {
+   "page": 4,
+   "title": "1. Compute Yield/IRR of Investments",
+   "thin": false,
+   "explainHtml": "<p>投资的 yield / IRR 是使 NPV=0 的折现率：把所有流出、流入放在时间轴上求解。</p>\n<p>债券 YTM 就是把现价当作流出、票息与本金当作流入时的 IRR。通常需数值法（财务计算器 / Excel IRR）。</p>\n<div class=\"kf\">0 = −P + Σ C_t/(1+y)^t + F/(1+y)^N</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "1. Compute Yield/IRR of Investments\n   Time (t)      1            2            3           ...          N\n   Cash Flow     CF₁          CF₂          CF₃         ...          CFₙ\n\nDefinition\nYield or IRR (internal rate of return) is the interest rate 𝒚 that equates the\npresent value (PV) of cash flows from an investment to its price. It is an\nimportant measure of the value of the investment.\n                                      𝑁\n                                       𝐶𝐹𝑡\n                                  𝑃=෍\n                                      1+𝒚 𝑡\n                                     𝑡=1\nWhere:\n• 𝐶𝐹𝑡 = cash flow at time 𝑡                      Special Case: Zero-Coupon Bond\n                                                                  1/𝑛\n• 𝑃 = price of the investment                          𝑦=\n                                                          𝐶𝐹𝑛\n                                                                        −1\n• 𝑁 = number of periods                                    𝑃"
+  },
+  {
+   "page": 5,
+   "title": "1. Compute Yield/IRR of Investments",
+   "thin": false,
+   "explainHtml": "<p>投资的 yield / IRR 是使 NPV=0 的折现率：把所有流出、流入放在时间轴上求解。</p>\n<p>债券 YTM 就是把现价当作流出、票息与本金当作流入时的 IRR。通常需数值法（财务计算器 / Excel IRR）。</p>\n<div class=\"kf\">0 = −P + Σ C_t/(1+y)^t + F/(1+y)^N</div>",
+   "excerpt": "1. Compute Yield/IRR of Investments\n  Time (t)    1          2           3        ...       N\n  Cash Flow   CF₁        CF₂         CF₃      ...       CFₙ\n\n                               𝑁\n                               𝐶𝐹𝑡\n                          𝑃=෍\n                              1+𝒚 𝑡\n                               𝑡=1\nKey Intuition:\n• Yield measures average annual return over life of the investment.\n• Found through trial-and-error or numerical methods"
+  },
+  {
+   "page": 6,
+   "title": "1. Compute Yield/IRR of Investments",
+   "thin": false,
+   "explainHtml": "<p>投资的 yield / IRR 是使 NPV=0 的折现率：把所有流出、流入放在时间轴上求解。</p>\n<p>债券 YTM 就是把现价当作流出、票息与本金当作流入时的 IRR。通常需数值法（财务计算器 / Excel IRR）。</p>\n<div class=\"kf\">0 = −P + Σ C_t/(1+y)^t + F/(1+y)^N</div>",
+   "excerpt": "1. Compute Yield/IRR of Investments\n                 Annualization and Conversion –Part1\n\n(a) Periodic yield → Annual yield        (b) Annual yield → Period yield\n\n•   Periodic to Nominal annual yield:    •   Nominal annual to periodic yield:\n       𝑦annual = 𝑦periodic × 𝑚                 𝑦periodic = 𝑦annual / 𝑚\n\n•   Periodic to Effective annual yield   •   EAY to Period Yield:\n    (EAY):\n                          𝑚\n        EAY = 1 + 𝑦per        −1                𝑦per = 1 + EAY 1/𝑚 − 1\n\n  Where 𝑚 is the frequency of            Where 𝑚 is the frequency of\npayments per year.                       payments per year."
+  },
+  {
+   "page": 7,
+   "title": "1. Compute Yield/IRR of Investments",
+   "thin": false,
+   "explainHtml": "<p>投资的 yield / IRR 是使 NPV=0 的折现率：把所有流出、流入放在时间轴上求解。</p>\n<p>债券 YTM 就是把现价当作流出、票息与本金当作流入时的 IRR。通常需数值法（财务计算器 / Excel IRR）。</p>\n<div class=\"kf\">0 = −P + Σ C_t/(1+y)^t + F/(1+y)^N</div>",
+   "excerpt": "1. Compute Yield/IRR of Investments\n             Annualization and Conversion –Part2\nExample\nSuppose a bond pays interest quarterly and has a periodic yield\nof 2% per quarter. Then\n• Nominal 𝐀𝐧𝐧𝐮𝐚𝐥𝐢𝐳𝐞𝐝 𝐘𝐢𝐞𝐥𝐝 = 2% × 4 = 8%\n                    𝑚\n• 𝐄𝐀𝐘 = 1 + 𝑦per        − 1 = 1 + 0.02 4 − 1 = 1.08243216 − 1 =\n  8.2432%\n\nInversely, given an EAY of 8.2432%, find the equivalent quarterly\nperiodic rate:\n   𝒚per = 1 + EAY 1/𝑚 − 1 = 1.08243216 1/4 − 1 = 2%"
+  },
+  {
+   "page": 8,
+   "title": "2. VARIOUS YIELD MEASURES",
+   "thin": true,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. VARIOUS YIELD MEASURES"
+  },
+  {
+   "page": 9,
+   "title": "2. Various Yield Measures",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. Various Yield Measures\n  Yield Type          Formula / Method                    Interpretation\nCurrent Yield                   Annual Coupon The right now income as a% price;\n                Current Yield =\n                                  Bond Price     ignores price changes and\n                                               reinvestment.\nYield to                      𝐶          𝑀     Total return if hold to maturity;\nMaturity         𝑃=෍               +\n                           1+𝑦 𝑡      1 + 𝑦 𝑛 includes coupon, capital gain/loss, and\n(YTM)\n 2.1. Yield for Securities                     reinvestment.       Most widely used.\nYield to Call Same as YTM but assumes bond Return if bond is called at first possible\n(YTC)         is called early                  date; Important for callable bond.\nYield to Put Like YTM, but assumes investor Return if investor exercises the put\n(YTP)         puts bond at known price/date option; useful when you want to exit.\nYield to      Minimum of YTM, YTC, YTP, YTS,       Most conservative yield estimate;\nWorst (YTW) etc.                               assumes worst case for investor.\nCash Flow                 Projected Cash Flow𝑡 Used for MBS/ABS where people pay\nYield            𝑃=෍                           early.\n                                 1+𝑦 𝑡"
+  },
+  {
+   "page": 10,
+   "title": "2. Various",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. Various\n Yield                                      YTC, YTS, YTM, YTP\n Measures\n   Yield Measure              Formula / Method                                 Interpretation\nCurrent Yield                             Annual Coupon    Simple income yield; ignores capital gains/losses and\n                        Current Yield =\n                                            Bond Price     time value of money.\nYield to Maturity             𝐶       𝑀                    Return if bond held to maturity; includes coupon,\n(YTM)                    𝑃=෍       +                       capital gain/loss, and reinvestment.\n                             1+𝑦 𝑡   1+𝑦 𝑛\n\nYield to Call (YTC) Same as YTM but assumes bond is       Return if bond is called at first possible date;\n                    called early                          conservative if callable.\n                                  Question for you:\nYield to Put (YTP) Like YTC, but assumes investor puts    Return if investor exercises the put option; useful for\n                    bond at knownGenerally,\n                                   price/date     YTC, YTM,      YTP, which one should be\n                                                          risk control.\nYield to Worst (YTW)Minimum of YTM,\n                                  theYTC,  YTP, YTS,the\n                                        lowest,     etc. highest?\n                                                          Most conservative yield estimate; assumes worst case\n                                                          for investor.\nCash Flow Yield                  Projected Cash Flow𝑡     Yield on amortizing bonds; includes prepayments;\n                         𝑃=෍                              used for MBS/ABS.\n                                        1+𝑦 𝑡"
+  },
+  {
+   "page": 11,
+   "title": "2. Various",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. Various\n Yield                           Coupon rate & Current yield & YTM Relationship\n Measures\n       Coupon Rate                     Current Yield          Yield to Maturity (YTM)\n\n                Annual Coupon                 Annual Coupon          𝐶       𝑀\nCoupon Rate =                 Current Yield =                 𝑃=෍         +\n                  Face Value                    Bond Price          1+𝑦 𝑡   1+𝑦 𝑛\n\n What is the difference between current yield and YTM?\n                 Current Yield = \"How much income do I get right now?“\n                                    Annual Coupon        50\n                   Current Yield =                     =     = 5.56%\n                                      Bond Price         900\n But hold on — this only looks at income, like rent from a house.\n     But it ignores two big things:\n 1.\n 2."
+  },
+  {
+   "page": 12,
+   "title": "2. Various",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. Various\nYield                       Coupon rate & Current yield & YTM Relationship\nMeasures\nWhat is the difference between current yield and YTM?\n  YTM (Yield to Maturity) = \"What’s my Total Return if I hold until maturity?\"\n\nYTM includes everything (Total Return):\n• The $50 annual income\n• The 1,000 back at maturity → a 100 capital gain\n• And the time value of money (interest on interest)\n\n    So if you bought the bond at $900, YTM might be 6.2% (example), which is\nhigher than current yield because: you earn interest + You gain $100 when it\nmatures"
+  },
+  {
+   "page": 13,
+   "title": "2. Various Yield",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "2. Various Yield\nMeasures                          Coupon rate & Current yield & YTM Relationship\n\n        Coupon Rate                      Current Yield             Yield to Maturity (YTM)\n\n                 Annual Coupon                     Annual Coupon          𝐶       𝑀\n Coupon Rate =                   Current Yield =                   𝑃=෍         +\n                   Face Value                        Bond Price          1+𝑦 𝑡   1+𝑦 𝑛\n\nTherefore, we have:\n                                                           Simple Intuition\nPrice < Par Coupon rate <             You pay          but get       coupon → current\n            Current yield < YTM yield rises       coupon rate; holding to\n                                maturity means capital       → YTM highest\nPrice = Par Coupon rate =       You pay face value → all yields      , no capital\n            Current yield = YTM gain or loss\nPrice > Par Coupon rate >       You pay                  but get      coupon → current\n            Current yield > YTM yield falls     coupon rate; holding to\n                                maturity means capital     → YTM lowest"
+  },
+  {
+   "page": 14,
+   "title": "3. YIELDS OF PORTFOLIOS &",
+   "thin": true,
+   "explainHtml": "<p>组合收益率不是简单算术平均；更合理的是市值加权，或直接对组合现金流求 IRR。</p>\n<p>浮息债常用 discount margin 等利差指标，而不是传统固定票息 YTM。</p>",
+   "excerpt": "3. YIELDS OF PORTFOLIOS &\nFLOATERS"
+  },
+  {
+   "page": 15,
+   "title": "3. Yields for Portfolios & Floaters",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "3. Yields for Portfolios & Floaters\nPortfolio Yields\n\n• NOT a simple average of YTMs\n• Compute full cash flow of entire portfolio\n   Time (t)             1     2        3        ...      N\n\n   Cash Flow       𝐶𝐹1 𝑃     𝐶𝐹2 𝑃    𝐶𝐹3 𝑃     …       𝐶𝐹𝑛 𝑃\n\n• Yield solves:\n                   𝑛   portfolio\n                    𝐶𝐹𝑡\n                  ෍          𝑡\n                                 = Total Market Value\n                      1+𝑦\n                  𝑡=1"
+  },
+  {
+   "page": 16,
+   "title": "3. Yields for Portfolios & Floaters",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "3. Yields for Portfolios & Floaters\n\nYield for Floaters – Part 1\n\nFor Floaters, Discount Margin (DM) is used instead of YTM (why?):\nWe find the discount margin in the following way:\n① Assume reference rate is constant\n② Try a margin (e.g., 96 bps)\n③ Discount cash flows using (reference rate + margin)\n④ Adjust margin iteratively until PV = price\n\nExample: If a floater priced at par with spread 80bps, DM = 80bps"
+  },
+  {
+   "page": 17,
+   "title": "3. Yields for Portfolios & Floaters",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "3. Yields for Portfolios & Floaters\n\nYield for Floaters – Part 2\n\nQ: Why use Discount Margin instead of YTM?"
+  },
+  {
+   "page": 18,
+   "title": "4. TOTAL RETURN & HORIZON",
+   "thin": true,
+   "explainHtml": "<p><strong>Horizon analysis / total return</strong>：在给定持有期、再投资利率、期末卖出收益率假设下，估算实现总回报。</p>\n<p>YTM 假设「持有到期 + 票息按 YTM 再投资」；一旦提前卖出或再投资利率不同，实现回报会偏离 YTM。</p>\n<div class=\"kf\">Total future value = 再投资后的票息累积 + 期末卖出价；再换算持有期收益率</div>",
+   "excerpt": "4. TOTAL RETURN & HORIZON\nANALYSIS"
+  },
+  {
+   "page": 19,
+   "title": "4. Total Return and Horizon Analysis",
+   "thin": false,
+   "explainHtml": "<p><strong>Horizon analysis / total return</strong>：在给定持有期、再投资利率、期末卖出收益率假设下，估算实现总回报。</p>\n<p>YTM 假设「持有到期 + 票息按 YTM 再投资」；一旦提前卖出或再投资利率不同，实现回报会偏离 YTM。</p>\n<div class=\"kf\">Total future value = 再投资后的票息累积 + 期末卖出价；再换算持有期收益率</div>",
+   "excerpt": "4. Total Return and Horizon Analysis\nThink of the three sources of bond return:\n\n      Coupon interest   Capital gain/loss   Reinvestment income\n                                            (interest-on-interest)\nExample\n3-Year Bond, Face value: $1,000, Coupon: 6% annual = $60/year,\nPurchase price: $950, Held to maturity, Reinvestment rate: 5%. Then\n• Coupon income = $60 *3 =180\n• Interest-on-interest = 60 × 1.05 2 + 60 × 1.05 1 + 60 − 180 = 9.15\n• Capital game = redeemed price–buy price = $1000-$950=$50"
+  },
+  {
+   "page": 20,
+   "title": "4. Total Return and Horizon Analysis",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "4. Total Return and Horizon Analysis\nTotal Return\n\nDefinition:\n Total Return = Coupon income + Reinvestment of coupons + Resale Price\n\nTotal return reflects the realized return on a bond over a specific\nholding period, not necessarily to maturity, factoring in:\n1. Coupon income\n2. Reinvestment of coupons for a given reinvestment rate (may not\n    be YTM)\n3. Resale price at the end of the horizon (which may differ from face\n    value)"
+  },
+  {
+   "page": 21,
+   "title": "4. Total Return and Horizon Analysis",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "4. Total Return and Horizon Analysis\nTotal Return (continued)\nTotal Return = Coupon income + Reinvestment of coupons + Resale Price\n\nWhy it matters (compared with YTM)?\n\n                                                  Total return\n        YTM assumes\n                                          • What if you sell early?\n • you hold the bond to           V.S.    • What if reinvestment\n   maturity and                             rates change?\n • reinvest coupons at the                • What if market yields\n   same rate                                change, affecting resale\n                                            price?"
+  },
+  {
+   "page": 22,
+   "title": "4. Total Return and Horizon Analysis",
+   "thin": false,
+   "explainHtml": "<p><strong>Horizon analysis / total return</strong>：在给定持有期、再投资利率、期末卖出收益率假设下，估算实现总回报。</p>\n<p>YTM 假设「持有到期 + 票息按 YTM 再投资」；一旦提前卖出或再投资利率不同，实现回报会偏离 YTM。</p>\n<div class=\"kf\">Total future value = 再投资后的票息累积 + 期末卖出价；再换算持有期收益率</div>",
+   "excerpt": "4. Total Return and Horizon Analysis\nHorizon Analysis                     Horizon h\n\nHorizon Analysis Steps: (suppose at horizon 𝒉)\n① Compute total (horizon h’s) value of coupons + reinvested interest\n   (FV annuity)\n② Estimate the (horizon h’s) price at sale (PV of remaining cash flows)\n③ Total FV (at horizon h) = step 1 + step 2\n④ Solve for yield 𝑦 such that:\n                 P0 1 + 𝑦 ℎ = Total FV at horizon h\n⑤ Double 𝑦 to annualize if semiannual."
+  },
+  {
+   "page": 23,
+   "title": "4. Total Return",
+   "thin": false,
+   "explainHtml": "<p><strong>Horizon analysis / total return</strong>：在给定持有期、再投资利率、期末卖出收益率假设下，估算实现总回报。</p>\n<p>YTM 假设「持有到期 + 票息按 YTM 再投资」；一旦提前卖出或再投资利率不同，实现回报会偏离 YTM。</p>\n<div class=\"kf\">Total future value = 再投资后的票息累积 + 期末卖出价；再换算持有期收益率</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Total Return\n                                 Horizon Analysis (continued)\n and Horizon                                                   Horizon = year 3\n Analysis\nParameters:     Example: horizon = 3 years (suppose with 2 years to maturity, so a 5-year bond)\n                Step 1: Compute FV of coupons + reinvestment\nFace Value      FV coupons = 60 × 1.04 2 + 60 × 1.04 1 + 60 = 64.90 + 62.40 + 60 = 187.30\n$1,000          Step 2: Estimate bond price at end of year 3\nCoupon Rate\n                Remaining cash flows at Year 3 (with 2 years to maturity):\n6% annual\n                                      Remaining CFs = 60 (1 year) + 1,060 (final)\n($60/year)\nCurrent Price   Discount at 5%:\n$970                                     60       1060\n                              Price =          +         = 57.14 + 907.03 = 1,018.59\nReinvestment                            1.05 1    1.05 2\nRate            Step 3: Total Future Value at the horizon\n4%                                    Total FV = 187.30 + 1,018.59 = 1,205.89\nExpected Sale   Step 4: Solve for 𝑦 in 970 1 + 𝑦 3 = 1,205.89\nYield                                   ⇒ 1 + 𝑦 3 = 1,205.89/970 = 1.2432\n5%                                 ⇒ 1 + 𝑦 = 1.2432 1/3 = 1.0753 ⇒ 𝑦 = 7.53%\n                Step 5: Annualize if needed\n                Already annual (since cash flows and reinvestment are annual).\n                                  𝑇𝑜𝑡𝑎𝑙 𝑟𝑒𝑡𝑢𝑟𝑛 𝑜𝑣𝑒𝑟 3 𝑦𝑒𝑎𝑟𝑠 = 7.53% 𝑎𝑛𝑛𝑢𝑎𝑙𝑙𝑦"
+  },
+  {
+   "page": 24,
+   "title": "4. Total Return",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "4. Total Return\n                                  Horizon Analysis (continued)\n and Horizon                                                  Horizon = year 3\n Analysis\nParameters:\n                Example: Total Return at Each Horizon (assume resale yield 5%)\nFace Value\n                    Horizon    FV          Resale       Total FV     Total Return\n$1,000\nCoupon Rate         (Years)    Coupons     Price                     Annualized(%)\n6% annual           1.0        60.0        1035.46      1095.46      12.93\n($60/year)\nCurrent Price       2.0        122.4       1027.23      1149.63      8.87\n$970                3.0        187.3       1018.59      1205.89      7.53\nReinvestment        4.0        254.79      1009.52      1264.31      6.85\nRate\n4%                  5.0        324.98      1000.0       1324.98      6.44\nExpected Sale\nYield           •     The bond’s YTM = 6.73%, larger than the 5-year horizon rate\n5%                    (6.44%). Why?"
+  },
+  {
+   "page": 25,
+   "title": "4. Total Return",
+   "thin": false,
+   "explainHtml": "<p><strong>Horizon analysis / total return</strong>：在给定持有期、再投资利率、期末卖出收益率假设下，估算实现总回报。</p>\n<p>YTM 假设「持有到期 + 票息按 YTM 再投资」；一旦提前卖出或再投资利率不同，实现回报会偏离 YTM。</p>\n<div class=\"kf\">Total future value = 再投资后的票息累积 + 期末卖出价；再换算持有期收益率</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Total Return\n                               4.2. Horizon Analysis\n and Horizon                                               Horizon = year 3\n Analysis\nParameters:\n                Example: Total Return at Each Horizon (assume resale yield 5.5%)\nFace Value\n$1,000          Horizon    FV Coupons Resale Price Total FV          Total Return\nCoupon Rate     (Years)                                              Annualized(%)\n6% annual\n($60/year)      1.0        60.0          1017.53       1077.53       11.09\nCurrent Price   2.0        122.4         1013.49       1135.89       8.21\n$970\n                3.0        187.3         1009.23       1196.53       7.25\nReinvestment\nRate            4.0        254.79        1004.74       1259.53       6.75\n4%              5.0        324.98        1000.0        1324.98       6.44\nExpected Sale\nYield\n5.5%            •   A higher resale yield means lower resale price, so your\n                    realized return is smaller over the horizon."
+  },
+  {
+   "page": 26,
+   "title": "5. RETURN & RISK TRADEOFFS",
+   "thin": true,
+   "explainHtml": "<p>收益与风险权衡：追求更高 yield 往往意味着更长久期、更差信用或更低流动性。</p>\n<p>没有免费的午餐——先问「多出来的那几百个 bp，买的是哪种风险？」</p>",
+   "excerpt": "5. RETURN & RISK TRADEOFFS"
+  },
+  {
+   "page": 27,
+   "title": "5. Return & Risk Tradeoffs",
+   "thin": false,
+   "explainHtml": "<p>常见指标：Current Yield（年票息/市价）、YTM、YTC（按赎回价与赎回日算）、Yield to Worst、现金流收益率等。</p>\n<p>可赎回债要同时看 YTM 与 YTC；发行人会选择对自己有利的时点，投资者应关注 <strong>yield to worst</strong>。</p>\n<div class=\"trap\"><strong>易错点：</strong>Current yield 忽略本金损益与再投资，只能当粗指标。</div>",
+   "excerpt": "5. Return & Risk Tradeoffs\nQuestion: It seems early horizons have higher horizon yields. Why\nwouldn’t people just sell early, lock in high return, and then repeat?\n  Reason Not to Sell Early                      Explanation\n    Reinvestment risk      Future opportunities may be worse\n     Transaction costs     Reduces net gain\n      Strategic needs      Long-term investors need cash flow matching\n    Market efficiency      Arbitrage opportunities are short-lived\n Short-horizon return may\n                           One-time capital gain + short duration exaggerates %\n        be inflated\n• That \"high first-year return\" may be real in retrospect, but uncertain in\n  foresight.\n• If you knew for sure resale yield would stay low, selling early might be\n  smart. But you don’t — so YTM remains the most reliable metric for long-\n  term planning."
+  },
+  {
+   "page": 28,
+   "title": "5. Return & Risk Figure: The trade-off between the return",
+   "thin": false,
+   "explainHtml": "<p>收益与风险权衡：追求更高 yield 往往意味着更长久期、更差信用或更低流动性。</p>\n<p>没有免费的午餐——先问「多出来的那几百个 bp，买的是哪种风险？」</p>",
+   "excerpt": "5. Return & Risk            Figure: The trade-off between the return\n                            and the risk by simulation illustration.\nTradeoffs\n\nIn the early years,\nthe return seems\nhigh, but the\nvariability is also\nvery high.\nNote:\nMonte Carlo iterations\nfor variability, sampling\nthe reinvestment rate\nfrom normal distribution\n𝒩 4%, 0.5% and resale\nyield from 𝒩 5%, 0.5%"
+  },
+  {
+   "page": 29,
+   "title": "• Q: How long do investors usually",
+   "thin": false,
+   "explainHtml": "<p>本页讲收益率度量「• Q: How long do investors usually」。先分清指标假设，再决定能不能拿来比较两只债券。</p>",
+   "excerpt": "• Q: How long do investors usually\n5. Return &   hold bond in practice?\n\nRisk\nTradeoffs"
+  },
+  {
+   "page": 30,
+   "title": "Quick Quiz",
+   "thin": false,
+   "explainHtml": "<p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>\n<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>",
+   "excerpt": "Quick Quiz\n\nQ1: A bond is trading below its par value. Which is higher: the\ncoupon rate or the current yield?\n• A) Coupon Rate\n  B) Current Yield\n\nQ2: Which measure includes both coupon income and capital\ngain/loss if the bond is held to maturity?\n• A) Current Yield\n   B) Yield to Maturity (YTM)"
+  },
+  {
+   "page": 31,
+   "title": "Summary & Key Takeaways",
+   "thin": false,
+   "explainHtml": "<p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>\n<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>",
+   "excerpt": "Summary & Key Takeaways\n\n• Yield (IRR) discounts cash flows to match bond price.\n• Current Yield is coupon/price; YTM includes total return.\n• YTW is the worst-case yield (lowest of YTM/YTC/YTP).\n• Discount bonds: YTM > Current Yield > Coupon Rate.\n• Total Return combines coupons, reinvestment, and price changes.\n• Horizon analysis calculates realized returns incorporating\n  reinvestment rates and changing market yields.\n• Short-term holders face more volatility than long-term investors."
+  },
+  {
+   "page": 32,
+   "title": "Reference",
+   "thin": true,
+   "explainHtml": "<p>本页讲收益率度量「Reference」。先分清指标假设，再决定能不能拿来比较两只债券。</p>",
+   "excerpt": "Reference\n\n• Fabozzi, Chapter 3."
+  }
+ ]
+}

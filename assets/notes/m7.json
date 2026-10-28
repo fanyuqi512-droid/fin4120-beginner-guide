@@ -1,0 +1,413 @@
+{
+ "module": "m7",
+ "deck": "Yield Curve & Yield Curve Management",
+ "pageCount": 58,
+ "pages": [
+  {
+   "page": 1,
+   "title": "Yield Curve &",
+   "thin": false,
+   "explainHtml": "<p>收益率曲线主题「Yield Curve &amp;」。先辨认形态，再解释「预期 vs 溢价 vs 供需」。</p>",
+   "excerpt": "Yield Curve &\n  Yield Curve Management\n\nFin4120: Fixed Income Securities\nInstructor: Prof. Linlin Ye (CUHKSZ)\n\n                                                 <#>"
+  },
+  {
+   "page": 2,
+   "title": "Roadmap",
+   "thin": false,
+   "explainHtml": "<p>这一页是整份讲义的<strong>目录地图</strong>。先扫一眼各节标题，建立「这节课要解决什么问题」的心理框架，再进入细节。</p>\n<p>建议学习法：每学完一节就回到这张 roadmap 打勾，避免只顾刷页码却不知道自己走到哪了。</p>",
+   "excerpt": "Roadmap\n\n1.    Interest Rates\n2.    Yield Curve Basics\n     2.1. The Shapes of Yield Curves\n     2.2. Over-Time Properties of Yield Curve\n     2.3. PCA & Yield Curve Modeling\n3.    Yield Curve Theories\n4.    Yield Curve Management\n     4.1. Yield Curve: A Vital Indicative\n     4.2. Central Bank Tools\n     4.3. A Case Study"
+  },
+  {
+   "page": 3,
+   "title": "1. INTEREST RATES",
+   "thin": true,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>",
+   "excerpt": "1. INTEREST RATES"
+  },
+  {
+   "page": 4,
+   "title": "1. Interest Rates (Yields)",
+   "thin": false,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>",
+   "excerpt": "1. Interest Rates (Yields)\n                 Yields ≈ Market Interest Rates\n           Yields (YTM)                                    Interest Rates\nThe Yields is the total return                The interest rate is the cost of\nanticipated on a bond if held until           borrowing money from a lender,\nmaturity, reflecting the                      expressed as a percentage of the\nannualized internal rate of return            loan amount paid annually. It\n(IRR) of the bond.\n                                              reflect the time value of money.\n\n                      Yield ≈ Market Interest Rate\n\n         For bond, yield and interest rate are interchangeable—\n         both reflect the investor’s expected return and the\n         issuer’s cost. Question: why “≈”, not “=”?"
+  },
+  {
+   "page": 5,
+   "title": "1. Interest Rates (Yields)",
+   "thin": false,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>",
+   "excerpt": "1. Interest Rates (Yields)\n\nReal and Nominal Interest Rates: Fisher’s Law\n\n                                     ∗\n              (𝟏 + 𝒊) = (𝟏 + 𝒓)(𝟏 + 𝒑 )\n\n     • Real Rate (𝑟): Adjusted for inflation\n     • Nominal Rate (𝑖): Not adjusted\n     • Inflation Rate (𝑝∗): Expected price level change\n•   This equation implied that 𝑖 = 𝑟 + 𝑝∗ + 𝑟𝑝∗, for the\n    common values of 𝑟 and 𝑝∗, the product 𝑟𝑝∗ is\n    small enough to be neglected and the equation can be\n    written as\n                        𝒊≈𝒓+𝒑∗"
+  },
+  {
+   "page": 6,
+   "title": "1. Interest Fisher’s Law: 𝑖 ≈ 𝑟 + 𝑝∗",
+   "thin": false,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>",
+   "excerpt": "1. Interest                        Fisher’s Law: 𝑖 ≈ 𝑟 + 𝑝∗\nRates (Yields)\n\n                                                                           U.S. 10Y Treasury\n                                                                           Yields and the\n                                                                           Real Rates,\n                                                                           considering\n                                                                           Inflation Rates,\n                                                                           (2018-2025.)\n\n•2020: 10Y yield plunged to around 0.7% due to COVID and Fed rate cuts.\n\n•2021–2022: Inflation surged past 8%, while yields lagged — causing deeply negative\nreal rates.\n•2023–2025: Yields rise and inflation moderates → real rates become positive again."
+  },
+  {
+   "page": 7,
+   "title": "1. Interest Application：Estimating expected inflation",
+   "thin": false,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>",
+   "excerpt": "1. Interest            Application：Estimating expected inflation\n                       via TIPS – Part1\nRates (Yields)\n\nDefine:\n          Break − even Inflation\n          = 𝐘𝐢𝐞𝐥𝐝 𝐨𝐧 𝐍𝐨𝐦𝐢𝐧𝐚𝐥 𝐓𝐫𝐞𝐚𝐬𝐮𝐫𝐲 − 𝐑𝐞𝐚𝐥 𝐘𝐢𝐞𝐥𝐝 𝐨𝐧 𝐓𝐈𝐏𝐒\n                          •    TIP refers to the Treasury Inflation-Protected\n                               Securities.\n                                 •     TIPS nominal yield = TIPS real yield\n                                       (guaranteed) + actual inflation rate.\n                          •    Nominal Treasury Yield: no inflation protection.\n                                 • Treasury nominal yield = not directly\n                                   adjusting to inflation = TIPS real yield +\n                                   breakeven rate"
+  },
+  {
+   "page": 8,
+   "title": "1. Interest Application：Estimating expected inflation",
+   "thin": false,
+   "explainHtml": "<p>Yield（YTM）常被当作该期限的市场利率锚。费雪关系粗略说：名义利率 ≈ 实际利率 + 预期通胀。</p>\n<div class=\"kf\">i ≈ r + π^e</div>\n<p>用名义国债与 TIPS 可估计盈亏平衡通胀。注意：还有通胀风险溢价与流动性溢价，不是纯预期。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "1. Interest                    Application：Estimating expected inflation\n                               via TIPS –Part2\nRates (Yields)\n                                                     ≝ Break-even Inflation\n\n 𝐄𝐱𝐩𝐞𝐜𝐭𝐞𝐝 𝐈𝐧𝐟𝐥𝐚𝐭𝐢𝐨𝐧 ≈ 𝐘𝐢𝐞𝐥𝐝 𝐨𝐧 𝐍𝐨𝐦𝐢𝐧𝐚𝐥 𝐓𝐫𝐞𝐚𝐬𝐮𝐫𝐲 − 𝐑𝐞𝐚𝐥 𝐘𝐢𝐞𝐥𝐝 𝐨𝐧 𝐓𝐈𝐏𝐒\n(a) Why called Break-even inflation? Remember,\n• TIPS nominal yield = TIPS real yield + actual inflation rate.\n• Treasury nominal yield = TIPS real yield + breakeven rate (expected inflation)\nIf actual inflation > breakeven rate → TIPS outperform nominal Treasuries → arbitrage\nIf actual inflation < breakeven rate → Nominal Treasuries outperform TIPS → arbitrage\nIf actual inflation = breakeven rate → Both give the same real return → indifferent\n\n(b) Why Break-even inflation ≈ Expected future inflation?\nBecause it reflects the market’s consensus forecast for future inflation.\n• If investors expect (future) inflation > breakeven rate, they buy TIPS/sell Treasuries,\n   pushing breakeven rate up to match expectations, vice versa."
+  },
+  {
+   "page": 9,
+   "title": "2. THE TERM STRUCTURE OF",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2. THE TERM STRUCTURE OF\nINTEREST RATES (YIELD CURVE)\n2.1. The Shapes of Yield Curves\n2.2. The Over-Time Properties of Yield Curves\n2.3. Factor Model & Review of PCA Method"
+  },
+  {
+   "page": 10,
+   "title": "2. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>收益率曲线主题「2. Yield Curve」。先辨认形态，再解释「预期 vs 溢价 vs 供需」。</p>",
+   "excerpt": "2. Yield Curve\nDefinition:\n                                                           09/19/2025\nThe term structure of interest       5\n\nrates (yield curve) is a graphical 4\n                                   4.5\n\nrepresentation that shows the 3.5\n                                     3\ninterest rates of bonds with       2.5\n\ndifferent maturity dates but the 1.52\nsame credit quality, at a specific 1\n                                   0.5\ntime.                                0\n\n•   It indicates the relationship\n    between short-term and long-            The most commonly referenced yield curve\n    term interest rates and helps           compares Treasury bond yields, from\n                                            short-term (e.g., 1-month) to long-term\n    forecast economic trends.               (e.g., 30-year)."
+  },
+  {
+   "page": 11,
+   "title": "2. THE TERM STRUCTURE OF",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2. THE TERM STRUCTURE OF\nINTEREST RATES (YIELD CURVE)\n2.1. The Shapes of Yield Curves\n2.2. The Over-Time Properties of Yield Curves\n2.3. Factor Model & Review of PCA Method"
+  },
+  {
+   "page": 12,
+   "title": "2.1. The Shapes of Yield Curves",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes of Yield Curves\nTerm structures can appear shapes as:\n\n       • Quasi-flat (Martellini, Figure 3.2)\n       • Increasing (Martellini, Figure 3.3)\n       • Decreasing (Martellini, Figure 3.4)\n       • Humped (Martellini, Figures 3.5 & 3.6)"
+  },
+  {
+   "page": 13,
+   "title": "2.1. The Shapes",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes\n                                 a. Quasi-flat Yield Curve\n of Yield Curves\n                                         • Signals economic stability.\n                                         • Neutral outlook on growth and inflation.\nA quasi-flat yield curve shows           • Sometimes may reflect market transition\n                                           or uncertainty.\nminimal differences in yields across\nmaturities.\n• It suggests investors expect stable\n   short-term interest rates, with\n   little anticipation of inflation or\n   major central bank policy\n   changes. Why?\n• Sometimes Economic uncertainty\n   can also lead to a flat curve as\n   markets await clearer signals."
+  },
+  {
+   "page": 14,
+   "title": "2.1. The Shapes b. Increasing Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes          b. Increasing Yield Curve\nof Yield Curves                  Signals growth and inflation expectations.\n                                 • Common in recovery or boom phases.\n                  •   Expectation: Investors expect strong\n                      economy growth and rising inflation,\n                      anticipating the central bank to raise rates to\n                      cool the economy.\n                  •   Risk: Holding long-term bonds risks losing\n                      value to inflation and missing higher future\n                      rates if central bank hikes.\n                  •   Action: Investors sell long-term bonds or\n                      demand higher long-term yields to\n                      compensate these risks.\n                  •   Result: Long-term bonds prices fall, yields\n                      rise, and the yield curve increases."
+  },
+  {
+   "page": 15,
+   "title": "2.1. The Shapes c. Decreasing Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes                      c. Decreasing Yield Curve\nof Yield Curves\n                                             • Strongly Predicts downturns.\n\n•   Expectation: Investors expect a economic\n    slowdown or recession, anticipating the\n    central bank will cut rate to boost the\n    economy in future.\n•   Risk: Holding short-term assets risks\n    reinvesting at much lower rates soon.\n•   Action: Investors want to lock in yields\n    before they drop (fly to safety): they rush\n    to buy long-term bonds, driving their\n    prices up (and hence yields down).\n•   Result: A decreasing yield curve."
+  },
+  {
+   "page": 16,
+   "title": "2.1. The Shapes",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes\n                                  d. Humped Yield Curve\n of Yield Curves\n    Reflecting short-term volatility + uncertainty about long-term trends.\n    • Common during policy shifts or mixed economic signals.\n\n              Humped down                                            Humped up\nExpectation: rates will cut (near-term               Expectation: rates will rise (near term\nrecession) followed by a strong rise                 growth/inflation), then fall\n(economy recovery).                                  later(recession),\nRisks: medium-term is the sweet zone:                Risks: Medium-term is the risky zone\n• Holding short-term is risky for                    • Holding medium term risks of locking\n    reinvestment (low reinvestment rate);                in right before crash → reinvest at\n• Holding long-term risks missing out                    much lower rate;\n    the high rate in future.                         Action: sell or demand a higher yields\nAction: rush to buy medium-term bonds                for medium-term bonds → prices drop,\n→ prices up, yields down.                            yields up;\n• Result: A humped down curve.                       Result: A humped up curve."
+  },
+  {
+   "page": 17,
+   "title": "2.1. The Shapes of Yield Curves",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes of Yield Curves\nWhat determines the shape of the yield curve?\nEconomic Outlook → Anticipated Central Bank Policy → Action → YC Shape\n\n                                                        Long-term rates\n                                                        reflect broader\n                                                           economic\n    Short-term\n                                                         expectations\n    rates more\n    sensitive to\n       policy"
+  },
+  {
+   "page": 18,
+   "title": "2.1. The Shapes of Yield Curves",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.1. The Shapes of Yield Curves\n\nA Short Summary\n   •   Flat Curve: Economic uncertainty or stability.\n\n   •   Upward Curve: Economic growth, long-term inflation.\n\n   •   Downward Curve: Economic slowdown or recession.\n\n   •   Humped Curve: Transitional phase, uncertainty about short-\n       term vs. long-term economic conditions."
+  },
+  {
+   "page": 19,
+   "title": "2. THE TERM STRUCTURE OF",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2. THE TERM STRUCTURE OF\nINTEREST RATES (YIELD CURVE)\n2.1. The Shapes of Yield Curves\n2.2. The Over-Time Properties of Yield Curves\n2.3. Factor Model & Review of PCA Method"
+  },
+  {
+   "page": 20,
+   "title": "2.2. Over-Time Properties of YCs",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time Properties of YCs\n\nHistorical evolution of yield curves exhibits following:\n\n•   Non-negativity\n•   Mean reversion\n•   Imperfect correlation across rates                  Important for\n•   Higher short-term rate volatility                   Empirical\n•   Level, slope, and curvature: The 95%                Modeling of\n    rule                                                Yield Curves"
+  },
+  {
+   "page": 21,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\n    Properties of                 a. Interest rates are non-negative\n    YCs\n\n•    Real interest rates can go negative in crises, like oil shocks with high inflation,\n     to avoid harming growth.\n•    Nominal rates rarely go negative since lending at a loss seems irrational. →\n     So interest rates are usually not assumed to be normally distributed."
+  },
+  {
+   "page": 22,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\n                                b. Mean reversion of interest rates –\nProperties of                   Part 1\nYCs\nInterest rates tend to revert to average levels after extreme highs or lows.\n•   Fact: during the 1990s, the Dow Jones Index showed a strong upward\n    trend, while the Fed funds rate remained between 3% and 10%. This\n    behavior supports modeling using a mean-reversion process. E.g.\n\n          Vasicek Model (Ornstein–Uhlenbeck process):\n\n             𝒅𝒓(𝒕) = 𝒂[𝒃 − 𝒓(𝒕)]𝒅𝒕 + 𝝈𝒅𝑾(𝒕)\n           •𝑎: Mean-reversion speed\n           •𝑏: Long-term mean\n                                             Drift            Random Part\n           •𝜎: Volatility\n           •𝑊(𝑡): Brownian motion"
+  },
+  {
+   "page": 23,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2.2. Over-Time\n                                 b. Mean reversion of interest rates –\nProperties of                    Part 2\nYCs\n                                                                 •   The Brownian motion\n               E.g. Vasicek Model :\n                                                                     term, 𝑑𝑊(𝑡),\n        𝒅𝒓(𝒕) = 𝒂[𝒃 − 𝒓(𝒕)]𝒅𝒕 + 𝝈𝒅𝑾(𝒕)                               representing the\n      •𝑎: Mean-reversion speed                                       random market\n      •𝑏: Long-term mean\n                                                                     shocks , is assumed to\n      •𝜎: Volatility\n      •𝑊(𝑡): Brownian motion\n                                                                     be stationary.\n                                                                 Over time, the mean-\nThe Mean-Reversion Force: term 𝑎[𝑏 − 𝑟(𝑡)]. It pulls\n                                                                 reversion term 𝑎[𝑏 − 𝑟(𝑡)]\nthe interest rate toward its Mean, 𝑏:\n➢If 𝑟(𝑡) > 𝑏, the drift is negative → pulls rate down.           dominates, driving 𝑟(𝑡)\n➢If 𝑟(𝑡) < 𝑏, the drift is positive → pulls rate up. So          back toward the long-\nover time, 𝑟(𝑡) clusters around 𝑏.                               term mean 𝑏, suggesting\n                                                                 mean-reversion."
+  },
+  {
+   "page": 24,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\nProperties of                     c. Imperfect correlation between rates\nYCs\n•       Statistics shows imperfect correlation between interest rates (≠ 1)\n•       Correlations are positive and decline with greater maturity differences.\n\n                                      Higher\n\n                  Lower\n    •    Also, Short-term rates often have near 1 correlations → a single factor\n      model may suffice for short-term products.\n    • However, longer-term instruments depend on multiple yield curve\n         segments → multifactor models are more appropriate."
+  },
+  {
+   "page": 25,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.2. Over-Time\nProperties of                d. Short-term rates more volatile\nYCs\n• Volatility declines with maturity.\n• Humped form can appear."
+  },
+  {
+   "page": 26,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\n                               e. Three factors explaining 95%+ of\nProperties of                  Yield Curve change –Part1\nYCs\nLet’s discuss if there are common factors that can explain the yield curve\nchange, specifically, using principal components analysis (PCA) to model YCs\n(Factor model). Why consider PCA?\n\n1. High Correlation Allows Dimension Reduction\n• Interest rates across maturities move together due to common factors like\n   growth, inflation, and policy. This allows us to use fewer common factors\n   instead of analyzing each rate individually.\n\n2. Redundancy Supports PCA\n• Rate movements are highly similar, meaning most of the variation in the\n   yield curve can be captured by a few principal components—often\n   representing the level, slope, and curvature of the curve."
+  },
+  {
+   "page": 27,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\n                                e. Three factors explaining 95%+ of\nProperties of                   Yield Curve change –Part2\nYCs\nPCA explains movements using independent factors.\n\nE.g. A 3-Factor PCA Approximation For Yield Curve Changes:\n                      𝜟𝑹 𝒕, 𝜽𝒌 ≈ 𝒄𝟏𝒌 𝑪𝟏𝒕 + 𝒄𝟐𝒌 𝑪𝟐𝒕 + 𝒄𝟑𝒌 𝑪𝟑𝒕\n𝐶𝑡1 : Level factor (parallel shifts)\n𝐶𝑡2 : Slope factor (twists)\n𝐶𝑡3 : Curvature factor (butterfly movements)\n\nThe components have been ordered such that 𝐶𝑡1 corresponds to the largest\nfraction of the total variance, 𝐶𝑡2 to the second largest and 𝐶𝑡3 to the third\nlargest.\n\nThe factor model reduces complexity, capturing the most important\ninformation in the yield curve."
+  },
+  {
+   "page": 28,
+   "title": "2.2. Over-Time",
+   "thin": false,
+   "explainHtml": "<p>曲线随时间移动：平行移动、变陡/变平、蝶式（弯曲）变化。风险管理常把这些模式分开做情景。</p>\n<p>短端更受政策利率牵引，长端更受增长/通胀预期与量化宽松等存量影响。</p>",
+   "excerpt": "2.2. Over-Time\n                                      e. Three factors explaining 95%+ of\nProperties of                         Yield Curve change –Part3\nYCs\nA PCA Approximation For Yield Curve Changes:\n                 𝜟𝑹 𝒕, 𝜽𝒌 ≈ 𝒄𝟏𝒌 𝑪𝟏𝒕 + 𝒄𝟐𝒌 𝑪𝟐𝒕 + 𝒄𝟑𝒌 𝑪𝟑𝒕\n𝐶𝑡1: Level factor (parallel shifts)\n𝐶𝑡2: Slope factor (twists)\n𝐶𝑡3: Curvature factor (butterfly movements)\n\n parallel shift                   slope twist                   curvature\n (θ𝑘 ↦ 𝑐1𝑘 ≈ constant)            (θ𝑘 ↦ 𝑐2𝑘 (crossing           (θ𝑘 ↦ 𝑐3𝑘 (concave\n                                  zero Fin\n                                       at 4120,\n                                           midProf.\n                                                maturities)\n                                                    Linlin Ye   or convex shape      28"
+  },
+  {
+   "page": 29,
+   "title": "2. THE TERM STRUCTURE OF",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2. THE TERM STRUCTURE OF\nINTEREST RATES (YIELD CURVE)\n2.1. The Shapes of Yield Curves\n2.2. The Over-Time Properties of Yield Curves\n2.3. Factor Model & Review of PCA Method"
+  },
+  {
+   "page": 30,
+   "title": "2.3. A Quick Review of PCA",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2.3. A Quick Review of PCA\nPCA: a statistical technique to transforms a set of correlated variables into a\nsmaller set of uncorrelated variables, called principal components.\n\n            PCA = An application of eigenvalue decomposition\n                   𝑥11 𝑥12 . . . 𝑥1𝑝\n                   𝑥21 𝑥22 . . . 𝑥2𝑝\n•   Suppose 𝑋 = ⋮         ⋮     ⋱      ⋮ be an 𝑛 × 𝑝 data matrix, where:\n                   𝑥𝑛1 𝑥𝑛2 ⋯ 𝑥𝑛𝑝\n•   𝑛 : number of observations (e.g., yield curve observations over time)\n•   𝑝 : number of variables (e.g., interest rates at different maturities).\n•   The Principal Component Matrix 𝑌 is given by:\n\n                                    𝒀 = 𝑿std 𝑽𝒌\n       𝐍𝐞𝐰 𝐃𝐚𝐭𝐚 = 𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐃𝐚𝐭𝐚 (𝐬𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐢𝐳𝐞𝐝) × 𝐓𝐨𝐩 𝐤 𝐄𝐢𝐠𝐞𝐧𝐯𝐞𝐜𝐭𝐨𝐫𝐬"
+  },
+  {
+   "page": 31,
+   "title": "2.3. A Quick Review of PCA",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>",
+   "excerpt": "2.3. A Quick Review of PCA\n            PCA = An application of eigenvalue decomposition\n            𝑥11        𝑥12    . . . 𝑥1𝑝\n            𝑥21        𝑥22    . . . 𝑥2𝑝\nSuppose 𝑋 = ⋮           ⋮      ⋱     ⋮ be an 𝑛 × 𝑝 data matrix.\n            𝑥𝑛1        𝑥𝑛2    ⋯ 𝑥𝑛𝑝\n\nNeed to find the Principal Components for 𝑋.\n\nThat is, suppose 𝑋 = 𝛥𝑅 𝑡, 𝜃𝑘 , we want to find the key factors, 𝐶𝑡1 , 𝐶𝑡2 , . . . 𝐶𝑡𝑘 ,\nso that 𝛥𝑅 𝑡, 𝜃𝑘 could be approximated by:\n\n                      𝜟𝑹 𝒕, 𝜽𝒌 ≈ 𝒄𝟏𝒌 𝑪𝟏𝒕 + 𝒄𝟐𝒌 𝑪𝟐𝒕 + 𝒄𝟑𝒌 𝑪𝟑𝒕"
+  },
+  {
+   "page": 32,
+   "title": "2.3. A Quick",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2.3. A Quick\n                         Step 1: Standardize the Data:\nReview of PCA                                         𝑋−𝜇\n                                              𝑋std =\nStep 1                                                   𝜎\nStandardize the data     •   where 𝜇: vector of column means, 𝜎: vector of\nStep 2\n                             column standard deviations.\nCovariance Matrix        Step 2: Compute the Covariance Matrix\nStep 3                                             1   ⊤\nPerform Eigen\n                                            Σ=       𝑋std 𝑋std\nDecomposition\n                                                 𝑛−1\n                         •   where Σ is a 𝑝 × 𝑝 symmetric matrix, is the\nStep 4                       covariance matrix.\nSort Order\n                         Step 3: Perform Eigenvalue Decomposition\nStep 5\nForm Projection Matrix                  Σ ⋅ 𝑣𝑖 = 𝜆𝑖 𝑣𝑖          for 𝑖 = 1,2, … , 𝑝\nStep 6\n                         where:\nData Projection          • 𝜆𝑖 : eigenvalue corresponding to the 𝑖 -th eigenvector\nStep 7                   • 𝑣𝑖 : 𝑖 -th eigenvector (a linear combination of original\nExpress Rate Change        variables, orthogonal)"
+  },
+  {
+   "page": 33,
+   "title": "Step 4: Sort Eigenvalues and Eigenvectors in",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "Step 4: Sort Eigenvalues and Eigenvectors in\n2.3. A Quick\n                         descending order:\nReview of PCA\n                                                   𝜆1 ≥ 𝜆2 ≥ ⋯ ≥ 𝜆𝑝 ,\nStep 1                   •   Reorder eigenvectors accordingly.\nStandardize the data\n                         Step 5: Form the Projection Matrix by eigen vectors\nStep 2                                 𝑽𝒌 = 𝒗 𝟏 𝒗 𝟐 ⋯ 𝒗 𝒌\nCovariance Matrix\n                         •   where 𝒌 ≤ 𝒑 is the number of principal components\nStep 3                       to keep.\nPerform Eigen\nDecomposition            Step 6: Project the Data (Define the PCs)\nStep 4                                            𝒀 = 𝑿std 𝑽𝒌 ∈ 𝑹𝒏×𝒌\nSort Order\n                         •  Each column of 𝑌 represents a principal\nStep 5                      component — an uncorrelated variable that captures\nForm Projection Matrix\n                            a key pattern in the original data.\nStep 6                   Step 7: Express Rate Change\nData Projection\n                                        𝑿𝒔𝒕𝒅 ≈ 𝒀𝑽𝒌 𝑻 = 𝑿𝒔𝒕𝒅 𝑽𝒌 𝑽𝒌 𝑻\nStep 7\nExpress Rate Change\n                         • Suppose X = Δ𝑅 represent the over-time rate changes.\n                            So 𝑉𝑘 is loading matrix, then 𝚫𝑹𝒔𝒕𝒅 ≈ 𝚫𝑹𝒔𝒕𝒅 𝑽𝒌 𝑽𝒌 𝑻 ."
+  },
+  {
+   "page": 34,
+   "title": "2.3. A Quick Review of PCA",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2.3. A Quick Review of PCA\nBefore PCA:                     𝑋𝑠td = 𝑥1 , 𝑥2 , . . . , 𝑥𝑝\nAfter PCA:       Xstd ≈ YVk T = (Xstd Vk )Vk T = C1 , C2 , … Ck Vk T\n\n    Principal Components                                       Loading matrix\n 𝑌 = 𝑋std 𝑉𝑘 = C1 , C2 , … Ck (n×k)                                  𝑉𝑘𝑇 𝑘×𝑝\n\n• Y is a linear combination                            𝑉kT = a (𝑘 × 𝑝) matrix of the top 𝑘\n  of 𝑋𝑠𝑡𝑑 weighted by eigenvectors;                    eigenvectors\n                                                       • The n-th row tells you how much\n• Each column is a PC → they are\n                                                           the n-PC contributes to each\n  orthogonal;\n                                                           maturity point\n• → Y is a lower-dimensional\n                                                       • The i-th column tells you how\n  version of 𝑋𝑠𝑡𝑑 , preserving key                         much each PC contribute to the ith\n  variance.                                                maturity point"
+  },
+  {
+   "page": 35,
+   "title": "2.3. A Quick An example table of three factors",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "2.3. A Quick                         An example table of three factors\n Review of PCA                             𝜟𝑹 𝒕, 𝜽𝒌 ≈ 𝒄𝟏𝒌 𝑪𝟏𝒕 + 𝒄𝟐𝒌 𝑪𝟐𝒕 + 𝒄𝟑𝒌 𝑪𝟑𝒕\n\n                                                               Eigenvector\n PC        Description        Pattern in Rates                (loadings 𝑐𝑖𝑘 )       Economic Driver\n                                                                 Example\n\n1st:    Parallel shift in   All rates move in             [0.5, 0.5, 0.5,       Inflation expectations,\nLevel   the entire yield    the same direction            0.5, 0.5]             monetary policy\n        curve               by similar amounts\n\n2nd : Steepening or         Short-term rates              [1, 0.5, 0, -0.5, Expectations about\nSlope flattening of the     move opposite                 -1]               future short rates vs\n      curve                 long-term rates                                 long-term growth\n\n3rd    Hump or bow in Medium-term rates [1, -1, 0, -1, 1] Market-specific factors,\n:Curva the middle of the move more than                   supply/demand in\nture curve               short and long                   certain maturities"
+  },
+  {
+   "page": 36,
+   "title": "2.3. A Quick A Real World Example",
+   "thin": false,
+   "explainHtml": "<p><strong>PCA</strong> 显示国债收益率变动大部分可由少数因子解释，典型是 Level / Slope / Curvature。</p>\n<div class=\"kf\">Δy ≈ β1·Level + β2·Slope + β3·Curvature</div>\n<p>实务含义：组合风险可以按这三个「曲线动作」来表达，而不是看每一个到期日。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "2.3. A Quick                            A Real World Example\n   Review of PCA                            𝜟𝑹 𝒕, 𝜽𝒌 ≈ 𝒄𝟏𝒌 𝑪𝟏𝒕 + 𝒄𝟐𝒌 𝑪𝟐𝒕 + 𝒄𝟑𝒌 𝑪𝟑𝒕 + 𝒄𝟒𝒌 𝑪𝟒𝒕\n\nFrench market, zero-coupon YC derived from daily swap market prices.\n• First three factors explain >97% of yield-curve variations (1995-1998).\n      Factor 1 (Level) affects all                        Factor 3 (Curvature) affects intermediate\n      maturities similarly                                maturities (e.g., 2-5 years) differently\n                                     𝒄𝟏𝒌                  from short and long maturities.\n                                     𝒄𝟐𝒌                                                𝒄𝟑𝒌\n                                                                                        𝒄𝟒𝒌\n\nFactor 2 (Slope) has a negative                            Factor 4 captures more nuanced or\neffect on maturities under 3 years,                        localized movements (e.g., specific to\nand a positive effect on maturities                        very short or long-term rates)\nover 3 years.                       Fin 4120, Prof. Linlin Ye                                     36"
+  },
+  {
+   "page": 37,
+   "title": "Do all zero-coupon rates behave like this?",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "Do all zero-coupon rates behave like this?\n         No! The behave of zero-coupon curve vary because\n\n         •   (cross time) Monetary policy regimes, economic\n2.3. A       cycles, and market stress influence how yield\n             curves behave.\n\nQuick    •   (cross country) Yield curve behavior differs\n             across countries. E.g., U.S. Treasury market\n             often more liquid and influenced by Fed policy.\nReview       Eurozone involves multiple economies and ECB\n             policy, leading to different curve dynamics.\nof PCA       Emerging markets may show more volatile or\n             idiosyncratic yield curve movements.\n         •   Data Frequency (e.g., daily, monthly, or quarterly)\n             and Maturity Range can affect PCA results\n         •   Modeling choices can also shift the shape and\n             interpretation of the principal components"
+  },
+  {
+   "page": 38,
+   "title": "3. YIELD CURVE THEORIES",
+   "thin": true,
+   "explainHtml": "<p>经典理论：纯预期假说、流动性偏好（期限溢价为正）、分割市场假说等。它们给出「为什么长端通常更高」的不同故事。</p>\n<p>现代观点常把收益率 = 预期短端路径 + 期限溢价；期限溢价可正可负。</p>",
+   "excerpt": "3. YIELD CURVE THEORIES"
+  },
+  {
+   "page": 39,
+   "title": "3. Yield Curve Theories",
+   "thin": false,
+   "explainHtml": "<p>经典理论：纯预期假说、流动性偏好（期限溢价为正）、分割市场假说等。它们给出「为什么长端通常更高」的不同故事。</p>\n<p>现代观点常把收益率 = 预期短端路径 + 期限溢价；期限溢价可正可负。</p>",
+   "excerpt": "3. Yield Curve Theories\nWhat shapes the term structure of interest rates?\n\n• Classical theories says:\n\n         Expectations\n     Liquidity preference                    Yield\n       Preferred habitat                     Curve\n     Market segmentation"
+  },
+  {
+   "page": 40,
+   "title": "3. Yield Curve Theories",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "3. Yield Curve Theories\nTheory        Key Assumptions       Forward Rate YC Shapes       Criticisms / Notes\n                                    Explained     Explained\nPure         Long-term rates =      𝑓t = 𝐸 𝑟t,t+1 All shapes     • Widely accepted.\nExpectations mkt’s avg                            (upward, flat, • Unrealistic bcs\nTheory       expectation of                       downward)         assumes\n                                                                    investors are\n             future short-term\n                                                                    indifferent to\n             rates (forward rates)                                  maturity.\nLiquidity    Investors require       𝑓t           Usually        • More realistic;\nPremium      compensation            = 𝐸 𝑟t,t+1   upward-        • Consistent with\nTheory       (liquidity premium)     + Liquidity sloping; can       risk aversion but\n             for interest rate risk Premium       be flat or        assumes\n             in longer-term                       inverted too      premium rises\n             bonds                                                  with maturity."
+  },
+  {
+   "page": 41,
+   "title": "3. Yield Curve Theories",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "3. Yield Curve Theories\nTheory         Key              Forward Rate                 YC Shapes   Criticisms / Notes\n               Assumptions      Explained                    Explained\nPreferred      Investors prefer 𝑓t                Any shape Flexible; allows\nHabitat Theory certain          = 𝐸 𝑟t,t+1 + Risk (including non-monotonic\n               maturities but   Premium           humps)      premiums; but\n               may shift if     (variable)                    difficult to quantify\n               compensated by                                 habitat preferences.\n               a risk premium\nMarket         Investors/borro Forward rates are Any shape; Highly restrictive;\nSegmentation wers are           irrelevant        depends on assumes no\nTheory         confined to                        supply/dem arbitrage across\n               specific                           and in each segments,\n               maturities and                     segment     contradicts\n               do not shift                                   observed behavior.\n               across segments"
+  },
+  {
+   "page": 42,
+   "title": "4. YIELD CURVE MANAGEMENT",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "4. YIELD CURVE MANAGEMENT\n\n4.1. Yield Curve: A Vital Indicative\n4.2. Tools of Yield Curve Management\n4.3. Case Study"
+  },
+  {
+   "page": 43,
+   "title": "Why Yield Curve is one of the most important",
+   "thin": false,
+   "explainHtml": "<p>曲线之所以重要：它是定价输入、宏观信号、政策传导渠道，也是银行净息差与风险偏好的关键变量。</p>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "Why Yield Curve is one of the most important\n\n                                           indicatives?\n\n                                           The Shape of the yield curve is great indicator for:\n                                           1. Economic Health: Economy growth,\n                                                stagnation, or recession.\n                                              → Forecasts cycles, financial stresses, etc.\n                                4. Yield   2. Market Expectation: Investor views on future\n                                 Curve          rates and economy.\n                                              → Influences borrowing, investment, and\n                            Management        spending.\n                                           3. Risk Compensation: Risk premium for\n                                                holding long bonds.\n                                              → Affects bonds pricing, investor behavior, &\n                                              govt’s borrowing costs.\n                                           4. Market Segmentation: Different Investor\n                                                behavior by maturity.\n                                              → Explains distortions beyond expectations.\n                                                                                                  43"
+  },
+  {
+   "page": 44,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "4. Yield Curve\n                         4.2. YC: a vital indicative\nManagement\n          Economic          Market                   (long-term) Risk     Market\nSignal\n          Health            Expectations             Compensation         Segmentation\n                            Flattening (→)\n          Inversion (↘) =                                                Kinks or humps\n                            or inversion             Steeper (↗) =\nShape     recession;                                                     (⋀ or ⋁) =\n                            (↘) =                    higher premium;\nPattern   steep (↗) =                                                    supply/demand\n                            slowdown &               flatter (→) = lower\n          growth                                                         imbalances\n                            future rate cut\n                            Influences               Affects bonds        Explains\n          Forecasts cycles\nWhy It                      borrowing,               pricing, investor    distortions\n          and financial\nMatters                     investment,              behavior, & govt’s   beyond\n          stress\n                            and policy               borrowing costs      expectations\n                            Post-2022 Fed                                 2023: banks\n                                                     2020 Fed QE →\n          U.S. inversion in hikes → sharp                                 (short) vs.\n                                                     lower long-term\nExample   2006 and 2019 flattening,                                       pensions (long)\n                                                     yields (lower\n          → recessions      signals slower                                → curve\n                                                     premium)\n                            growth                                        distortions"
+  },
+  {
+   "page": 45,
+   "title": "4. YIELD CURVE MANAGEMENT",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "4. YIELD CURVE MANAGEMENT\n\n4.1. Yield Curve: A Vital Indicative\n4.2. Tools of Yield Curve Management\n4.3. Case Study"
+  },
+  {
+   "page": 46,
+   "title": "4. Yield Curve Management",
+   "thin": false,
+   "explainHtml": "<p>曲线形态：向上（正常）、平坦、倒挂（inverted）、驼峰等。倒挂常被当成衰退预警信号（短端高于长端）。</p>\n<p>解释形态要结合：预期未来短端路径、期限溢价、供需与央行操作。</p>\n<div class=\"trap\"><strong>易错点：</strong>倒挂是统计规律不是物理定律；要同时看倒挂深度与持续时间。</div>",
+   "excerpt": "4. Yield Curve Management\nWhat is yield curve management?\n•     Yield curve management refers to the strategies used by governments\n      and central banks to influence the shape and level of interest rates\n      across different maturities.\n\n                                 Motivation\n\n    Financial          Fiscal Policy                 Monetary        Inflation\n    Stability:         Support: Lower                Policy          Targeting:\n    Avoiding           long−term                     Transmission:   Influence\n    excessively        rates reduce                 Shape            inflation\n    steep or           government                   Control can      expectations\n    inverted curves    borrowing                    stimulate/cool   via long−term\n    that may signal    costs.                       borrowing and    rates.\n    recession.                                      investment."
+  },
+  {
+   "page": 47,
+   "title": "Examples",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "Examples\n\n                       Japan (2016–present): Introduction of\n4. Yield                YCC to control the 10-year JGB yield.\n\nCurve\nManagement             United States (Post-2008 and 2020\n                     Pandemic): Fed’s QE programs and yield\n                                  suppression.\n\n                     Australia (2020–2021): RBA’s attempt\n                    to cap the 3-year bond yield during the\n                                   pandemic."
+  },
+  {
+   "page": 48,
+   "title": "4. Yield Curve Quantitative",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Yield Curve          Quantitative\nManagement              Easing (QE)\n\n4.1. Central\nBank Tools              Tool                Quantitative Easing (QE)\n                                            Central bank purchases long-term bonds\n•   Quantitative        Mechanism\n    Easing (QE)\n                                            to inject liquidity into the market.\n•   Yield Curve                             Lowers long-term interest rates,\n    Control (YCC)       Outcome             stimulates investment and inflation\n•   Forward                                 expectations. (why?)\n    Guidance\n•   Interest on\n                                            During severe recessions or deflationary\n    Reserves/Short-                         pressures, especially when short-term\n                        When to Use\n    Term Policy Rates                       rates are already near zero. Example:\n                                            Post-2008 global financial crisis.\n                        Potential           Market distortion, asset price inflation,\n                        Issues              diminishing returns over time."
+  },
+  {
+   "page": 49,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Yield Curve\n                        Yield Curve Control (YCC)\nManagement\n\n4.1. Central            Tool             Yield Curve Control (YCC)\nBank Tools                        Central bank sets a target for a specific\n                        Mechanism point on the yield curve and buys/sells\n•   Quantitative                  bonds to maintain it.\n    Easing (QE)\n•   Yield Curve                          Stabilizes long-term rates, supports\n                        Outcome\n    Control (YCC)                        inflation and growth targets.\n•   Forward\n    Guidance                        When long-term rates are rising despite\n•   Interest on                     policy goals, or to stabilize expectations\n                        When to Use\n    Reserves/Short-                 for a prolonged period. Example: Japan\n    Term Policy Rates               since 2016 (why use?).\n                                    Loss of market pricing efficiency,\n                        Potential\n                                    potential for large balance sheet risks,\n                        Issues\n                                    difficult exit strategy."
+  },
+  {
+   "page": 50,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Yield Curve\n                        Forward Guidance\nManagement\n                        Tool             Forward Guidance\n4.1. Central\nBank Tools                        Communicates future policy\n                        Mechanism intentions (e.g., keeping short-term\n•   Quantitative                  rates low).\n    Easing (QE)\n                                         Influences expectations, lowers long-\n•   Yield Curve         Outcome\n    Control (YCC)                        term rates indirectly.\n•   Forward                         When the central bank wants to\n    Guidance\n                                    shape expectations without\n•   Interest on\n    Reserves/Short-\n                        When to Use immediate intervention. (Why use?)\n    Term Policy Rates               Example: U.S. Federal Reserve during\n                                    the 2010s recovery.\n                                    Credibility risk if policy diverges from\n                        Potential\n                                    guidance; may anchor expectations\n                        Issues\n                                    too rigidly."
+  },
+  {
+   "page": 51,
+   "title": "4. Yield Curve Interest on Reserves/Short-Term Policy Rates",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Yield Curve        Interest on Reserves/Short-Term Policy Rates\nManagement\n                                  Interest on Reserves (IOR) / Short-\n                      Tool\n4.1. Central                      Term Policy Rates\nBank Tools                        Adjusting benchmark rates or interest\n                      Mechanism paid on reserves to influence short-\n•   Quantitative                  term borrowing.\n    Easing (QE)                   Influences short-term borrowing\n•   Yield Curve       Outcome     costs and expectations of future\n    Control (YCC)\n                                  rates.\n•   Forward\n    Guidance                      As a conventional tool to manage\n•   Interest on                   short-term interest rates. Example:\n                      When to Use\n    Reserves/Short-               Fed funds rate adjustments in\n    Term Policy                   normal times.\n    Rates\n                                  Limited impact on long-term rates\n                      Potential\n                                  without complementary tools like QE\n                      Issues\n                                  or YCC."
+  },
+  {
+   "page": 52,
+   "title": "4. YIELD CURVE MANAGEMENT",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "4. YIELD CURVE MANAGEMENT\n\n4.1. Yield Curve: A Vital Indicative\n4.2. Tools of Yield Curve Management\n4.3. Case Study"
+  },
+  {
+   "page": 53,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "4. Yield Curve\nManagement                    4.3. Case Study: Fed QE In 2020 –Part1\n\n  Background and Why:\n  The Fed launched QE in 2020 to fight the economic shock of the\n  pandemic when markets were collapsing and credit was freezing. The\n  goal was to stabilize financial conditions and support the economy by\n  lowering borrowing costs."
+  },
+  {
+   "page": 54,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>",
+   "excerpt": "4. Yield Curve\nManagement                   4.3. Case Study: Fed QE In 2020 –Part2\n\n How It Was Done:\n\n    1) (long-term end) The Fed bought large amounts of\n    bonds, including Treasuries and mortgage-backed\n    securities, while\n    2) (short-term end): cutting interest rates to near zero. It\n    also\n    3) (forward guidance): promised to keep rates low for a\n    long time, shaping market expectations and directly\n    influencing the yield curve."
+  },
+  {
+   "page": 55,
+   "title": "4. Yield Curve",
+   "thin": false,
+   "explainHtml": "<p>央行管理曲线：政策利率主要钉短端；QE/扭转操作等影响长端供需与期限溢价。</p>\n<p>实体经济对长端利率更敏感（按揭、公司债融资）。在零利率下限附近，QE / 负利率成为工具箱选项。</p>\n<div class=\"kf\">QE: 央行买入长久期债券 → 价格↑ → 长端 y↓</div>\n<div class=\"trap\"><strong>学习提示：</strong>本页信息密度高，先标出 2–3 个核心公式/定义，再回头啃例子。</div>",
+   "excerpt": "4. Yield Curve\n     Management                                                              4.3. Case Study: Fed QE In 2020 –Part3\n\n                Outcome: QE lowered long-term rates and flattened the yield curve. Investors\n                accepted lower risk premiums, seeking safety and liquidity. The policy helped\n                calm markets, but also raised concerns about distortions in asset\n                pricing and unequal impacts across financial sectors. (Demo)\n\n                           U.S. Treasury Yield Curve                                                             QE\n          1.4\n          1.2\n            1\n                         Before QE\nYield %\n\n          0.8\n          0.6\n          0.4\n          0.2                                              After QE\n            0\n                1 Mo 2 Mo 3 Mo 6 Mo 1 Yr     2 Yr   3 Yr   5 Yr   7 Yr 10 Yr 20 Yr 30 Yr\n                                             Maturity\n\n                                03/30/2020           03/10/2020"
+  },
+  {
+   "page": 56,
+   "title": "Quick Quiz",
+   "thin": false,
+   "explainHtml": "<p>先自己在草稿纸上答，再对答案。测验的价值在于暴露「以为懂了其实不会算」的缺口。</p>\n<p>若卡住，回到该主题对应的讲义页，把符号定义抄一遍再重做。</p>",
+   "excerpt": "Quick Quiz\n\n1. What does an inverted (downward-sloping) yield curve usually\nsignal?\nA) Strong economic growth ahead\nB) Recession risk and expected rate cuts\n\n2. Which tool did the Fed use in 2020 to lower long-term interest\nrates during the pandemic?\nA) Quantitative Easing (QE)\nB) Raising the policy rate"
+  },
+  {
+   "page": 57,
+   "title": "Summary & Key Takeaways",
+   "thin": false,
+   "explainHtml": "<p>总结页请当成<strong>考前速查卡</strong>：能用自己的话复述每一条，才算真懂。</p>\n<p>对照左边要点，问自己：对应公式是什么？适用假设是什么？常见反例是什么？</p>",
+   "excerpt": "Summary & Key Takeaways\n\n• The yield curve shows interest rates for different bond\n  maturities.\n• Its shape helps predict economic trends like growth or\n  recession.\n• Three main factors drive yield curve movements: level, slope,\n  and curvature.\n• Central banks use tools like QE, YCC, and forward guidance to\n  influence the curve.\n• The yield curve is a key indicator, influencing and reflecting\n  growth, inflation, and financial stability."
+  },
+  {
+   "page": 58,
+   "title": "Reference",
+   "thin": true,
+   "explainHtml": "<p>收益率曲线主题「Reference」。先辨认形态，再解释「预期 vs 溢价 vs 供需」。</p>",
+   "excerpt": "Reference\n\n• Fabozzi, Chapter 5, 6.\n• Martellini, Chapter 3."
+  }
+ ]
+}
